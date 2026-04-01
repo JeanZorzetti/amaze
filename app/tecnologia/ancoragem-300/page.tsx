@@ -138,6 +138,36 @@ export default function Ancoragem300Page() {
           </div>
         </section>
 
+        {/* ── ANCORAGEM DOCUMENTADA ── */}
+        <section className="py-24 px-4 lg:px-8 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="w-full aspect-[4/3] bg-surface-container-low border-2 border-dashed border-border rounded-lg flex flex-col items-center justify-center gap-3 text-muted">
+                  <svg className="size-10 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                  </svg>
+                  <span className="text-xs font-bold uppercase tracking-widest opacity-50">Foto do produto</span>
+                </div>
+              </div>
+              <div>
+                <p className="section-label text-orange mb-3">Especificação Aberta</p>
+                <h2
+                  className="text-3xl lg:text-5xl font-black text-text uppercase mb-6"
+                  style={{ fontFamily: "var(--font-headline)" }}
+                >
+                  ANCORAGEM DOCUMENTADA
+                </h2>
+                <p className="text-base text-muted leading-relaxed">
+                  Cada ponto de fixação de um inflável Amaze é dimensionado para suportar 300 kg/f de carga de
+                  ruptura. Publicamos os componentes, os materiais e as especificações — nenhum concorrente faz
+                  isso porque nenhum concorrente tem esta ancoragem.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ── ANATOMIA DO SISTEMA ── */}
         <section className="py-24 px-4 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
@@ -152,26 +182,34 @@ export default function Ancoragem300Page() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {components.map((comp) => (
-                <div key={comp.num} className="relative bg-surface-container-low border border-border rounded-xl p-8 overflow-hidden">
-                  <div
-                    className="absolute top-2 right-4 text-[5rem] font-black leading-none text-primary/5 select-none"
-                    style={{ fontFamily: "var(--font-headline)" }}
-                  >
-                    {comp.num}
+                <div key={comp.num} className="relative bg-surface-container-low border border-border rounded-xl overflow-hidden">
+                  <div className="w-full aspect-square bg-surface-container-low border-b-2 border-dashed border-border flex flex-col items-center justify-center gap-3 text-muted">
+                    <svg className="size-10 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                    </svg>
+                    <span className="text-xs font-bold uppercase tracking-widest opacity-50">Foto do produto</span>
                   </div>
-                  <p
-                    className="text-4xl font-black text-primary/20 mb-4 relative z-10"
-                    style={{ fontFamily: "var(--font-headline)" }}
-                  >
-                    {comp.num}
-                  </p>
-                  <h3
-                    className="text-base font-black text-text uppercase mb-3 relative z-10"
-                    style={{ fontFamily: "var(--font-headline)" }}
-                  >
-                    {comp.title}
-                  </h3>
-                  <p className="text-sm text-muted leading-relaxed relative z-10">{comp.body}</p>
+                  <div className="p-8">
+                    <div
+                      className="absolute top-2 right-4 text-[5rem] font-black leading-none text-primary/5 select-none"
+                      style={{ fontFamily: "var(--font-headline)" }}
+                    >
+                      {comp.num}
+                    </div>
+                    <p
+                      className="text-4xl font-black text-primary/20 mb-4 relative z-10"
+                      style={{ fontFamily: "var(--font-headline)" }}
+                    >
+                      {comp.num}
+                    </p>
+                    <h3
+                      className="text-base font-black text-text uppercase mb-3 relative z-10"
+                      style={{ fontFamily: "var(--font-headline)" }}
+                    >
+                      {comp.title}
+                    </h3>
+                    <p className="text-sm text-muted leading-relaxed relative z-10">{comp.body}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -327,6 +365,32 @@ export default function Ancoragem300Page() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ── PROTOCOLO DE INSTALAÇÃO (VÍDEO) ── */}
+        <section className="py-24 px-4 lg:px-8 bg-on-surface relative overflow-hidden">
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-primary opacity-10 blur-[120px] translate-x-1/3 -translate-y-1/3" />
+          </div>
+          <div className="relative z-10 max-w-4xl mx-auto text-center">
+            <p className="section-label text-orange mb-3">Demonstração</p>
+            <h2
+              className="text-3xl lg:text-5xl font-black text-inverse-on-surface uppercase mb-10"
+              style={{ fontFamily: "var(--font-headline)" }}
+            >
+              PROTOCOLO DE INSTALAÇÃO
+            </h2>
+            <div className="w-full aspect-video bg-on-surface border-2 border-dashed border-white/20 rounded-xl flex flex-col items-center justify-center gap-4 text-inverse-on-surface/40">
+              <svg className="size-14 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
+              </svg>
+              <span className="text-sm font-bold uppercase tracking-widest opacity-50">Vídeo do processo — em breve</span>
+            </div>
+            <p className="text-inverse-on-surface/50 text-sm mt-6">
+              Em breve: vídeo do protocolo completo de instalação e ancoragem
+            </p>
           </div>
         </section>
 
