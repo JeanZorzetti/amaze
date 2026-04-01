@@ -95,7 +95,7 @@ export default function SetoresPage() {
                   key={s.slug}
                   href={`/setores/${s.slug}`}
                   className={[
-                    "group flex flex-col gap-4 p-8 rounded-2xl border transition-all",
+                    "group flex flex-col gap-4 p-8 rounded-xl border transition-all",
                     isFeatured
                       ? "bg-gradient-to-br from-primary to-purple text-white border-transparent sm:col-span-2 lg:col-span-1"
                       : "bg-white border-border hover:border-primary/30 hover:shadow-lg",
@@ -103,7 +103,7 @@ export default function SetoresPage() {
                 >
                   <div
                     className={[
-                      "size-14 rounded-2xl flex items-center justify-center text-3xl",
+                      "size-14 rounded-xl flex items-center justify-center text-3xl",
                       isFeatured ? "bg-white/15" : "bg-primary/8",
                     ].join(" ")}
                   >

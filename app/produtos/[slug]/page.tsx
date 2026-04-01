@@ -548,7 +548,7 @@ export default async function ProdutoPage({
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
             {/* Coluna esquerda */}
             <div>
-              <div className="size-16 bg-white/10 rounded-2xl flex items-center justify-center text-4xl mb-6">
+              <div className="size-16 bg-white/10 rounded-xl flex items-center justify-center text-4xl mb-6">
                 {product.icon}
               </div>
               <h1
@@ -576,7 +576,7 @@ export default async function ProdutoPage({
             </div>
 
             {/* Coluna direita — card de detalhes */}
-            <div className="bg-white/10 rounded-2xl p-8 border border-white/20 space-y-6">
+            <div className="bg-white/10 rounded-xl p-8 border border-white/20 space-y-6">
               <div>
                 <h3 className="text-xs font-semibold uppercase tracking-widest text-white/50 mb-3">
                   Tamanhos
@@ -633,9 +633,9 @@ export default async function ProdutoPage({
               {product.benefits.map((b) => (
                 <div
                   key={b.title}
-                  className="bg-surface-container-low border border-border rounded-2xl p-8"
+                  className="bg-surface-container-low border border-border rounded-xl p-8"
                 >
-                  <div className="size-12 rounded-xl bg-primary/8 flex items-center justify-center text-2xl mb-5">
+                  <div className="size-12 rounded-lg bg-primary/8 flex items-center justify-center text-2xl mb-5">
                     {b.icon}
                   </div>
                   <h3
@@ -664,7 +664,7 @@ export default async function ProdutoPage({
               {product.useCases.map((uc) => (
                 <div
                   key={uc.title}
-                  className="bg-white rounded-xl p-6 border border-border"
+                  className="bg-white rounded-lg p-6 border border-border"
                 >
                   <h3
                     className="font-black uppercase text-text mb-3"
@@ -692,7 +692,7 @@ export default async function ProdutoPage({
               {product.specs.map((spec) => (
                 <div
                   key={spec.label}
-                  className="bg-white/5 border border-white/10 rounded-xl p-4"
+                  className="bg-white/5 border border-white/10 rounded-lg p-4"
                 >
                   <p className="text-[0.6rem] uppercase tracking-widest text-inverse-on-surface/40 mb-1">
                     {spec.label}

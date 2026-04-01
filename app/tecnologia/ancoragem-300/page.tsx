@@ -152,7 +152,7 @@ export default function Ancoragem300Page() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {components.map((comp) => (
-                <div key={comp.num} className="relative bg-surface-container-low border border-border rounded-2xl p-8 overflow-hidden">
+                <div key={comp.num} className="relative bg-surface-container-low border border-border rounded-xl p-8 overflow-hidden">
                   <div
                     className="absolute top-2 right-4 text-[5rem] font-black leading-none text-primary/5 select-none"
                     style={{ fontFamily: "var(--font-headline)" }}
@@ -194,7 +194,7 @@ export default function Ancoragem300Page() {
               {steps.map((step) => (
                 <div
                   key={step.num}
-                  className={`relative rounded-2xl p-7 overflow-hidden ${
+                  className={`relative rounded-xl p-7 overflow-hidden ${
                     step.critical
                       ? "bg-white border-2 border-orange"
                       : "bg-white border border-border"
@@ -258,7 +258,7 @@ export default function Ancoragem300Page() {
                   diferença entre uma especificação e um argumento de vendas vazio.
                 </p>
                 {/* Blockquote */}
-                <div className="relative bg-white/5 border border-white/10 rounded-2xl p-8">
+                <div className="relative bg-white/5 border border-white/10 rounded-xl p-8">
                   <div
                     className="absolute -top-4 left-6 text-[4rem] font-black leading-none text-orange/30 select-none"
                     style={{ fontFamily: "var(--font-headline)" }}
@@ -271,8 +271,8 @@ export default function Ancoragem300Page() {
                 </div>
               </div>
               {/* Garantia card */}
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
-                <div className="size-12 rounded-xl bg-orange/20 flex items-center justify-center text-2xl mb-6">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-8">
+                <div className="size-12 rounded-lg bg-orange/20 flex items-center justify-center text-2xl mb-6">
                   🛡️
                 </div>
                 <h3
@@ -316,7 +316,7 @@ export default function Ancoragem300Page() {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {specs.map((s) => (
-                <div key={s.label} className="bg-surface-container-low border border-border rounded-2xl p-6">
+                <div key={s.label} className="bg-surface-container-low border border-border rounded-xl p-6">
                   <p className="text-[0.6rem] font-black uppercase tracking-widest text-muted mb-2">{s.label}</p>
                   <p
                     className="text-xl font-black text-text leading-tight"

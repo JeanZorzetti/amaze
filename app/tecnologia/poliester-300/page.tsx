@@ -139,7 +139,7 @@ export default function Poliester300Page() {
             </div>
             <div className="grid md:grid-cols-3 gap-6">
               {layers.map((layer) => (
-                <div key={layer.num} className="relative bg-surface-container-low border border-border rounded-2xl p-8 overflow-hidden">
+                <div key={layer.num} className="relative bg-surface-container-low border border-border rounded-xl p-8 overflow-hidden">
                   <div
                     className="absolute top-3 right-5 text-[6rem] font-black leading-none text-primary/5 select-none"
                     style={{ fontFamily: "var(--font-headline)" }}
@@ -179,8 +179,8 @@ export default function Poliester300Page() {
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               {/* UV */}
-              <div className="bg-white border border-border rounded-2xl p-8">
-                <div className="size-12 rounded-xl bg-orange/10 flex items-center justify-center text-2xl mb-6">
+              <div className="bg-white border border-border rounded-xl p-8">
+                <div className="size-12 rounded-lg bg-orange/10 flex items-center justify-center text-2xl mb-6">
                   ☀️
                 </div>
                 <h3
@@ -198,8 +198,8 @@ export default function Poliester300Page() {
                 </p>
               </div>
               {/* Antifungo */}
-              <div className="bg-white border border-border rounded-2xl p-8">
-                <div className="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-2xl mb-6">
+              <div className="bg-white border border-border rounded-xl p-8">
+                <div className="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-2xl mb-6">
                   🛡️
                 </div>
                 <h3
@@ -244,7 +244,7 @@ export default function Poliester300Page() {
             </p>
             <div className="grid md:grid-cols-3 gap-4">
               {lifeTimeline.map((item, i) => (
-                <div key={item.period} className="relative bg-white/5 border border-white/10 rounded-2xl p-8">
+                <div key={item.period} className="relative bg-white/5 border border-white/10 rounded-xl p-8">
                   {i < lifeTimeline.length - 1 && (
                     <div className="hidden md:block absolute top-1/2 -right-2 w-4 h-px bg-white/20" />
                   )}
@@ -281,7 +281,7 @@ export default function Poliester300Page() {
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {maintenance.map((item) => (
-                <div key={item.title} className="bg-surface-container-low border border-border rounded-2xl p-7">
+                <div key={item.title} className="bg-surface-container-low border border-border rounded-xl p-7">
                   <div className="text-3xl mb-4">{item.icon}</div>
                   <h3
                     className="text-base font-black text-text uppercase mb-2"

@@ -103,7 +103,7 @@ export default async function BlogPostPage({
             />
 
             {/* CTA inline */}
-            <div className="mt-16 p-8 rounded-2xl bg-primary text-on-primary text-center">
+            <div className="mt-16 p-8 rounded-xl bg-primary text-on-primary text-center">
               <h3
                 className="text-2xl font-black uppercase mb-3"
                 style={{ fontFamily: "var(--font-headline)" }}
@@ -139,7 +139,7 @@ export default async function BlogPostPage({
                   <Link
                     key={r.slug}
                     href={`/blog/${r.slug}`}
-                    className="group bg-white rounded-2xl p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all"
+                    className="group bg-white rounded-xl p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all"
                   >
                     <p className="text-xs font-bold uppercase tracking-widest text-muted mb-2">{r.readTime}</p>
                     <h3

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -198,14 +198,14 @@ export default function TecnologiaPage() {
                 <div
                   key={p.id}
                   id={p.id}
-                  className={`rounded-2xl p-8 lg:p-10 ${p.dark ? "bg-on-surface" : "bg-surface-container-low border border-border"}`}
+                  className={`rounded-xl p-8 lg:p-10 ${p.dark ? "bg-on-surface" : "bg-surface-container-low border border-border"}`}
                 >
                   <div className="grid lg:grid-cols-2 gap-10 items-start">
 
                     {/* Left */}
                     <div>
                       <div className="flex items-center gap-3 mb-4">
-                        <div className={`size-12 rounded-xl flex items-center justify-center text-2xl ${p.dark ? "bg-white/10" : "bg-primary/8"}`}>
+                        <div className={`size-12 rounded-lg flex items-center justify-center text-2xl ${p.dark ? "bg-white/10" : "bg-primary/8"}`}>
                           {p.icon}
                         </div>
                         <span className={`text-[0.6rem] font-black uppercase tracking-[0.25em] ${p.badgeColor}`}>{p.badge}</span>
@@ -229,7 +229,7 @@ export default function TecnologiaPage() {
                       {p.specs.map((s) => (
                         <div
                           key={s.label}
-                          className={`rounded-xl p-4 ${p.dark ? "bg-white/5 border border-white/10" : "bg-white border border-border"}`}
+                          className={`rounded-lg p-4 ${p.dark ? "bg-white/5 border border-white/10" : "bg-white border border-border"}`}
                         >
                           <p className={`text-[0.6rem] font-black uppercase tracking-widest mb-1 ${p.dark ? "text-inverse-on-surface/40" : "text-muted"}`}>
                             {s.label}
@@ -265,7 +265,7 @@ export default function TecnologiaPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {process.map((step) => (
-                <div key={step.num} className="relative bg-white/5 rounded-2xl p-8 border border-white/10">
+                <div key={step.num} className="relative bg-white/5 rounded-xl p-8 border border-white/10">
                   <div
                     className="text-[5rem] font-black leading-none text-white/5 select-none absolute top-2 right-4"
                     style={{ fontFamily: "var(--font-headline)" }}
@@ -304,7 +304,7 @@ export default function TecnologiaPage() {
               </p>
             </div>
 
-            <div className="rounded-2xl overflow-hidden border border-border">
+            <div className="rounded-xl overflow-hidden border border-border">
               {/* Header */}
               <div className="grid grid-cols-3 bg-on-surface text-inverse-on-surface text-xs font-black uppercase tracking-widest">
                 <div className="col-span-1 p-4">Especificação</div>

@@ -63,7 +63,7 @@ export default function BlogPage() {
             <p className="section-label text-primary mb-6">Artigo em Destaque</p>
             <Link
               href={`/blog/${featured.slug}`}
-              className="group grid grid-cols-1 lg:grid-cols-2 rounded-2xl overflow-hidden border border-primary/20 hover:border-primary/50 hover:shadow-xl transition-all bg-white"
+              className="group grid grid-cols-1 lg:grid-cols-2 rounded-xl overflow-hidden border border-primary/20 hover:border-primary/50 hover:shadow-xl transition-all bg-white"
             >
               {/* Visual */}
               <div className="h-64 lg:h-auto bg-gradient-to-br from-primary to-secondary flex items-center justify-center min-h-64 relative">
@@ -131,7 +131,7 @@ export default function BlogPage() {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="group flex flex-col rounded-2xl border border-border overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all"
+                  className="group flex flex-col rounded-xl border border-border overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all"
                 >
                   {/* Visual placeholder */}
                   <div className="h-48 bg-gradient-to-br from-primary-container to-secondary-container flex items-center justify-center">

@@ -49,7 +49,7 @@ export default function ProjectCard({
     return (
       <Link
         href={href}
-        className={`group flex flex-col bg-surface-container-highest rounded-xl overflow-hidden ambient-shadow border border-outline-variant/10 ${hoverBorder[accent]} transition-colors ${staggerClass}`}
+        className={`group flex flex-col bg-surface-container-highest rounded-lg overflow-hidden ambient-shadow border border-outline-variant/10 ${hoverBorder[accent]} transition-colors ${staggerClass}`}
       >
         {/* Image placeholder */}
         <div className="relative h-52 bg-gradient-to-br from-primary-container to-secondary overflow-hidden">
@@ -87,7 +87,7 @@ export default function ProjectCard({
 
   // Service card (Formatos style)
   return (
-    <div className={`bg-surface-container-highest rounded-xl p-8 ambient-shadow border border-outline-variant/10 ${hoverBorder[accent]} transition-colors flex flex-col items-center text-center ${staggerClass}`}>
+    <div className={`bg-surface-container-highest rounded-lg p-8 ambient-shadow border border-outline-variant/10 ${hoverBorder[accent]} transition-colors flex flex-col items-center text-center ${staggerClass}`}>
       <div className={`size-16 rounded-full flex items-center justify-center mb-6 ${iconBg[accent]}`}>
         <span className="text-3xl">{icon}</span>
       </div>

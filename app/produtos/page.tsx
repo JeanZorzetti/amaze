@@ -96,7 +96,7 @@ export default function ProdutosPage() {
                 product.featured ? (
                   <div
                     key={product.slug}
-                    className="sm:col-span-2 lg:col-span-1 relative bg-gradient-to-br from-primary to-purple text-white rounded-2xl p-8 flex flex-col"
+                    className="sm:col-span-2 lg:col-span-1 relative bg-gradient-to-br from-primary to-purple text-white rounded-xl p-8 flex flex-col"
                   >
                     <div className="absolute top-4 right-4">
                       <span className="section-label text-orange text-[0.6rem]">
@@ -133,7 +133,7 @@ export default function ProdutosPage() {
                 ) : (
                   <div
                     key={product.slug}
-                    className="border border-border hover:border-primary/30 hover:shadow-lg rounded-2xl p-8 flex flex-col transition-all duration-200"
+                    className="border border-border hover:border-primary/30 hover:shadow-lg rounded-xl p-8 flex flex-col transition-all duration-200"
                   >
                     <div className="text-5xl mb-5">{product.icon}</div>
                     <h2

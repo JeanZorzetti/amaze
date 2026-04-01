@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -188,7 +188,7 @@ export default function BalonismoPage() {
                 { label: "Duração do Voo",           value: "1–3 h",          cls: "bg-primary-container text-on-primary-container" },
                 { label: "Altura do Envelope",       value: "Até 25m",        cls: "bg-on-surface text-inverse-on-surface" },
               ].map(({ label, value, cls }) => (
-                <div key={label} className={`${cls} rounded-2xl p-8 aspect-square flex flex-col justify-end`}>
+                <div key={label} className={`${cls} rounded-xl p-8 aspect-square flex flex-col justify-end`}>
                   <div className="text-3xl font-black" style={{ fontFamily: "var(--font-headline)" }}>{value}</div>
                   <div className="text-[0.65rem] font-bold uppercase tracking-widest opacity-70 mt-2">{label}</div>
                 </div>
@@ -212,7 +212,7 @@ export default function BalonismoPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               {modalities.map((m) => (
-                <div key={m.title} className="bg-white rounded-2xl overflow-hidden border border-border shadow-sm flex flex-col">
+                <div key={m.title} className="bg-white rounded-xl overflow-hidden border border-border shadow-sm flex flex-col">
                   <div className={`${m.accent} p-8`}>
                     <div className="text-4xl mb-4">{m.icon}</div>
                     <p className="text-[0.65rem] font-black uppercase tracking-widest opacity-70 mb-1">{m.subtitle}</p>
@@ -256,7 +256,7 @@ export default function BalonismoPage() {
                 { num: "03", title: "CERTIFICAÇÃO & PLANEJ.", desc: "Cuidamos de todas as licenças de voo, certificações ANAC/FAA e planejamento de rotas." },
                 { num: "04", title: "LANÇAMENTO & RELATÓRIO", desc: "Executamos a campanha e entregamos um relatório pós-voo com dados de alcance e mídia." },
               ].map((step) => (
-                <div key={step.num} className="relative bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div key={step.num} className="relative bg-white/5 rounded-xl p-6 border border-white/10">
                   <div
                     className="text-[4rem] font-black leading-none text-white/5 select-none absolute top-2 right-3"
                     style={{ fontFamily: "var(--font-headline)" }}

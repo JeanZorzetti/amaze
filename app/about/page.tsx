@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Button from "@/components/ui/Button";
@@ -82,7 +82,7 @@ export default function AboutPage() {
                 ].map((stat) => (
                   <div
                     key={stat.label}
-                    className="p-4 rounded-xl border border-border bg-surface-card"
+                    className="p-4 rounded-lg border border-border bg-surface-card"
                   >
                     <div
                       className="text-2xl font-black text-purple"
@@ -96,7 +96,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-dark to-purple-soft rounded-2xl aspect-square flex items-center justify-center">
+            <div className="bg-gradient-to-br from-purple-dark to-purple-soft rounded-xl aspect-square flex items-center justify-center">
               <div className="text-center text-white/40 p-8">
                 <div className="text-8xl mb-4">🎈</div>
                 <p className="text-sm">Foto: Thiago Marques & equipe</p>
@@ -125,7 +125,7 @@ export default function AboutPage() {
               ].map((v) => (
                 <div
                   key={v.title}
-                  className="p-6 rounded-2xl bg-white/5 border border-white/10"
+                  className="p-6 rounded-xl bg-white/5 border border-white/10"
                 >
                   <div className="text-3xl mb-3">{v.icon}</div>
                   <h3

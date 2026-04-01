@@ -100,7 +100,7 @@ export default function SobrePage() {
               </div>
 
               {/* Coluna direita — timeline */}
-              <div className="bg-surface-container-low rounded-2xl p-8 border border-border">
+              <div className="bg-surface-container-low rounded-xl p-8 border border-border">
                 <p
                   className="text-xs font-black uppercase tracking-widest text-muted mb-8"
                   style={{ fontFamily: "var(--font-headline)" }}
@@ -165,7 +165,7 @@ export default function SobrePage() {
 
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               {/* Foto placeholder */}
-              <div className="bg-gradient-to-br from-primary to-purple rounded-2xl aspect-square flex flex-col items-center justify-center gap-4">
+              <div className="bg-gradient-to-br from-primary to-purple rounded-xl aspect-square flex flex-col items-center justify-center gap-4">
                 <span className="text-8xl">🧑‍🏭</span>
                 <p className="text-white/60 text-sm font-medium">Thiago Marques — Diretor</p>
               </div>
@@ -265,9 +265,9 @@ export default function SobrePage() {
               ].map((card) => (
                 <div
                   key={card.title}
-                  className="bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col gap-4"
+                  className="bg-white/5 border border-white/10 rounded-xl p-8 flex flex-col gap-4"
                 >
-                  <div className="size-12 bg-white/10 rounded-xl flex items-center justify-center text-2xl">
+                  <div className="size-12 bg-white/10 rounded-lg flex items-center justify-center text-2xl">
                     {card.icon}
                   </div>
                   <h3
@@ -346,7 +346,7 @@ export default function SobrePage() {
               ].map((v) => (
                 <div
                   key={v.title}
-                  className="bg-surface-container-low border border-border rounded-2xl p-8"
+                  className="bg-surface-container-low border border-border rounded-xl p-8"
                 >
                   <div className="text-3xl mb-4">{v.icon}</div>
                   <h3
@@ -406,9 +406,9 @@ export default function SobrePage() {
               ].map((step) => (
                 <div
                   key={step.num}
-                  className="bg-white rounded-2xl p-6 border border-border flex flex-col gap-3"
+                  className="bg-white rounded-xl p-6 border border-border flex flex-col gap-3"
                 >
-                  <div className="size-12 bg-primary/8 rounded-xl flex items-center justify-center">
+                  <div className="size-12 bg-primary/8 rounded-lg flex items-center justify-center">
                     <span
                       className="text-3xl font-black text-primary leading-none"
                       style={{ fontFamily: "var(--font-headline)" }}

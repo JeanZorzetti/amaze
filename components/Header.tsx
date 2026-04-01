@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
@@ -116,7 +116,7 @@ export default function Header() {
 
             {megaOpen === "sectors" && (
               <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-64">
-              <div className="bg-white rounded-xl ambient-shadow border border-surface-variant/30 p-4">
+              <div className="bg-white rounded-lg ambient-shadow border border-surface-variant/30 p-4">
                 <p className="text-[0.65rem] font-black uppercase tracking-[0.22em] text-on-surface-variant mb-3">
                   Indústrias
                 </p>
@@ -153,7 +153,7 @@ export default function Header() {
 
             {megaOpen === "tecnologia" && (
               <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-72">
-                <div className="bg-white rounded-xl ambient-shadow border border-surface-variant/30 p-4">
+                <div className="bg-white rounded-lg ambient-shadow border border-surface-variant/30 p-4">
                   <p className="text-[0.65rem] font-black uppercase tracking-[0.22em] text-on-surface-variant mb-3">
                     3 Pilares de Engenharia
                   </p>
@@ -214,7 +214,7 @@ export default function Header() {
 
             {megaOpen === "products" && (
               <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[600px]">
-              <div className="bg-white rounded-xl ambient-shadow border border-surface-variant/30 p-6">
+              <div className="bg-white rounded-lg ambient-shadow border border-surface-variant/30 p-6">
                 <p className="text-[0.65rem] font-black uppercase tracking-[0.22em] text-on-surface-variant mb-4">
                   Nossos Produtos
                 </p>

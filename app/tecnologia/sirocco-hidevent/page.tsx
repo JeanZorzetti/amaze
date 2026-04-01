@@ -138,7 +138,7 @@ export default function SiroccoHideventPage() {
             </div>
             <div className="grid md:grid-cols-3 gap-6">
               {anatomy.map((item) => (
-                <div key={item.title} className="bg-surface-container-low border border-border rounded-2xl p-8">
+                <div key={item.title} className="bg-surface-container-low border border-border rounded-xl p-8">
                   <div className="size-10 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
                     <div className="size-3 rounded-full bg-primary" />
                   </div>
@@ -167,7 +167,7 @@ export default function SiroccoHideventPage() {
                 MANGUEIRA EXTERNA VS. HIDEVENT
               </h2>
             </div>
-            <div className="rounded-2xl overflow-hidden border border-border">
+            <div className="rounded-xl overflow-hidden border border-border">
               {/* Header */}
               <div className="grid grid-cols-3 bg-on-surface text-inverse-on-surface text-xs font-black uppercase tracking-widest">
                 <div className="col-span-1 p-4">Critério</div>
@@ -210,7 +210,7 @@ export default function SiroccoHideventPage() {
                   em um único final de semana. A logística parecia impossível — como garantir montadores
                   especializados em 50 locais ao mesmo tempo?
                 </p>
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+                <div className="bg-white/5 border border-white/10 rounded-xl p-6">
                   <p className="text-orange text-xs font-black uppercase tracking-widest mb-3">A Solução Amaze</p>
                   <p className="text-inverse-on-surface/80 text-sm leading-relaxed">
                     Réplicas de 4 metros com Sirocco HideVENT. A inflagem em 2 minutos permitiu que a própria
@@ -221,7 +221,7 @@ export default function SiroccoHideventPage() {
               </div>
               <div className="grid grid-cols-3 gap-4">
                 {metrics.map((m) => (
-                  <div key={m.label} className="bg-orange/10 border border-orange/20 rounded-2xl p-6 text-center">
+                  <div key={m.label} className="bg-orange/10 border border-orange/20 rounded-xl p-6 text-center">
                     <p
                       className="text-3xl font-black text-orange mb-2"
                       style={{ fontFamily: "var(--font-headline)" }}
@@ -250,7 +250,7 @@ export default function SiroccoHideventPage() {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {specs.map((s) => (
-                <div key={s.label} className="bg-surface-container-low border border-border rounded-2xl p-6">
+                <div key={s.label} className="bg-surface-container-low border border-border rounded-xl p-6">
                   <p className="text-[0.6rem] font-black uppercase tracking-widest text-muted mb-2">{s.label}</p>
                   <p
                     className="text-xl font-black text-text"

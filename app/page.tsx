@@ -1,4 +1,4 @@
-﻿// Homepage — Structure: Michelin Inflatables / Design: Floatie Kings
+// Homepage — Structure: Michelin Inflatables / Design: Floatie Kings
 // 1. Hero        — full-bleed, edge-to-edge, bold ALL-CAPS headline
 // 2. Ticker      — scrolling product categories marquee
 // 3. Video       — local .mp4 showcase
@@ -66,7 +66,7 @@ export default function Home() {
               INFLÁVEIS QUE<br />
               <span className="text-primary">PARAM O MUNDO</span>
             </h2>
-            <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl bg-black">
+            <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-xl bg-black">
               <video
                 className="w-full h-full object-cover"
                 controls
@@ -148,11 +148,11 @@ export default function Home() {
                 <Link
                   key={s.slug}
                   href={`/setores/${s.slug}`}
-                  className={`group flex flex-col gap-4 p-8 rounded-2xl border border-border bg-white hover:border-primary/30 hover:shadow-lg transition-all ${
+                  className={`group flex flex-col gap-4 p-8 rounded-xl border border-border bg-white hover:border-primary/30 hover:shadow-lg transition-all ${
                     idx === 0 ? "sm:col-span-2 lg:col-span-1 lg:row-span-2 bg-gradient-to-br from-primary to-purple text-white border-transparent" : ""
                   }`}
                 >
-                  <div className={`size-14 rounded-2xl flex items-center justify-center text-3xl ${idx === 0 ? "bg-white/15" : "bg-primary/8"}`}>
+                  <div className={`size-14 rounded-xl flex items-center justify-center text-3xl ${idx === 0 ? "bg-white/15" : "bg-primary/8"}`}>
                     {s.icon}
                   </div>
                   <div className="flex-1">
@@ -212,9 +212,9 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
 
               {/* Card destaque — Sirocco HideVENT */}
-              <div className="md:col-span-2 lg:col-span-2 bg-gradient-to-br from-primary to-purple rounded-2xl p-8 flex flex-col gap-6">
+              <div className="md:col-span-2 lg:col-span-2 bg-gradient-to-br from-primary to-purple rounded-xl p-8 flex flex-col gap-6">
                 <div className="flex items-start gap-4">
-                  <div className="size-12 rounded-xl bg-white/15 flex items-center justify-center text-2xl shrink-0">⚡</div>
+                  <div className="size-12 rounded-lg bg-white/15 flex items-center justify-center text-2xl shrink-0">⚡</div>
                   <div>
                     <p className="text-[0.6rem] font-black uppercase tracking-[0.25em] text-orange mb-1">Exclusivo Amaze</p>
                     <h3
@@ -236,8 +236,8 @@ export default function Home() {
               </div>
 
               {/* Garantia 3 anos */}
-              <div className="bg-orange rounded-2xl p-8 flex flex-col gap-4">
-                <div className="size-12 rounded-xl bg-white/20 flex items-center justify-center text-2xl">🛡️</div>
+              <div className="bg-orange rounded-xl p-8 flex flex-col gap-4">
+                <div className="size-12 rounded-lg bg-white/20 flex items-center justify-center text-2xl">🛡️</div>
                 <div>
                   <p className="text-[0.6rem] font-black uppercase tracking-[0.25em] text-white/60 mb-1">Única no Setor</p>
                   <h3
@@ -256,8 +256,8 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
               {/* Poliéster 300g/m² */}
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col gap-4">
-                <div className="size-12 rounded-xl bg-primary/20 flex items-center justify-center text-2xl">🧵</div>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-8 flex flex-col gap-4">
+                <div className="size-12 rounded-lg bg-primary/20 flex items-center justify-center text-2xl">🧵</div>
                 <div>
                   <p className="text-[0.6rem] font-black uppercase tracking-[0.25em] text-orange mb-1">Material Base</p>
                   <h3
@@ -273,8 +273,8 @@ export default function Home() {
               </div>
 
               {/* Ancoragem 300 kg/f */}
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col gap-4">
-                <div className="size-12 rounded-xl bg-primary/20 flex items-center justify-center text-2xl">⚓</div>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-8 flex flex-col gap-4">
+                <div className="size-12 rounded-lg bg-primary/20 flex items-center justify-center text-2xl">⚓</div>
                 <div>
                   <p className="text-[0.6rem] font-black uppercase tracking-[0.25em] text-orange mb-1">Estrutura</p>
                   <h3
@@ -290,8 +290,8 @@ export default function Home() {
               </div>
 
               {/* Fluxo Contínuo */}
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col gap-4">
-                <div className="size-12 rounded-xl bg-primary/20 flex items-center justify-center text-2xl">🔄</div>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-8 flex flex-col gap-4">
+                <div className="size-12 rounded-lg bg-primary/20 flex items-center justify-center text-2xl">🔄</div>
                 <div>
                   <p className="text-[0.6rem] font-black uppercase tracking-[0.25em] text-orange mb-1">Zero Risco de Evento</p>
                   <h3
@@ -344,7 +344,7 @@ export default function Home() {
                   icon: "🚚",
                 },
               ].map((step) => (
-                <div key={step.num} className="relative bg-white/5 rounded-2xl p-8 border border-white/10">
+                <div key={step.num} className="relative bg-white/5 rounded-xl p-8 border border-white/10">
                   <div
                     className="text-[5rem] font-black leading-none text-white/5 select-none absolute top-2 right-4"
                     style={{ fontFamily: "var(--font-headline)" }}
@@ -409,7 +409,7 @@ export default function Home() {
                 <Link
                   key={p.title}
                   href="/portfolio"
-                  className={`group relative h-80 rounded-2xl overflow-hidden bg-gradient-to-br ${p.gradient} cursor-pointer`}
+                  className={`group relative h-80 rounded-xl overflow-hidden bg-gradient-to-br ${p.gradient} cursor-pointer`}
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
                   <div className="absolute top-4 left-4">

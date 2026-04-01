@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -415,7 +415,7 @@ export default async function SetorPage({
             {sector.stats.map((stat) => (
               <div
                 key={stat.label}
-                className={`${stat.color} rounded-2xl p-6 flex flex-col justify-end aspect-square`}
+                className={`${stat.color} rounded-xl p-6 flex flex-col justify-end aspect-square`}
               >
                 <p
                   className="text-4xl font-black leading-none mb-2"
@@ -442,9 +442,9 @@ export default async function SetorPage({
               {sector.useCases.map((uc) => (
                 <div
                   key={uc.title}
-                  className="bg-surface-container-low rounded-2xl p-8 border border-border"
+                  className="bg-surface-container-low rounded-xl p-8 border border-border"
                 >
-                  <div className="size-12 bg-primary/8 rounded-xl flex items-center justify-center text-2xl mb-5">
+                  <div className="size-12 bg-primary/8 rounded-lg flex items-center justify-center text-2xl mb-5">
                     {uc.icon}
                   </div>
                   <h3
@@ -474,7 +474,7 @@ export default async function SetorPage({
 
               {/* Desafio / Solução / Resultado */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+                <div className="bg-white/5 border border-white/10 rounded-xl p-8">
                   <p className="text-orange text-xs font-black uppercase tracking-widest mb-3">
                     Desafio
                   </p>
@@ -482,7 +482,7 @@ export default async function SetorPage({
                     {sector.caseStudy.challenge}
                   </p>
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+                <div className="bg-white/5 border border-white/10 rounded-xl p-8">
                   <p className="text-orange text-xs font-black uppercase tracking-widest mb-3">
                     Solução
                   </p>
@@ -490,7 +490,7 @@ export default async function SetorPage({
                     {sector.caseStudy.solution}
                   </p>
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+                <div className="bg-white/5 border border-white/10 rounded-xl p-8">
                   <p className="text-orange text-xs font-black uppercase tracking-widest mb-3">
                     Resultado
                   </p>
@@ -505,7 +505,7 @@ export default async function SetorPage({
                 {sector.caseStudy.metrics.map((m, i) => (
                   <div
                     key={m.label}
-                    className={`rounded-2xl p-6 text-center ${i === 0 ? "bg-orange text-white" : i === 1 ? "bg-primary text-on-primary" : "bg-white/10 text-inverse-on-surface"}`}
+                    className={`rounded-xl p-6 text-center ${i === 0 ? "bg-orange text-white" : i === 1 ? "bg-primary text-on-primary" : "bg-white/10 text-inverse-on-surface"}`}
                   >
                     <p
                       className="text-3xl lg:text-4xl font-black mb-2"
@@ -534,7 +534,7 @@ export default async function SetorPage({
               {sector.products.map((p) => (
                 <div
                   key={p.title}
-                  className="border border-border rounded-2xl p-8 flex flex-col gap-4 hover:border-primary/30 hover:shadow-lg transition-all ambient-shadow"
+                  className="border border-border rounded-xl p-8 flex flex-col gap-4 hover:border-primary/30 hover:shadow-lg transition-all ambient-shadow"
                 >
                   <h3
                     className="text-lg font-black uppercase"

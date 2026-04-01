@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Button from "@/components/ui/Button";
@@ -57,7 +57,7 @@ export default function QuoteForm() {
 
   if (submitted) {
     return (
-      <div className="text-center py-16 px-8 bg-surface-card rounded-2xl border border-border">
+      <div className="text-center py-16 px-8 bg-surface-card rounded-xl border border-border">
         <div className="size-16 rounded-full bg-green/10 text-green flex items-center justify-center text-3xl mx-auto mb-6">
           ✓
         </div>
@@ -77,12 +77,12 @@ export default function QuoteForm() {
   }
 
   const inputClass =
-    "w-full px-4 py-3 rounded-xl border border-border bg-white text-text placeholder:text-muted text-sm focus:outline-none focus:ring-2 focus:ring-purple/30 focus:border-purple transition-colors";
+    "w-full px-4 py-3 rounded-lg border border-border bg-white text-text placeholder:text-muted text-sm focus:outline-none focus:ring-2 focus:ring-purple/30 focus:border-purple transition-colors";
 
   const labelClass = "block text-sm font-semibold text-text mb-1.5";
 
   return (
-    <form onSubmit={handleSubmit} className="bg-surface-card rounded-2xl border border-border overflow-hidden">
+    <form onSubmit={handleSubmit} className="bg-surface-card rounded-xl border border-border overflow-hidden">
       {/* Progress */}
       <div className="flex border-b border-border">
         {([1, 2, 3] as Step[]).map((s) => (
@@ -113,7 +113,7 @@ export default function QuoteForm() {
                     key={opt}
                     type="button"
                     onClick={() => set("product", opt)}
-                    className={`px-4 py-3 rounded-xl text-sm font-medium border text-left transition-all ${
+                    className={`px-4 py-3 rounded-lg text-sm font-medium border text-left transition-all ${
                       form.product === opt
                         ? "bg-purple text-white border-purple"
                         : "bg-white text-text border-border hover:border-purple/40"
@@ -133,7 +133,7 @@ export default function QuoteForm() {
                     key={opt}
                     type="button"
                     onClick={() => set("eventType", opt)}
-                    className={`px-4 py-3 rounded-xl text-sm font-medium border text-left transition-all ${
+                    className={`px-4 py-3 rounded-lg text-sm font-medium border text-left transition-all ${
                       form.eventType === opt
                         ? "bg-purple text-white border-purple"
                         : "bg-white text-text border-border hover:border-purple/40"

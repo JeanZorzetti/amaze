@@ -37,7 +37,7 @@ export default function ProductCard({
   return (
     <Link
       href={href}
-      className={`group relative overflow-hidden rounded-2xl cursor-pointer flex items-end w-full h-full ${large ? "min-h-[640px]" : "min-h-[300px]"}`}
+      className={`group relative overflow-hidden rounded-xl cursor-pointer flex items-end w-full h-full ${large ? "min-h-[640px]" : "min-h-[300px]"}`}
     >
       {/* Background */}
       {imageSrc ? (
