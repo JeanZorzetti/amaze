@@ -167,7 +167,7 @@ export default function SiroccoHideventPage() {
                 MANGUEIRA EXTERNA VS. HIDEVENT
               </h2>
             </div>
-            <div className="rounded-xl overflow-hidden border border-border">
+            <div className="rounded-md overflow-hidden border border-border">
               {/* Header */}
               <div className="grid grid-cols-3 bg-on-surface text-inverse-on-surface text-xs font-black uppercase tracking-widest">
                 <div className="col-span-1 p-4">Critério</div>
@@ -250,10 +250,10 @@ export default function SiroccoHideventPage() {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {specs.map((s) => (
-                <div key={s.label} className="bg-surface-container-low border border-border rounded-xl p-6">
-                  <p className="text-[0.6rem] font-black uppercase tracking-widest text-muted mb-2">{s.label}</p>
+                <div key={s.label} className="bg-surface-container-low border border-border rounded-lg px-10 py-5">
+                  <p className="text-[0.6rem] font-black uppercase tracking-widest text-muted mb-1.5">{s.label}</p>
                   <p
-                    className="text-xl font-black text-text"
+                    className="text-lg font-black text-text"
                     style={{ fontFamily: "var(--font-headline)" }}
                   >
                     {s.value}

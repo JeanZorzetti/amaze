@@ -21,24 +21,24 @@ const sectors = [
 
 const tecnologias = [
   {
-    label: "Motor Sirocco HideVENT",
-    href: "/tecnologia/sirocco-hidevent",
-    icon: "⚡",
-    desc: "100% embutido, 330w, inflagem em 2 min",
-    badge: "Exclusivo",
-  },
-  {
-    label: "Poliéster 300g/m²",
-    href: "/tecnologia/poliester-300",
-    icon: "🧵",
-    desc: "Material base com impressão fotográfica",
+    label: "Engenharia Aplicada",
+    href: "/tecnologia/engenharia-aplicada",
+    icon: "⚙️",
+    desc: "Motor, ancoragem e fluxo contínuo",
     badge: null,
   },
   {
-    label: "Ancoragem 300 kg/f",
-    href: "/tecnologia/ancoragem-300",
-    icon: "⚓",
-    desc: "6 camadas de reforço, argola 38mm",
+    label: "Impacto Visual Estratégico",
+    href: "/tecnologia/impacto-visual",
+    icon: "🎯",
+    desc: "Escala, definição e domínio de atenção",
+    badge: null,
+  },
+  {
+    label: "Confiabilidade Operacional",
+    href: "/tecnologia/confiabilidade",
+    icon: "🛡️",
+    desc: "Performance garantida do início ao fim",
     badge: null,
   },
 ];

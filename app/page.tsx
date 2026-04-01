@@ -432,7 +432,69 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── 8. EXPERT CTA — full-width, phone + quote button ── */}
+        {/* ── 8. POR QUE A AMAZE — Michelin-style numbered reasons ── */}
+        <section className="py-24 px-4 lg:px-8 bg-white">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16 items-start">
+
+            {/* Left — sticky title */}
+            <div className="lg:sticky lg:top-32">
+              <p className="section-label text-orange mb-4">Nossa Filosofia</p>
+              <h2
+                className="text-4xl lg:text-5xl font-black leading-tight uppercase text-text"
+                style={{ fontFamily: "var(--font-headline)" }}
+              >
+                POR QUE A AMAZE<br />
+                <span className="text-primary">É DIFERENTE?</span>
+              </h2>
+            </div>
+
+            {/* Right — numbered items */}
+            <div className="divide-y divide-border">
+              {[
+                {
+                  num: "1",
+                  title: "Infláveis são ativos, não despesas",
+                  body: "Um inflável Amaze deve ser tratado como CAPEX — um investimento de longa duração. Com vida útil de 5 a 10 anos e garantia de 3 anos, o custo por ativação se torna drasticamente menor que qualquer outra mídia física de grande formato. É um ativo que se paga no primeiro grande evento e continua gerando valor por anos.",
+                },
+                {
+                  num: "2",
+                  title: "Engenharia aeronáutica, não artesanato",
+                  body: "Poliéster emborrachado 300g/m², motor Sirocco HideVENT 100% embutido, ancoragem 300 kg/f documentada. Cada decisão de material e estrutura segue o mesmo rigor das aplicações aeronáuticas — porque infláveis que falham em eventos não têm segundo chance.",
+                },
+                {
+                  num: "3",
+                  title: "40+ anos de know-how passado de pai para filho",
+                  body: "A Amaze carrega o conhecimento acumulado de mais de 40 anos, consolidado de geração em geração. Esse legado se traduz em padrões técnicos que nenhum concorrente consegue replicar — e em especificações que publicamos abertamente porque somos os únicos que as possuem.",
+                },
+                {
+                  num: "4",
+                  title: "Dominar o espaço é dominar a percepção",
+                  body: "Infláveis gigantes operam acima da linha de visão, onde nenhum banner, stand ou display convencional chega. Quem ocupa o espaço vertical domina o ambiente — e molda a percepção de autoridade e escala da marca nos próximos 30 segundos de atenção do público.",
+                },
+              ].map((item) => (
+                <div key={item.num} className="grid grid-cols-[3rem_1fr] gap-6 py-8">
+                  <div
+                    className="size-10 bg-primary flex items-center justify-center text-on-primary font-black text-sm shrink-0"
+                  >
+                    {item.num}
+                  </div>
+                  <div>
+                    <h3
+                      className="text-lg font-black text-text mb-2"
+                      style={{ fontFamily: "var(--font-headline)" }}
+                    >
+                      {item.title}
+                    </h3>
+                    <p className="text-muted text-sm leading-relaxed">{item.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+          </div>
+        </section>
+
+        {/* ── 9. EXPERT CTA — full-width, phone + quote button ── */}
         <section className="py-32 px-4 lg:px-8 bg-purple text-white text-center relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-secondary opacity-20 blur-[100px]" />

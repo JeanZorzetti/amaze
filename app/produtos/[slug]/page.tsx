@@ -692,13 +692,13 @@ export default async function ProdutoPage({
               {product.specs.map((spec) => (
                 <div
                   key={spec.label}
-                  className="bg-white/5 border border-white/10 rounded-lg p-4"
+                  className="bg-white/5 border border-white/10 rounded-lg px-10 py-5"
                 >
-                  <p className="text-[0.6rem] uppercase tracking-widest text-inverse-on-surface/40 mb-1">
+                  <p className="text-[0.6rem] uppercase tracking-widest text-inverse-on-surface/40 mb-1.5">
                     {spec.label}
                   </p>
                   <p
-                    className="text-xl font-black text-inverse-on-surface"
+                    className="text-lg font-black text-inverse-on-surface"
                     style={{ fontFamily: "var(--font-headline)" }}
                   >
                     {spec.value}

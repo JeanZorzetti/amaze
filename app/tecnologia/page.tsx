@@ -229,9 +229,9 @@ export default function TecnologiaPage() {
                       {p.specs.map((s) => (
                         <div
                           key={s.label}
-                          className={`rounded-lg p-4 ${p.dark ? "bg-white/5 border border-white/10" : "bg-white border border-border"}`}
+                          className={`rounded-lg px-6 py-5 ${p.dark ? "bg-white/5 border border-white/10" : "bg-white border border-border"}`}
                         >
-                          <p className={`text-[0.6rem] font-black uppercase tracking-widest mb-1 ${p.dark ? "text-inverse-on-surface/40" : "text-muted"}`}>
+                          <p className={`text-[0.6rem] font-black uppercase tracking-widest mb-1.5 ${p.dark ? "text-inverse-on-surface/40" : "text-muted"}`}>
                             {s.label}
                           </p>
                           <p
@@ -304,10 +304,10 @@ export default function TecnologiaPage() {
               </p>
             </div>
 
-            <div className="rounded-xl overflow-hidden border border-border">
+            <div className="rounded-md overflow-hidden border border-border">
               {/* Header */}
               <div className="grid grid-cols-3 bg-on-surface text-inverse-on-surface text-xs font-black uppercase tracking-widest">
-                <div className="col-span-1 p-4">Especificação</div>
+                <div className="col-span-1 px-6 py-4">Especificação</div>
                 <div className="p-4 text-center text-orange">Amaze</div>
                 <div className="p-4 text-center text-inverse-on-surface/40">Mercado</div>
               </div>
@@ -317,7 +317,7 @@ export default function TecnologiaPage() {
                   key={row.spec}
                   className={`grid grid-cols-3 text-sm border-t border-border ${i % 2 === 0 ? "bg-white" : "bg-surface-container-low"}`}
                 >
-                  <div className="col-span-1 p-4 font-semibold text-text">{row.spec}</div>
+                  <div className="col-span-1 px-6 py-4 font-semibold text-text">{row.spec}</div>
                   <div className="p-4 flex items-center justify-center">
                     <span className="size-6 rounded-full bg-green/15 flex items-center justify-center text-green font-black text-xs">✓</span>
                   </div>

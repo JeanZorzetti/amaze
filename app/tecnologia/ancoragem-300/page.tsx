@@ -316,10 +316,10 @@ export default function Ancoragem300Page() {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {specs.map((s) => (
-                <div key={s.label} className="bg-surface-container-low border border-border rounded-xl p-6">
-                  <p className="text-[0.6rem] font-black uppercase tracking-widest text-muted mb-2">{s.label}</p>
+                <div key={s.label} className="bg-surface-container-low border border-border rounded-lg px-10 py-5">
+                  <p className="text-[0.6rem] font-black uppercase tracking-widest text-muted mb-1.5">{s.label}</p>
                   <p
-                    className="text-xl font-black text-text leading-tight"
+                    className="text-lg font-black text-text leading-tight"
                     style={{ fontFamily: "var(--font-headline)" }}
                   >
                     {s.value}
