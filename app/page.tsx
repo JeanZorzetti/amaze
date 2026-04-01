@@ -494,7 +494,95 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── 9. EXPERT CTA — full-width, phone + quote button ── */}
+        {/* ── 9. ESPECIALISTA — Floatie Kings style ── */}
+        <section className="py-24 px-4 lg:px-8 bg-surface-container-low">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <p className="section-label text-orange mb-3">Atendimento Especializado</p>
+              <h2
+                className="text-3xl lg:text-5xl font-black text-text uppercase"
+                style={{ fontFamily: "var(--font-headline)" }}
+              >
+                A MELHOR EXPERIÊNCIA COMEÇA
+                <br />
+                <span className="text-primary">COM PESSOAS REAIS</span>
+              </h2>
+            </div>
+
+            <div className="bg-white rounded-xl border border-border overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] items-stretch">
+
+                {/* Foto placeholder */}
+                <div className="relative bg-surface-container-low border-b lg:border-b-0 lg:border-r border-border flex flex-col items-center justify-center min-h-72 lg:min-h-0">
+                  <div className="w-full h-full min-h-72 flex flex-col items-center justify-center gap-3 text-muted p-8">
+                    <svg className="size-14 opacity-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                    </svg>
+                    <span className="text-xs font-bold uppercase tracking-widest opacity-40 text-center">Foto do especialista</span>
+                  </div>
+                </div>
+
+                {/* Conteúdo */}
+                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                  <h3
+                    className="text-2xl lg:text-3xl font-black text-text uppercase leading-tight mb-3"
+                    style={{ fontFamily: "var(--font-headline)" }}
+                  >
+                    UM ESPECIALISTA AMAZE
+                    <br />
+                    ESTÁ PRONTO PARA TE ATENDER
+                  </h3>
+                  <p className="text-muted mb-8 leading-relaxed">
+                    Suporte personalizado de alguém que entende de infláveis de verdade —
+                    do briefing à entrega, do conceito à especificação técnica.
+                  </p>
+
+                  <p className="text-xs font-black uppercase tracking-widest text-orange mb-5">Como podemos ajudar</p>
+                  <div className="grid grid-cols-2 gap-4 mb-10">
+                    {[
+                      { icon: "🎨", label: "Escolha do produto ideal" },
+                      { icon: "📐", label: "Assistência de design" },
+                      { icon: "💬", label: "Orçamento em 24h" },
+                      { icon: "📦", label: "Suporte de pedido" },
+                    ].map((item) => (
+                      <div key={item.label} className="flex items-center gap-3 text-sm text-text">
+                        <span className="text-xl">{item.icon}</span>
+                        {item.label}
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <a
+                      href="https://wa.me/5548920612591"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-hover-inflate inline-flex items-center justify-center gap-2 h-12 px-8 bg-orange text-white rounded-full font-black text-sm uppercase tracking-wide"
+                    >
+                      <svg className="size-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L0 24l6.296-1.507A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.651-.51-5.17-1.402l-.371-.22-3.838.92.97-3.72-.242-.386A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+                      </svg>
+                      FALAR NO WHATSAPP
+                    </a>
+                    <a
+                      href="tel:+5548920612591"
+                      className="inline-flex items-center justify-center gap-2 h-12 px-8 bg-white border-2 border-border text-text rounded-full font-black text-sm uppercase tracking-wide hover:border-primary/40 transition-colors"
+                    >
+                      <svg className="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 6.75z" />
+                      </svg>
+                      +55 48 9206-1259
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. EXPERT CTA — full-width, phone + quote button ── */}
         <section className="py-32 px-4 lg:px-8 bg-purple text-white text-center relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-secondary opacity-20 blur-[100px]" />

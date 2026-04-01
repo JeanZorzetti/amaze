@@ -21,6 +21,7 @@ const links = {
     { label: "Sobre Nós",    href: "/sobre" },
     { label: "Portfólio",    href: "/portfolio" },
     { label: "Blog",         href: "/blog" },
+    { label: "Instruções",   href: "/instrucoes" },
     { label: "Contato",      href: "/contact" },
     { label: "Orçamento",    href: "/orcamento" },
   ],
