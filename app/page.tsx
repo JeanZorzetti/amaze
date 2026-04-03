@@ -329,38 +329,43 @@ export default function Home() {
                   num: "01",
                   title: "SOLICITE UM ORÇAMENTO",
                   desc: "Conte-nos sobre seu projeto pelo nosso formulário. Respondemos com uma proposta personalizada em até 24 horas.",
-                  icon: "📋",
                 },
                 {
                   num: "02",
                   title: "DESIGN & APROVAÇÃO",
                   desc: "Nossa equipe cria uma maquete 3D colorida. Você revisa e aprova cada detalhe antes do início da produção.",
-                  icon: "✏️",
                 },
                 {
                   num: "03",
                   title: "PRODUÇÃO & ENTREGA",
                   desc: "Fabricamos seu inflável com engenharia de precisão e entregamos no local — pontualmente, sempre.",
-                  icon: "🚚",
                 },
               ].map((step) => (
-                <div key={step.num} className="relative bg-white/5 rounded-xl p-8 border border-white/10">
-                  <div
-                    className="text-[5rem] font-black leading-none text-white/5 select-none absolute top-2 right-4"
-                    style={{ fontFamily: "var(--font-headline)" }}
-                  >
-                    {step.num}
+                <div key={step.num} className="relative bg-white/5 rounded-xl overflow-hidden border border-white/10">
+                  {/* Image placeholder */}
+                  <div className="aspect-[4/3] bg-white/5 border-b-2 border-dashed border-white/20 flex flex-col items-center justify-center gap-3">
+                    <svg className="size-10 text-white/20" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M6.827 6.175A2.31 2.31 0 0 1 5.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 0 0-1.134-.175 2.31 2.31 0 0 1-1.64-1.055l-.822-1.316a2.192 2.192 0 0 0-1.736-1.039 48.774 48.774 0 0 0-5.232 0 2.192 2.192 0 0 0-1.736 1.039l-.821 1.316Z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0ZM18.75 10.5h.008v.008h-.008V10.5Z" />
+                    </svg>
+                    <span className="text-xs text-white/30 uppercase tracking-wider">Foto do passo {step.num}</span>
                   </div>
-                  <div className="size-14 rounded-full bg-orange/20 flex items-center justify-center text-2xl mb-6">
-                    {step.icon}
+                  {/* Content */}
+                  <div className="relative p-8">
+                    <div
+                      className="text-[5rem] font-black leading-none text-white/5 select-none absolute top-2 right-4"
+                      style={{ fontFamily: "var(--font-headline)" }}
+                    >
+                      {step.num}
+                    </div>
+                    <h3
+                      className="font-black text-inverse-on-surface text-xl uppercase mb-3"
+                      style={{ fontFamily: "var(--font-headline)" }}
+                    >
+                      {step.title}
+                    </h3>
+                    <p className="text-inverse-on-surface/60 text-sm leading-relaxed">{step.desc}</p>
                   </div>
-                  <h3
-                    className="font-black text-inverse-on-surface text-xl uppercase mb-3"
-                    style={{ fontFamily: "var(--font-headline)" }}
-                  >
-                    {step.title}
-                  </h3>
-                  <p className="text-inverse-on-surface/60 text-sm leading-relaxed">{step.desc}</p>
                 </div>
               ))}
             </div>
