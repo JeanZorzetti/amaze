@@ -14,8 +14,8 @@ const images = [
 
 export default function FloatieKingsGallery() {
   return (
-    <section className="w-full bg-white pb-12 pt-4 px-2 md:px-4">
-      <div className="max-w-[1600px] mx-auto">
+    <section className="w-full bg-white pb-12 pt-4">
+      <div className="w-full">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-3 auto-rows-[150px] md:auto-rows-[250px] lg:grid-rows-[250px_320px_350px]">
           
           {/* Item 1: Top left (spans 2 cols). Encaixa WPI Arch panorâmico */}
