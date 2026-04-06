@@ -1,4 +1,6 @@
-﻿// Footer — inverse-surface (#342e38) style from v1.html
+﻿"use client"
+
+// Footer — inverse-surface (#342e38) style from v1.html
 
 import Link from "next/link";
 import dynamic from "next/dynamic";
