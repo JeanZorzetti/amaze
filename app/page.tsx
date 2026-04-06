@@ -383,39 +383,35 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── GALLERY BREAK — simple parallax mosaic ── */}
-        <section className="relative w-full h-[600px] overflow-hidden">
-          {/* Fixed background image grid */}
-          <div
-            className="absolute inset-0 grid grid-cols-4 grid-rows-3 gap-1"
-            style={{ backgroundAttachment: "fixed" }}
-          >
-            {[
-              "SaveClip.App_588050369_17875356303448342_4763558584539654616_n.jpg",
-              "SaveClip.App_589642225_17876804805448342_7097452702531659399_n.jpg",
-              "SaveClip.App_589648017_17876804814448342_8600020723861108054_n.jpg",
-              "SaveClip.App_598409687_17877354618448342_6209046712205705990_n.jpg",
-              "SaveClip.App_598635946_17877354609448342_3340277087935498923_n.jpg",
-              "SaveClip.App_598834557_17877354591448342_4532624735367015725_n.jpg",
-              "SaveClip.App_598904006_17877354627448342_7377931598932079293_n.jpg",
-              "SaveClip.App_598989249_17877354600448342_7726145296482408610_n.jpg",
-              "SaveClip.App_604055838_17878831959448342_7903443883004681535_n.jpg",
-              "SaveClip.App_606337516_17878831950448342_3141222151768433182_n.jpg",
-              "SaveClip.App_632153979_17885887683448342_7600628157039576746_n.jpg",
-              "SaveClip.App_659586715_17891981046448342_7629493146823458172_n.jpg",
-            ].map((file, i) => (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                key={i}
-                src={`/images/gallery/${file}`}
-                alt={`Projeto Amaze ${i + 1}`}
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            ))}
+        {/* ── GALLERY BREAK — Floatie Kings layout ── */}
+        <section className="w-full overflow-hidden" style={{ height: "820px", display: "flex", gap: "2px" }}>
+
+          {/* Col esquerda — 3 fotos empilhadas */}
+          <div style={{ flex: "0 0 24%", display: "flex", flexDirection: "column", gap: "2px" }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/gallery/SaveClip.App_598635946_17877354609448342_3340277087935498923_n.jpg" alt="Amaze 1" style={{ flex: 1, width: "100%", objectFit: "cover" }} loading="lazy" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/gallery/SaveClip.App_598904006_17877354627448342_7377931598932079293_n.jpg" alt="Amaze 2" style={{ flex: 1, width: "100%", objectFit: "cover" }} loading="lazy" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/gallery/SaveClip.App_632153979_17885887683448342_7600628157039576746_n.jpg" alt="Amaze 3" style={{ flex: 1, width: "100%", objectFit: "cover" }} loading="lazy" />
           </div>
-          {/* Dark overlay for depth */}
-          <div className="absolute inset-0 bg-on-surface/40" />
+
+          {/* Col centro — panorâmica topo + grande embaixo */}
+          <div style={{ flex: "0 0 52%", display: "flex", flexDirection: "column", gap: "2px" }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/gallery/SaveClip.App_589642225_17876804805448342_7097452702531659399_n.jpg" alt="Amaze 4" style={{ flex: "0 0 38%", width: "100%", objectFit: "cover" }} loading="lazy" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/gallery/SaveClip.App_604055838_17878831959448342_7903443883004681535_n.jpg" alt="Amaze 5" style={{ flex: "0 0 62%", width: "100%", objectFit: "cover" }} loading="lazy" />
+          </div>
+
+          {/* Col direita — 2 fotos retrato */}
+          <div style={{ flex: "0 0 24%", display: "flex", flexDirection: "column", gap: "2px" }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/gallery/SaveClip.App_598834557_17877354591448342_4532624735367015725_n.jpg" alt="Amaze 6" style={{ flex: 1, width: "100%", objectFit: "cover" }} loading="lazy" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/gallery/SaveClip.App_659586715_17891981046448342_7629493146823458172_n.jpg" alt="Amaze 7" style={{ flex: 1, width: "100%", objectFit: "cover" }} loading="lazy" />
+          </div>
+
         </section>
 
         {/* ── 7. PORTFOLIO HIGHLIGHTS ── */}
