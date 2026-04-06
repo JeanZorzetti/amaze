@@ -411,13 +411,13 @@ export default function Home() {
 
           {/* CENTER TOP — wide top band */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/gallery/SaveClip.App_589642225_17876804805448342_7097452702531659399_n.jpg" alt="Amaze 4"
+          <img src="/images/gallery/SaveClip.App_589648017_17876804814448342_8600020723861108054_n.jpg" alt="Amaze 4"
             style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover",
               clipPath: "polygon(24% 0, 78% 0, 75% 38%, 27% 38%)" }} loading="lazy" />
 
           {/* CENTER BOT — large center bottom */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/gallery/SaveClip.App_604055838_17878831959448342_7903443883004681535_n.jpg" alt="Amaze 5"
+          <img src="/images/gallery/SaveClip.App_598409687_17877354618448342_6209046712205705990_n.jpg" alt="Amaze 5"
             style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover",
               clipPath: "polygon(27% 38%, 75% 38%, 72% 100%, 18% 100%)" }} loading="lazy" />
 
