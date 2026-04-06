@@ -1,6 +1,9 @@
 ﻿// Footer — inverse-surface (#342e38) style from v1.html
 
 import Link from "next/link";
+import dynamic from "next/dynamic";
+
+const WorldMap = dynamic(() => import("@/components/blocks/WorldMap"), { ssr: false });
 
 const links = {
   Produtos: [
@@ -127,56 +130,9 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* SVG World Map */}
-            <div className="flex-1 relative overflow-hidden" style={{ minHeight: "260px" }}>
-              {/* Simple world map paths — orange gradient fill */}
-              <svg viewBox="0 0 1010 570" className="w-full h-full" style={{ opacity: 0.85 }}>
-                <defs>
-                  <linearGradient id="mapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#f97316" />
-                    <stop offset="50%" stopColor="#ea580c" />
-                    <stop offset="100%" stopColor="#c2410c" />
-                  </linearGradient>
-                </defs>
-                {/* Simplified continent shapes */}
-                {/* North America */}
-                <path fill="url(#mapGrad)" d="M120,80 L220,60 L280,70 L300,100 L310,140 L290,180 L260,220 L230,260 L200,280 L170,260 L140,230 L110,200 L90,160 L95,120 Z" />
-                {/* Central America */}
-                <path fill="url(#mapGrad)" d="M200,280 L230,260 L240,290 L230,320 L210,330 L195,310 Z" />
-                {/* South America */}
-                <path fill="url(#mapGrad)" d="M195,330 L240,310 L270,330 L290,370 L300,420 L290,460 L260,490 L230,480 L200,450 L185,410 L180,370 Z" />
-                {/* Europe */}
-                <path fill="url(#mapGrad)" d="M430,60 L490,55 L520,70 L530,100 L510,120 L480,130 L450,120 L420,100 L415,80 Z" />
-                {/* Africa */}
-                <path fill="url(#mapGrad)" d="M430,140 L490,130 L530,150 L545,200 L540,260 L520,310 L490,340 L460,330 L430,300 L415,250 L410,200 L420,160 Z" />
-                {/* Asia */}
-                <path fill="url(#mapGrad)" d="M530,55 L650,45 L780,60 L840,90 L860,130 L830,170 L780,190 L720,200 L660,190 L600,180 L550,160 L530,130 L520,100 Z" />
-                {/* Russia north */}
-                <path fill="url(#mapGrad)" d="M490,40 L650,30 L800,40 L840,60 L780,60 L650,45 L530,55 L490,55 Z" />
-                {/* Southeast Asia / Indonesia */}
-                <path fill="url(#mapGrad)" d="M720,200 L780,190 L830,210 L850,230 L820,240 L780,235 L740,225 Z" />
-                <path fill="url(#mapGrad)" d="M800,240 L840,235 L860,255 L840,265 L810,258 Z" />
-                {/* Australia */}
-                <path fill="url(#mapGrad)" d="M760,310 L840,300 L890,320 L900,370 L870,410 L820,420 L770,400 L745,360 L750,325 Z" />
-                {/* Japan / Korea */}
-                <path fill="url(#mapGrad)" d="M840,120 L860,115 L870,130 L855,140 L840,135 Z" />
-                {/* UK / Ireland */}
-                <path fill="url(#mapGrad)" d="M415,65 L430,60 L428,80 L415,80 Z" />
-
-                {/* Pin — Brasil (approx ~240, 390) */}
-                <g transform="translate(240,375)">
-                  <circle cx="0" cy="0" r="8" fill="white" opacity="0.9" />
-                  <circle cx="0" cy="0" r="4" fill="#f97316" />
-                  <line x1="0" y1="0" x2="0" y2="18" stroke="white" strokeWidth="2" />
-                </g>
-
-                {/* Pin — USA (approx ~185, 155) */}
-                <g transform="translate(185,155)">
-                  <circle cx="0" cy="0" r="8" fill="white" opacity="0.9" />
-                  <circle cx="0" cy="0" r="4" fill="#f97316" />
-                  <line x1="0" y1="0" x2="0" y2="18" stroke="white" strokeWidth="2" />
-                </g>
-              </svg>
+            {/* react-simple-maps World Map */}
+            <div className="flex-1" style={{ minHeight: "260px" }}>
+              <WorldMap />
             </div>
 
           </div>
