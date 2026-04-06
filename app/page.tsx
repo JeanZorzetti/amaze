@@ -13,7 +13,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroSlider from "@/components/HeroSlider";
 import { FAQSchema } from "@/components/SchemaOrg";
-import AmazeGallery from "@/components/blocks/amaze-gallery";
+
 
 const homeFaqs = [
   { question: "Quanto tempo leva para produzir um inflável personalizado?", answer: "A maioria dos projetos leva de 3 a 6 semanas, dependendo da complexidade. Fornecemos um prazo de entrega garantido antes do início da produção." },
@@ -383,9 +383,39 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── GALLERY BREAK ── */}
-        <section className="w-full bg-on-surface overflow-hidden">
-          <AmazeGallery />
+        {/* ── GALLERY BREAK — simple parallax mosaic ── */}
+        <section className="relative w-full h-[600px] overflow-hidden">
+          {/* Fixed background image grid */}
+          <div
+            className="absolute inset-0 grid grid-cols-4 grid-rows-3 gap-1"
+            style={{ backgroundAttachment: "fixed" }}
+          >
+            {[
+              "SaveClip.App_588050369_17875356303448342_4763558584539654616_n.jpg",
+              "SaveClip.App_589642225_17876804805448342_7097452702531659399_n.jpg",
+              "SaveClip.App_589648017_17876804814448342_8600020723861108054_n.jpg",
+              "SaveClip.App_598409687_17877354618448342_6209046712205705990_n.jpg",
+              "SaveClip.App_598635946_17877354609448342_3340277087935498923_n.jpg",
+              "SaveClip.App_598834557_17877354591448342_4532624735367015725_n.jpg",
+              "SaveClip.App_598904006_17877354627448342_7377931598932079293_n.jpg",
+              "SaveClip.App_598989249_17877354600448342_7726145296482408610_n.jpg",
+              "SaveClip.App_604055838_17878831959448342_7903443883004681535_n.jpg",
+              "SaveClip.App_606337516_17878831950448342_3141222151768433182_n.jpg",
+              "SaveClip.App_632153979_17885887683448342_7600628157039576746_n.jpg",
+              "SaveClip.App_659586715_17891981046448342_7629493146823458172_n.jpg",
+            ].map((file, i) => (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                key={i}
+                src={`/images/gallery/${file}`}
+                alt={`Projeto Amaze ${i + 1}`}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            ))}
+          </div>
+          {/* Dark overlay for depth */}
+          <div className="absolute inset-0 bg-on-surface/40" />
         </section>
 
         {/* ── 7. PORTFOLIO HIGHLIGHTS ── */}
