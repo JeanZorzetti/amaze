@@ -383,34 +383,55 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── GALLERY BREAK — Floatie Kings layout ── */}
-        <section className="w-full overflow-hidden" style={{ height: "820px", display: "flex", gap: "2px" }}>
+        {/* ── GALLERY BREAK — Floatie Kings diagonal cuts ── */}
+        {/* Layout: 7 cells, absolute positioned with clip-path polygons
+            Cols: left=0-26%, center=24-76%, right=74-100%
+            Diagonal offset: ~3% of width (~40px) creates the angled cuts
+            Rows: top=0-38%, bottom=38-100%
+        */}
+        <section className="w-full relative overflow-hidden" style={{ height: "820px" }}>
 
-          {/* Col esquerda — 3 fotos empilhadas */}
-          <div style={{ flex: "0 0 24%", display: "flex", flexDirection: "column", gap: "2px" }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/gallery/SaveClip.App_598635946_17877354609448342_3340277087935498923_n.jpg" alt="Amaze 1" style={{ flex: 1, width: "100%", objectFit: "cover" }} loading="lazy" />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/gallery/SaveClip.App_598904006_17877354627448342_7377931598932079293_n.jpg" alt="Amaze 2" style={{ flex: 1, width: "100%", objectFit: "cover" }} loading="lazy" />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/gallery/SaveClip.App_632153979_17885887683448342_7600628157039576746_n.jpg" alt="Amaze 3" style={{ flex: 1, width: "100%", objectFit: "cover" }} loading="lazy" />
-          </div>
+          {/* LEFT TOP — col left, top 1/3 */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/gallery/SaveClip.App_598635946_17877354609448342_3340277087935498923_n.jpg" alt="Amaze 1"
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover",
+              clipPath: "polygon(0 0, 27% 0, 24% 33%, 0 33%)" }} loading="lazy" />
 
-          {/* Col centro — panorâmica topo + grande embaixo */}
-          <div style={{ flex: "0 0 52%", display: "flex", flexDirection: "column", gap: "2px" }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/gallery/SaveClip.App_589642225_17876804805448342_7097452702531659399_n.jpg" alt="Amaze 4" style={{ flex: "0 0 38%", width: "100%", objectFit: "cover" }} loading="lazy" />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/gallery/SaveClip.App_604055838_17878831959448342_7903443883004681535_n.jpg" alt="Amaze 5" style={{ flex: "0 0 62%", width: "100%", objectFit: "cover" }} loading="lazy" />
-          </div>
+          {/* LEFT MID — col left, mid 1/3 */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/gallery/SaveClip.App_598904006_17877354627448342_7377931598932079293_n.jpg" alt="Amaze 2"
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover",
+              clipPath: "polygon(0 33%, 24% 33%, 21% 66%, 0 66%)" }} loading="lazy" />
 
-          {/* Col direita — 2 fotos retrato */}
-          <div style={{ flex: "0 0 24%", display: "flex", flexDirection: "column", gap: "2px" }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/gallery/SaveClip.App_598834557_17877354591448342_4532624735367015725_n.jpg" alt="Amaze 6" style={{ flex: 1, width: "100%", objectFit: "cover" }} loading="lazy" />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/gallery/SaveClip.App_659586715_17891981046448342_7629493146823458172_n.jpg" alt="Amaze 7" style={{ flex: 1, width: "100%", objectFit: "cover" }} loading="lazy" />
-          </div>
+          {/* LEFT BOT — col left, bottom 1/3 */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/gallery/SaveClip.App_632153979_17885887683448342_7600628157039576746_n.jpg" alt="Amaze 3"
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover",
+              clipPath: "polygon(0 66%, 21% 66%, 18% 100%, 0 100%)" }} loading="lazy" />
+
+          {/* CENTER TOP — wide top band */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/gallery/SaveClip.App_589642225_17876804805448342_7097452702531659399_n.jpg" alt="Amaze 4"
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover",
+              clipPath: "polygon(24% 0, 78% 0, 75% 38%, 27% 38%)" }} loading="lazy" />
+
+          {/* CENTER BOT — large center bottom */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/gallery/SaveClip.App_604055838_17878831959448342_7903443883004681535_n.jpg" alt="Amaze 5"
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover",
+              clipPath: "polygon(27% 38%, 75% 38%, 72% 100%, 18% 100%)" }} loading="lazy" />
+
+          {/* RIGHT TOP */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/gallery/SaveClip.App_598834557_17877354591448342_4532624735367015725_n.jpg" alt="Amaze 6"
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover",
+              clipPath: "polygon(75% 0, 100% 0, 100% 50%, 78% 50%)" }} loading="lazy" />
+
+          {/* RIGHT BOT */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/gallery/SaveClip.App_659586715_17891981046448342_7629493146823458172_n.jpg" alt="Amaze 7"
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover",
+              clipPath: "polygon(78% 50%, 100% 50%, 100% 100%, 72% 100%)" }} loading="lazy" />
 
         </section>
 
