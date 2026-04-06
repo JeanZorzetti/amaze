@@ -112,6 +112,20 @@ body {
   animation-play-state: paused;
 }
 
+/* ── Masonry gallery grid ── */
+.masonry-grid {
+  display: flex;
+  width: auto;
+}
+.masonry-grid_column {
+  background-clip: padding-box;
+}
+.masonry-grid_column > img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
 /* ── Section label (Floatie Kings ALL-CAPS small label) ── */
 .section-label {
   font-size: 0.7rem;

@@ -13,6 +13,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroSlider from "@/components/HeroSlider";
 import { FAQSchema } from "@/components/SchemaOrg";
+import GalleryMosaic from "@/components/blocks/GalleryMosaic";
 
 
 const homeFaqs = [
@@ -383,57 +384,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── GALLERY BREAK — Floatie Kings diagonal cuts ── */}
-        {/* Layout: 7 cells, absolute positioned with clip-path polygons
-            Cols: left=0-26%, center=24-76%, right=74-100%
-            Diagonal offset: ~3% of width (~40px) creates the angled cuts
-            Rows: top=0-38%, bottom=38-100%
-        */}
-        <section className="w-full relative overflow-hidden" style={{ height: "820px" }}>
-
-          {/* LEFT TOP — col left, top 1/3 */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/gallery/SaveClip.App_598635946_17877354609448342_3340277087935498923_n.jpg" alt="Amaze 1"
-            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover",
-              clipPath: "polygon(0 0, 27% 0, 24% 33%, 0 33%)" }} loading="lazy" />
-
-          {/* LEFT MID — col left, mid 1/3 */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/gallery/SaveClip.App_598904006_17877354627448342_7377931598932079293_n.jpg" alt="Amaze 2"
-            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover",
-              clipPath: "polygon(0 33%, 24% 33%, 21% 66%, 0 66%)" }} loading="lazy" />
-
-          {/* LEFT BOT — col left, bottom 1/3 */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/gallery/SaveClip.App_632153979_17885887683448342_7600628157039576746_n.jpg" alt="Amaze 3"
-            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover",
-              clipPath: "polygon(0 66%, 21% 66%, 18% 100%, 0 100%)" }} loading="lazy" />
-
-          {/* CENTER TOP — wide top band */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/gallery/SaveClip.App_589648017_17876804814448342_8600020723861108054_n.jpg" alt="Amaze 4"
-            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover",
-              clipPath: "polygon(24% 0, 78% 0, 75% 38%, 27% 38%)" }} loading="lazy" />
-
-          {/* CENTER BOT — large center bottom */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/gallery/SaveClip.App_598409687_17877354618448342_6209046712205705990_n.jpg" alt="Amaze 5"
-            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover",
-              clipPath: "polygon(27% 38%, 75% 38%, 72% 100%, 18% 100%)" }} loading="lazy" />
-
-          {/* RIGHT TOP */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/gallery/SaveClip.App_598834557_17877354591448342_4532624735367015725_n.jpg" alt="Amaze 6"
-            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover",
-              clipPath: "polygon(75% 0, 100% 0, 100% 50%, 78% 50%)" }} loading="lazy" />
-
-          {/* RIGHT BOT */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/gallery/SaveClip.App_659586715_17891981046448342_7629493146823458172_n.jpg" alt="Amaze 7"
-            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover",
-              clipPath: "polygon(78% 50%, 100% 50%, 100% 100%, 72% 100%)" }} loading="lazy" />
-
-        </section>
+        {/* ── GALLERY BREAK — masonry ── */}
+        <GalleryMosaic />
 
         {/* ── 7. PORTFOLIO HIGHLIGHTS ── */}
         <section className="py-24 px-4 lg:px-8 bg-white">
