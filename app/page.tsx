@@ -13,7 +13,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroSlider from "@/components/HeroSlider";
 import { FAQSchema } from "@/components/SchemaOrg";
-import GalleryMosaic from "@/components/blocks/GalleryMosaic";
+import FloatieKingsGallery from "@/components/blocks/FloatieKingsGallery";
 
 
 const homeFaqs = [
@@ -385,7 +385,7 @@ export default function Home() {
         </section>
 
         {/* ── GALLERY BREAK — masonry ── */}
-        <GalleryMosaic />
+        <FloatieKingsGallery />
 
         {/* ── 7. PORTFOLIO HIGHLIGHTS ── */}
         <section className="py-24 px-4 lg:px-8 bg-white">
