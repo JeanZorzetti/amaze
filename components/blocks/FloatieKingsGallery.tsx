@@ -14,11 +14,11 @@ const images = [
 
 export default function FloatieKingsGallery() {
   return (
-    <section className="w-full bg-white py-12 px-4 md:px-8">
-      <div className="max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] md:auto-rows-[300px] gap-2 md:gap-4 lg:gap-6">
+    <section className="w-full bg-white pb-12 pt-4 px-2 md:px-4">
+      <div className="max-w-[1600px] mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-3 auto-rows-[150px] md:auto-rows-[250px] lg:grid-rows-[250px_320px_350px]">
           
-          {/* Item 1: WPI Arch (top left, spans 2 cols) */}
+          {/* Item 1: Top left (spans 2 cols). Encaixa WPI Arch panorâmico */}
           <div className="col-span-2 md:col-span-2 md:row-span-1 relative overflow-hidden group">
             <Image 
               src={images[0].src} 
@@ -28,7 +28,7 @@ export default function FloatieKingsGallery() {
             />
           </div>
 
-          {/* Item 2: Jet Ski (top right 1) */}
+          {/* Item 2: Top right 1 (spans 1 col). Encaixa o Jet Ski */}
           <div className="col-span-1 md:col-span-1 md:row-span-1 relative overflow-hidden group">
             <Image 
               src={images[1].src} 
@@ -38,7 +38,7 @@ export default function FloatieKingsGallery() {
             />
           </div>
 
-          {/* Item 3: Vodka (top right 2, spans 2 rows) */}
+          {/* Item 3: Top right 2 (spans 2 cols em altura). Encaixa Vodka Bottle longo */}
           <div className="col-span-1 md:col-span-1 row-span-2 md:row-span-2 relative overflow-hidden group">
             <Image 
               src={images[2].src} 
@@ -48,7 +48,7 @@ export default function FloatieKingsGallery() {
             />
           </div>
 
-          {/* Item 4: Brain (mid left) */}
+          {/* Item 4: Mid left (spans 1 col). Encaixa Brain */}
           <div className="col-span-1 md:col-span-1 md:row-span-1 relative overflow-hidden group">
             <Image 
               src={images[3].src} 
@@ -58,7 +58,7 @@ export default function FloatieKingsGallery() {
             />
           </div>
 
-          {/* Item 5: Helmet (mid center, spans 2 cols, 2 rows) */}
+          {/* Item 5: Mid center (spans 2 cols, 2 rows). Encaixa Helmetão Quadrado Gigante */}
           <div className="col-span-2 md:col-span-2 row-span-2 md:row-span-2 relative overflow-hidden group">
             <Image 
               src={images[4].src} 
@@ -68,7 +68,7 @@ export default function FloatieKingsGallery() {
             />
           </div>
 
-          {/* Item 6: Lemon (bot left) */}
+          {/* Item 6: Bot left (spans 1 col). Encaixa Lemon Square */}
           <div className="col-span-1 md:col-span-1 md:row-span-1 relative overflow-hidden group">
             <Image 
               src={images[5].src} 
@@ -78,7 +78,7 @@ export default function FloatieKingsGallery() {
             />
           </div>
 
-          {/* Item 7: Chef (bot right) */}
+          {/* Item 7: Bot right (spans 1 col). Encaixa Chef */}
           <div className="col-span-1 md:col-span-1 md:row-span-1 relative overflow-hidden group">
             <Image 
               src={images[6].src} 
