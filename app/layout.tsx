@@ -21,7 +21,7 @@ const BASE_URL = "https://amazeballoons.com";
 
 export const metadata: Metadata = {
   title: {
-    default: "Infláveis Personalizados e Balões Gigantes de Publicidade | Amaze Balloons",
+    default: "Amaze Balloons - Mais que Infláveis. Presença de Alta Performance.",
     template: "%s | Amaze Balloons",
   },
   description:
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     alternateLocale: "en_US",
     url: BASE_URL,
     siteName: "Amaze Balloons",
-    title: "Infláveis Personalizados e Balões Gigantes de Publicidade | Amaze Balloons",
+    title: "Amaze Balloons - Mais que Infláveis. Presença de Alta Performance.",
     description:
       "Infláveis personalizados premium e soluções publicitárias gigantes. Mais de 40 anos de experiência atendendo as principais marcas.",
     images: [
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Infláveis Personalizados e Balões Gigantes de Publicidade | Amaze Balloons",
+    title: "Amaze Balloons - Mais que Infláveis. Presença de Alta Performance.",
     description:
       "Infláveis personalizados premium e soluções publicitárias gigantes. Mais de 40 anos de experiência.",
     images: ["/og-image.jpg"],
