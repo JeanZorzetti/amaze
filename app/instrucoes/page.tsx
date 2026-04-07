@@ -185,8 +185,8 @@ export default function InstrucoesPage() {
 
             {/* PDF download */}
             <a
-              href="/ManualGRANDE_2025.pdf"
-              download="Manual_Amaze_Balloons_2025.pdf"
+              href="/Manual_Amaze_2025.pdf"
+              download="Manual_Amaze_Instrucoes_Bom_Uso_2025.pdf"
               className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-orange/40 rounded-xl p-8 flex flex-col items-center text-center gap-6 transition-all"
             >
               <div className="size-20 rounded-xl bg-orange/20 group-hover:bg-orange/30 flex items-center justify-center transition-colors">
