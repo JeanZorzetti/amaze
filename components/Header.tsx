@@ -4,11 +4,14 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 
 const products = [
-  { label: "Infláveis Personalizados",  href: "/produtos/inflaveis-personalizados",  icon: "🎨", desc: "Qualquer formato, cor ou tamanho" },
-  { label: "Infláveis Gigantes",        href: "/produtos/inflaveis-gigantes",   icon: "🏔️", desc: "Réplicas de até 15m ou mais" },
-  { label: "Arcos & Portais",           href: "/produtos/arcos-portais",      icon: "🔷", desc: "Entradas para corridas e eventos" },
-  { label: "Mascotes Infláveis",        href: "/produtos/mascotes-inflaveis",  icon: "🦁", desc: "Personagens em escala gigante" },
-  { label: "Totens & Displays",         href: "/produtos/totens-displays",     icon: "📐", desc: "Torres de marca em formato vertical" },
+  { label: "Tendas Infláveis",       href: "/produtos/tendas-inflaveis" },
+  { label: "Portais Infláveis",      href: "/produtos/portais-inflaveis" },
+  { label: "Totens Infláveis",       href: "/produtos/totens-inflaveis" },
+  { label: "Túneis Infláveis",       href: "/produtos/tuneis-inflaveis" },
+  { label: "Produtos Gigantes",      href: "/produtos/produtos-gigantes" },
+  { label: "Personagens Infláveis",  href: "/produtos/personagens-inflaveis" },
+  { label: "Colchões 2D",            href: "/produtos/colchoes-2d" },
+  { label: "Roof-Top",               href: "/produtos/roof-top" },
 ];
 
 const sectors = [
@@ -213,35 +216,35 @@ export default function Header() {
             </button>
 
             {megaOpen === "products" && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[600px]">
-              <div className="bg-white rounded-lg ambient-shadow border border-surface-variant/30 p-6">
-                <p className="text-[0.65rem] font-black uppercase tracking-[0.22em] text-on-surface-variant mb-4">
-                  Nossos Produtos
-                </p>
-                <div className="grid grid-cols-2 gap-2">
+              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-64">
+                <div className="bg-white rounded-lg ambient-shadow border border-surface-variant/30 overflow-hidden">
+                  <p className="text-[0.65rem] font-black uppercase tracking-[0.22em] text-on-surface-variant px-4 pt-4 pb-2">
+                    Navegue por nossos modelos
+                  </p>
                   {products.map((p) => (
                     <Link
                       key={p.href}
                       href={p.href}
                       onClick={() => setMegaOpen(null)}
-                      className="group flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 border border-transparent hover:border-primary-container/30 transition-all"
+                      className="group flex items-center gap-3 px-4 py-2.5 hover:bg-primary/5 transition-colors border-b border-outline-variant/20 last:border-0"
                     >
-                      <span className="text-xl mt-0.5">{p.icon}</span>
-                      <div>
-                        <div className="text-sm font-bold text-on-surface group-hover:text-primary transition-colors" style={{ fontFamily: "var(--font-headline)" }}>
-                          {p.label}
-                        </div>
-                        <div className="text-xs text-on-surface-variant">{p.desc}</div>
+                      {/* Image placeholder */}
+                      <div className="size-8 rounded bg-surface-container shrink-0 flex items-center justify-center text-on-surface-variant/30 border border-border">
+                        <svg className="size-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                        </svg>
                       </div>
+                      <span className="text-sm font-semibold text-on-surface group-hover:text-primary transition-colors">
+                        {p.label}
+                      </span>
                     </Link>
                   ))}
+                  <div className="px-4 py-3 bg-surface-container/50">
+                    <Link href="/orcamento" onClick={() => setMegaOpen(null)} className="text-xs font-bold text-primary hover:underline">
+                      Solicitar orçamento personalizado →
+                    </Link>
+                  </div>
                 </div>
-                <div className="mt-4 pt-4 border-t border-outline-variant/40 flex justify-end">
-                  <Link href="/orcamento" onClick={() => setMegaOpen(null)} className="text-sm font-bold text-primary hover:underline">
-                    Solicitar orçamento personalizado →
-                  </Link>
-                </div>
-              </div>
               </div>
             )}
           </div>
@@ -309,7 +312,7 @@ export default function Header() {
               {products.map((p) => (
                 <Link key={p.href} href={p.href} onClick={() => setMobileOpen(false)}
                   className="flex items-center gap-3 px-2 py-2.5 rounded-lg text-sm font-semibold text-on-surface hover:bg-primary/5 hover:text-primary transition-colors">
-                  <span>{p.icon}</span>{p.label}
+                  {p.label}
                 </Link>
               ))}
               <div className="border-t border-outline-variant/40 my-2" />
