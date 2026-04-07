@@ -253,6 +253,7 @@ export default function Header() {
             { label: "Portfólio", href: "/portfolio" },
             { label: "Sobre",     href: "/sobre" },
             { label: "Blog",      href: "/blog" },
+            { label: "FAQ",       href: "/faq" },
           ].map((item) => (
             <Link
               key={item.href}
@@ -332,7 +333,7 @@ export default function Header() {
                 </Link>
               ))}
               <div className="border-t border-outline-variant/40 my-2" />
-              {[{ label: "Portfólio", href: "/portfolio" }, { label: "Sobre", href: "/sobre" }, { label: "Blog", href: "/blog" }].map((item) => (
+              {[{ label: "Portfólio", href: "/portfolio" }, { label: "Sobre", href: "/sobre" }, { label: "Blog", href: "/blog" }, { label: "FAQ", href: "/faq" }].map((item) => (
                 <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)}
                   className="block px-2 py-2.5 rounded-lg text-sm font-semibold text-on-surface hover:bg-primary/5 hover:text-primary transition-colors">
                   {item.label}
