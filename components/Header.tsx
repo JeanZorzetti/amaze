@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const products = [
   { label: "Tendas Infláveis",       href: "/produtos/tendas-inflaveis" },
@@ -84,18 +85,15 @@ export default function Header() {
       <div className="bg-white border-b border-surface-variant/30 relative flex items-center justify-between whitespace-nowrap px-6 py-3.5 lg:px-12">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 text-primary shrink-0">
-          <div className="size-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
-            <svg className="size-4" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
-            </svg>
-          </div>
-          <span
-            className="text-primary font-black text-xl leading-tight tracking-tight uppercase"
-            style={{ fontFamily: "var(--font-headline)" }}
-          >
-            Amaze Balloons
-          </span>
+        <Link href="/" className="shrink-0">
+          <Image
+            src="/logos/2026_AmazeBalloons_B_black.png"
+            alt="Amaze Balloons"
+            width={160}
+            height={52}
+            className="h-10 w-auto"
+            priority
+          />
         </Link>
 
         {/* Desktop nav — centered absolutely, Michelin style */}
