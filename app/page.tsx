@@ -179,98 +179,103 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
 
               {/* Card destaque — Sirocco HideVENT */}
-              <div className="md:col-span-2 lg:col-span-2 bg-gradient-to-br from-primary to-purple rounded-xl p-8 flex flex-col gap-6">
-                <div className="flex items-start gap-4">
-                  <div className="size-12 rounded-lg bg-white/15 flex items-center justify-center text-2xl shrink-0">⚡</div>
-                  <div>
-                    <p className="text-[0.6rem] font-black uppercase tracking-[0.25em] text-orange mb-1">Exclusivo Amaze</p>
-                    <h3
-                      className="font-black text-white text-xl lg:text-2xl uppercase"
-                      style={{ fontFamily: "var(--font-headline)" }}
-                    >
-                      Motor Sirocco HideVENT
-                    </h3>
+              <div className="md:col-span-2 lg:col-span-2 bg-gradient-to-br from-primary to-purple rounded-xl overflow-hidden flex flex-col gap-0">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/gallery/SaveClip.App_604055838_17878831959448342_7903443883004681535_n.jpg" alt="" className="w-full h-40 object-cover opacity-60" />
+                <div className="p-8 flex flex-col gap-6 flex-1">
+                  <div className="flex items-start gap-4">
+                    <div className="size-12 rounded-lg bg-white/15 flex items-center justify-center text-2xl shrink-0">⚡</div>
+                    <div>
+                      <p className="text-[0.6rem] font-black uppercase tracking-[0.25em] text-orange mb-1">Exclusivo Amaze</p>
+                      <h3 className="font-black text-white text-xl lg:text-2xl uppercase" style={{ fontFamily: "var(--font-headline)" }}>
+                        Motor Sirocco HideVENT
+                      </h3>
+                    </div>
                   </div>
-                </div>
-                <p className="text-white/70 text-sm leading-relaxed">
-                  100% embutido na estrutura — sem mangueiras externas, sem riscos de acidentes. À prova d'água, opera com <strong className="text-white">330w de potência</strong> e infla arenas inteiras em aproximadamente 2 minutos. Silencioso. Invisível. Implacável.
-                </p>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {["330w de potência", "À prova d'água", "Inflagem em ~2 min", "100% embutido"].map((tag) => (
-                    <span key={tag} className="px-3 py-1 bg-white/10 text-white text-xs font-bold rounded-full border border-white/15">{tag}</span>
-                  ))}
+                  <p className="text-white/70 text-sm leading-relaxed">
+                    100% embutido na estrutura — sem mangueiras externas, sem riscos de acidentes. À prova d'água, opera com <strong className="text-white">330w de potência</strong> e infla arenas inteiras em aproximadamente 2 minutos. Silencioso. Invisível. Implacável.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mt-auto">
+                    {["330w de potência", "À prova d'água", "Inflagem em ~2 min", "100% embutido"].map((tag) => (
+                      <span key={tag} className="px-3 py-1 bg-white/10 text-white text-xs font-bold rounded-full border border-white/15">{tag}</span>
+                    ))}
+                  </div>
                 </div>
               </div>
 
               {/* Garantia 3 anos */}
-              <div className="bg-orange rounded-xl p-8 flex flex-col gap-4">
-                <div className="size-12 rounded-lg bg-white/20 flex items-center justify-center text-2xl">🛡️</div>
-                <div>
-                  <p className="text-[0.6rem] font-black uppercase tracking-[0.25em] text-white/60 mb-1">Única no Setor</p>
-                  <h3
-                    className="font-black text-white text-xl uppercase"
-                    style={{ fontFamily: "var(--font-headline)" }}
-                  >
-                    Garantia de 3 Anos
-                  </h3>
+              <div className="bg-orange rounded-xl overflow-hidden flex flex-col">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/gallery/SaveClip.App_604055838_17878831959448342_7903443883004681535_n.jpg" alt="" className="w-full h-40 object-cover opacity-50" />
+                <div className="p-8 flex flex-col gap-4 flex-1">
+                  <div className="size-12 rounded-lg bg-white/20 flex items-center justify-center text-2xl">🛡️</div>
+                  <div>
+                    <p className="text-[0.6rem] font-black uppercase tracking-[0.25em] text-white/60 mb-1">Única no Setor</p>
+                    <h3 className="font-black text-white text-xl uppercase" style={{ fontFamily: "var(--font-headline)" }}>
+                      Garantia de 3 Anos
+                    </h3>
+                  </div>
+                  <p className="text-white/80 text-sm leading-relaxed flex-1">
+                    Cobertura total de fabricação — sem exclusões para vento ou chuva. A RVB cobre apenas 1 ano e exclui "ventos fortes". Nós cobrimos o real.
+                  </p>
                 </div>
-                <p className="text-white/80 text-sm leading-relaxed flex-1">
-                  Cobertura total de fabricação — sem exclusões para vento ou chuva. A RVB cobre apenas 1 ano e exclui "ventos fortes". Nós cobrimos o real.
-                </p>
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
               {/* Poliéster 300g/m² */}
-              <div className="bg-white/5 border border-white/10 rounded-xl p-8 flex flex-col gap-4">
-                <div className="size-12 rounded-lg bg-primary/20 flex items-center justify-center text-2xl">🧵</div>
-                <div>
-                  <p className="text-[0.6rem] font-black uppercase tracking-[0.25em] text-orange mb-1">Material Base</p>
-                  <h3
-                    className="font-black text-inverse-on-surface text-lg uppercase"
-                    style={{ fontFamily: "var(--font-headline)" }}
-                  >
-                    Poliéster 300g/m²
-                  </h3>
+              <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden flex flex-col">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/gallery/SaveClip.App_604055838_17878831959448342_7903443883004681535_n.jpg" alt="" className="w-full h-36 object-cover opacity-40" />
+                <div className="p-8 flex flex-col gap-4 flex-1">
+                  <div className="size-12 rounded-lg bg-primary/20 flex items-center justify-center text-2xl">🧵</div>
+                  <div>
+                    <p className="text-[0.6rem] font-black uppercase tracking-[0.25em] text-orange mb-1">Material Base</p>
+                    <h3 className="font-black text-inverse-on-surface text-lg uppercase" style={{ fontFamily: "var(--font-headline)" }}>
+                      Poliéster 300g/m²
+                    </h3>
+                  </div>
+                  <p className="text-inverse-on-surface/60 text-sm leading-relaxed flex-1">
+                    Fios de alta tenacidade com camada de borracha anti-torção e acabamento acetinado. Permite impressão em resolução fotográfica. Tratamento UV e antifungo de série.
+                  </p>
                 </div>
-                <p className="text-inverse-on-surface/60 text-sm leading-relaxed flex-1">
-                  Fios de alta tenacidade com camada de borracha anti-torção e acabamento acetinado. Permite impressão em resolução fotográfica. Tratamento UV e antifungo de série.
-                </p>
               </div>
 
               {/* Ancoragem 300 kg/f */}
-              <div className="bg-white/5 border border-white/10 rounded-xl p-8 flex flex-col gap-4">
-                <div className="size-12 rounded-lg bg-primary/20 flex items-center justify-center text-2xl">⚓</div>
-                <div>
-                  <p className="text-[0.6rem] font-black uppercase tracking-[0.25em] text-orange mb-1">Estrutura</p>
-                  <h3
-                    className="font-black text-inverse-on-surface text-lg uppercase"
-                    style={{ fontFamily: "var(--font-headline)" }}
-                  >
-                    Ancoragem 300 kg/f
-                  </h3>
+              <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden flex flex-col">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/gallery/SaveClip.App_604055838_17878831959448342_7903443883004681535_n.jpg" alt="" className="w-full h-36 object-cover opacity-40" />
+                <div className="p-8 flex flex-col gap-4 flex-1">
+                  <div className="size-12 rounded-lg bg-primary/20 flex items-center justify-center text-2xl">⚓</div>
+                  <div>
+                    <p className="text-[0.6rem] font-black uppercase tracking-[0.25em] text-orange mb-1">Estrutura</p>
+                    <h3 className="font-black text-inverse-on-surface text-lg uppercase" style={{ fontFamily: "var(--font-headline)" }}>
+                      Ancoragem 300 kg/f
+                    </h3>
+                  </div>
+                  <p className="text-inverse-on-surface/60 text-sm leading-relaxed flex-1">
+                    Alças com meia argola de 38mm e arame soldado 4mm. Tripla costura dupla em 6 camadas de reforço nas áreas críticas. Suporta até 300 kg/f de ruptura.
+                  </p>
                 </div>
-                <p className="text-inverse-on-surface/60 text-sm leading-relaxed flex-1">
-                  Alças com meia argola de 38mm e arame soldado 4mm. Tripla costura dupla em 6 camadas de reforço nas áreas críticas. Suporta até 300 kg/f de ruptura.
-                </p>
               </div>
 
               {/* Fluxo Contínuo */}
-              <div className="bg-white/5 border border-white/10 rounded-xl p-8 flex flex-col gap-4">
-                <div className="size-12 rounded-lg bg-primary/20 flex items-center justify-center text-2xl">🔄</div>
-                <div>
-                  <p className="text-[0.6rem] font-black uppercase tracking-[0.25em] text-orange mb-1">Zero Risco de Evento</p>
-                  <h3
-                    className="font-black text-inverse-on-surface text-lg uppercase"
-                    style={{ fontFamily: "var(--font-headline)" }}
-                  >
-                    Fluxo Contínuo
-                  </h3>
+              <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden flex flex-col">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/gallery/SaveClip.App_604055838_17878831959448342_7903443883004681535_n.jpg" alt="" className="w-full h-36 object-cover opacity-40" />
+                <div className="p-8 flex flex-col gap-4 flex-1">
+                  <div className="size-12 rounded-lg bg-primary/20 flex items-center justify-center text-2xl">🔄</div>
+                  <div>
+                    <p className="text-[0.6rem] font-black uppercase tracking-[0.25em] text-orange mb-1">Zero Risco de Evento</p>
+                    <h3 className="font-black text-inverse-on-surface text-lg uppercase" style={{ fontFamily: "var(--font-headline)" }}>
+                      Fluxo Contínuo
+                    </h3>
+                  </div>
+                  <p className="text-inverse-on-surface/60 text-sm leading-relaxed flex-1">
+                    A Amaze não trabalha com infláveis selados. Micro-vazamentos e pressões externas são compensados instantaneamente — a estrutura permanece rígida e imponente durante todo o evento.
+                  </p>
                 </div>
-                <p className="text-inverse-on-surface/60 text-sm leading-relaxed flex-1">
-                  A Amaze não trabalha com infláveis selados. Micro-vazamentos e pressões externas são compensados instantaneamente — a estrutura permanece rígida e imponente durante todo o evento.
-                </p>
               </div>
 
             </div>
