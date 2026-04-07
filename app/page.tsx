@@ -106,82 +106,47 @@ export default function Home() {
             {/* 5-card grid: first card spans 2 rows on desktop */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr">
               {[
-                {
-                  slug: "corporate-events",
-                  title: "Eventos Corporativos",
-                  description: "Infláveis gigantes para lançamentos de produtos, ativações de marca, conferências anuais e cúpulas B2B.",
-                  icon: "🏢",
-                  tags: ["Lançamentos", "Ativações", "Conferências"],
-                  large: true,
-                },
-                {
-                  slug: "trade-shows",
-                  title: "Feiras & Exposições",
-                  description: "Destaque-se em qualquer exposição com infláveis e réplicas que atraem visitantes de todo o piso.",
-                  icon: "🎪",
-                  tags: ["Estandes", "Réplicas", "Displays"],
-                  large: false,
-                },
-                {
-                  slug: "sports",
-                  title: "Esportes & Corridas",
-                  description: "Arcos, totens de patrocinadores e displays gigantes para maratonas, corridas e competições.",
-                  icon: "🏃",
-                  tags: ["Arcos", "Patrocinadores", "Mascotes"],
-                  large: false,
-                },
-                {
-                  slug: "parties",
-                  title: "Festas & Celebrações",
-                  description: "Infláveis personalizados para festivais de música, aniversários e celebrações públicas.",
-                  icon: "🎉",
-                  tags: ["Festivais", "Temáticos", "Sazonais"],
-                  large: false,
-                },
-                {
-                  slug: "marketing-advertising",
-                  title: "Marketing & Publicidade",
-                  description: "Infláveis publicitários comprovadamente capazes de gerar 10× mais engajamento que a mídia exterior convencional.",
-                  icon: "📣",
-                  tags: ["Exterior", "Varejo", "Guerrilha"],
-                  large: false,
-                },
+                { slug: "corporate-events",      title: "Eventos Corporativos",   tags: ["Lançamentos", "Ativações", "Conferências"], large: true  },
+                { slug: "trade-shows",            title: "Feiras & Exposições",    tags: ["Estandes", "Réplicas", "Displays"],         large: false },
+                { slug: "sports",                 title: "Esportes & Corridas",    tags: ["Arcos", "Patrocinadores", "Mascotes"],      large: false },
+                { slug: "parties",                title: "Festas & Celebrações",   tags: ["Festivais", "Temáticos", "Sazonais"],       large: false },
+                { slug: "marketing-advertising",  title: "Marketing & Publicidade",tags: ["Exterior", "Varejo", "Guerrilha"],          large: false },
               ].map((s, idx) => (
                 <Link
                   key={s.slug}
                   href={`/setores/${s.slug}`}
-                  className={`group flex flex-col gap-4 p-8 rounded-xl border border-border bg-white hover:border-primary/30 hover:shadow-lg transition-all ${
-                    idx === 0 ? "sm:col-span-2 lg:col-span-1 lg:row-span-2 bg-gradient-to-br from-primary to-purple text-white border-transparent" : ""
+                  className={`group relative overflow-hidden rounded-xl flex flex-col justify-end min-h-[220px] ${
+                    idx === 0 ? "sm:col-span-2 lg:col-span-1 lg:row-span-2 min-h-[460px]" : ""
                   }`}
                 >
-                  <div className={`size-14 rounded-xl flex items-center justify-center text-3xl ${idx === 0 ? "bg-white/15" : "bg-primary/8"}`}>
-                    {s.icon}
-                  </div>
-                  <div className="flex-1">
-                    <h3
-                      className={`text-xl font-black mb-2 uppercase ${idx === 0 ? "text-white" : "text-text group-hover:text-primary transition-colors"}`}
-                      style={{ fontFamily: "var(--font-headline)" }}
-                    >
+                  {/* Background image */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/images/gallery/SaveClip.App_659586715_17891981046448342_7629493146823458172_n.jpg"
+                    alt={s.title}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
+                  {/* Content */}
+                  <div className="relative z-10 p-6 flex flex-col gap-3">
+                    <div className="flex flex-wrap gap-1.5">
+                      {s.tags.map((tag) => (
+                        <span key={tag} className="px-2.5 py-1 text-xs font-medium rounded-full bg-white/15 text-white backdrop-blur-sm">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <h3 className="text-xl font-black text-white uppercase" style={{ fontFamily: "var(--font-headline)" }}>
                       {s.title}
                     </h3>
-                    <p className={`text-sm leading-relaxed ${idx === 0 ? "text-white/70" : "text-muted"}`}>{s.description}</p>
+                    <span className="text-xs font-black uppercase tracking-widest text-orange flex items-center gap-2">
+                      Explorar setor
+                      <svg className="size-3 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </span>
                   </div>
-                  <div className="flex flex-wrap gap-1.5">
-                    {s.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className={`px-2.5 py-1 text-xs font-medium rounded-full ${idx === 0 ? "bg-white/15 text-white" : "bg-surface-container text-on-surface-variant"}`}
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <span className={`text-xs font-black uppercase tracking-widest flex items-center gap-2 ${idx === 0 ? "text-orange" : "text-primary"}`}>
-                    Explorar setor
-                    <svg className="size-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </span>
                 </Link>
               ))}
             </div>
