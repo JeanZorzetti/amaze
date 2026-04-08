@@ -133,7 +133,7 @@ export default function Footer() {
             </div>
 
             {/* react-simple-maps World Map */}
-            <div className="flex-1" style={{ minHeight: "260px" }}>
+            <div className="flex-1 overflow-hidden rounded-xl" style={{ minHeight: "260px", maxHeight: "320px" }}>
               <WorldMap />
             </div>
 

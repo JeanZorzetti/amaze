@@ -11,36 +11,38 @@ const markers = [
 
 export default function WorldMap() {
   return (
-    <ComposableMap
-      projection="geoMercator"
-      projectionConfig={{ scale: 120, center: [10, 20] }}
-      style={{ width: "100%", height: "100%" }}
-    >
-      <Geographies geography={GEO_URL}>
-        {({ geographies }) =>
-          geographies.map((geo) => (
-            <Geography
-              key={geo.rsmKey}
-              geography={geo}
-              fill="#ea580c"
-              stroke="#c2410c"
-              strokeWidth={0.5}
-              style={{
-                default: { outline: "none" },
-                hover: { fill: "#f97316", outline: "none" },
-                pressed: { outline: "none" },
-              }}
-            />
-          ))
-        }
-      </Geographies>
+    <div style={{ width: "100%", overflow: "hidden", lineHeight: 0 }}>
+      <ComposableMap
+        projection="geoMercator"
+        projectionConfig={{ scale: 155, center: [10, 15] }}
+        style={{ width: "100%", display: "block", marginBottom: "-18%" }}
+      >
+        <Geographies geography={GEO_URL}>
+          {({ geographies }) =>
+            geographies.map((geo) => (
+              <Geography
+                key={geo.rsmKey}
+                geography={geo}
+                fill="#ea580c"
+                stroke="#342e38"
+                strokeWidth={0.5}
+                style={{
+                  default: { outline: "none" },
+                  hover: { fill: "#f97316", outline: "none" },
+                  pressed: { outline: "none" },
+                }}
+              />
+            ))
+          }
+        </Geographies>
 
-      {markers.map(({ name, coordinates }) => (
-        <Marker key={name} coordinates={coordinates}>
-          <circle r={6} fill="white" stroke="#ea580c" strokeWidth={2} />
-          <circle r={3} fill="#ea580c" />
-        </Marker>
-      ))}
-    </ComposableMap>
+        {markers.map(({ name, coordinates }) => (
+          <Marker key={name} coordinates={coordinates}>
+            <circle r={7} fill="white" opacity={0.9} />
+            <circle r={3} fill="#ea580c" />
+          </Marker>
+        ))}
+      </ComposableMap>
+    </div>
   )
 }
