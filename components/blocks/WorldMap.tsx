@@ -14,8 +14,8 @@ export default function WorldMap() {
     <div style={{ width: "100%", overflow: "hidden", lineHeight: 0 }}>
       <ComposableMap
         projection="geoMercator"
-        projectionConfig={{ scale: 155, center: [10, 15] }}
-        style={{ width: "100%", display: "block", marginBottom: "-18%" }}
+        projectionConfig={{ scale: 100, center: [10,-50] }}
+        style={{ width: "100%", height: "100%" }}
       >
         <Geographies geography={GEO_URL}>
           {({ geographies }) =>
