@@ -14,6 +14,7 @@ import Footer from "@/components/Footer";
 import HeroSlider from "@/components/HeroSlider";
 import { FAQSchema } from "@/components/SchemaOrg";
 import FloatieKingsGallery from "@/components/blocks/FloatieKingsGallery";
+import VideoCarousel from "@/components/blocks/VideoCarousel";
 
 
 const homeFaqs = [
@@ -68,15 +69,7 @@ export default function Home() {
               INFLÁVEIS QUE<br />
               <span className="text-primary">PARAM O MUNDO</span>
             </h2>
-            <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-xl bg-black">
-              <video
-                className="w-full h-full object-cover"
-                controls
-                playsInline
-                preload="metadata"
-                src="/amaze-video.mp4"
-              />
-            </div>
+            <VideoCarousel />
           </div>
         </section>
 
