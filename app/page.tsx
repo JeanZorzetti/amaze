@@ -518,8 +518,16 @@ export default function Home() {
         </section>
 
         {/* ── 8. POR QUE A AMAZE — Michelin-style numbered reasons ── */}
-        <section className="py-24 px-4 lg:px-8 bg-white">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16 items-start">
+        <section className="py-24 px-4 lg:px-8 relative overflow-hidden bg-slate-50">
+          {/* Background photo — very low opacity */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/gallery/SaveClip.App_659586715_17891981046448342_7629493146823458172_n.jpg"
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover opacity-[0.07] pointer-events-none select-none"
+          />
+          <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16 items-start">
 
             {/* Left — sticky title */}
             <div className="lg:sticky lg:top-32">
