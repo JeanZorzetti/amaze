@@ -147,11 +147,9 @@ export default function SiroccoHideventPage() {
                 </p>
               </div>
               <div>
-                <div className="w-full aspect-[4/3] bg-surface-container-low border-2 border-dashed border-border rounded-lg flex flex-col items-center justify-center gap-3 text-muted">
-                  <svg className="size-10 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                  </svg>
-                  <span className="text-xs font-bold uppercase tracking-widest opacity-50">Motor Sirocco HideVENT — instalado</span>
+                <div className="w-full aspect-[4/3] rounded-lg overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/images/gallery/SaveClip.App_659586715_17891981046448342_7629493146823458172_n.jpg" alt="" className="w-full h-full object-cover" />
                 </div>
               </div>
             </div>
@@ -174,11 +172,9 @@ export default function SiroccoHideventPage() {
               {anatomy.map((item) => (
                 <div key={item.title} className="bg-surface-container-low border border-border rounded-xl overflow-hidden">
                   <div className="p-0">
-                    <div className="w-full aspect-[4/3] bg-surface-container-low border-b-2 border-dashed border-border flex flex-col items-center justify-center gap-3 text-muted">
-                      <svg className="size-10 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                      </svg>
-                      <span className="text-xs font-bold uppercase tracking-widest opacity-50">Foto do produto</span>
+                    <div className="w-full aspect-[4/3] overflow-hidden">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src="/images/gallery/SaveClip.App_659586715_17891981046448342_7629493146823458172_n.jpg" alt="" className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <div className="p-8">

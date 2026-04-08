@@ -314,13 +314,10 @@ export default function Home() {
                 },
               ].map((step) => (
                 <div key={step.num} className="relative bg-white/5 rounded-xl overflow-hidden border border-white/10">
-                  {/* Image placeholder */}
-                  <div className="aspect-[4/3] bg-white/5 border-b-2 border-dashed border-white/20 flex flex-col items-center justify-center gap-3">
-                    <svg className="size-10 text-white/20" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M6.827 6.175A2.31 2.31 0 0 1 5.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 0 0-1.134-.175 2.31 2.31 0 0 1-1.64-1.055l-.822-1.316a2.192 2.192 0 0 0-1.736-1.039 48.774 48.774 0 0 0-5.232 0 2.192 2.192 0 0 0-1.736 1.039l-.821 1.316Z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0ZM18.75 10.5h.008v.008h-.008V10.5Z" />
-                    </svg>
-                    <span className="text-xs text-white/30 uppercase tracking-wider">Foto do passo {step.num}</span>
+                  {/* Image */}
+                  <div className="aspect-[4/3] overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/images/gallery/SaveClip.App_659586715_17891981046448342_7629493146823458172_n.jpg" alt="" className="w-full h-full object-cover" />
                   </div>
                   {/* Content */}
                   <div className="relative p-8">
@@ -605,14 +602,10 @@ export default function Home() {
             <div className="bg-white rounded-xl border border-border overflow-hidden">
               <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] items-stretch">
 
-                {/* Foto placeholder */}
-                <div className="relative bg-surface-container-low border-b lg:border-b-0 lg:border-r border-border flex flex-col items-center justify-center min-h-72 lg:min-h-0">
-                  <div className="w-full h-full min-h-72 flex flex-col items-center justify-center gap-3 text-muted p-8">
-                    <svg className="size-14 opacity-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                    </svg>
-                    <span className="text-xs font-bold uppercase tracking-widest opacity-40 text-center">Foto do especialista</span>
-                  </div>
+                {/* Foto */}
+                <div className="relative border-b lg:border-b-0 lg:border-r border-border overflow-hidden min-h-72 lg:min-h-0">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/images/gallery/SaveClip.App_659586715_17891981046448342_7629493146823458172_n.jpg" alt="" className="w-full h-full object-cover absolute inset-0" />
                 </div>
 
                 {/* Conteúdo */}
