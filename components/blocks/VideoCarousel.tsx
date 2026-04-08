@@ -1,6 +1,14 @@
 "use client"
 
-import { useState } from "react"
+import * as React from "react"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/interfaces-carousel"
 
 const videos = [
   { src: "/amaze-video.mp4", label: "Vídeo 01" },
@@ -9,51 +17,55 @@ const videos = [
 ]
 
 export default function VideoCarousel() {
-  const [active, setActive] = useState(0)
+  const [api, setApi] = React.useState<CarouselApi>()
+  const [current, setCurrent] = React.useState(0)
+
+  React.useEffect(() => {
+    if (!api) return
+    api.on("select", () => setCurrent(api.selectedScrollSnap()))
+  }, [api])
 
   return (
     <div className="space-y-4">
-      {/* Main video */}
-      <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-xl bg-black">
-        <video
-          key={active}
-          className="w-full h-full object-cover"
-          controls
-          playsInline
-          preload="metadata"
-          src={videos[active].src}
-        />
-      </div>
+      <Carousel
+        opts={{ loop: true }}
+        setApi={setApi}
+        className="w-full"
+      >
+        <CarouselContent>
+          {videos.map((v, i) => (
+            <CarouselItem key={i}>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-xl bg-black">
+                <video
+                  className="w-full h-full object-cover"
+                  controls
+                  playsInline
+                  preload="metadata"
+                  src={v.src}
+                />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
 
-      {/* Thumbnails */}
-      <div className="grid grid-cols-3 gap-3">
+        {/* Arrows — positioned inside, not outside (no -left-12 overflow issue) */}
+        <CarouselPrevious className="-left-0 left-3 bg-black/50 border-white/20 text-white hover:bg-black/70 hover:text-white" />
+        <CarouselNext    className="-right-0 right-3 bg-black/50 border-white/20 text-white hover:bg-black/70 hover:text-white" />
+      </Carousel>
+
+      {/* Dot indicators */}
+      <div className="flex items-center justify-center gap-2">
         {videos.map((v, i) => (
           <button
             key={i}
-            onClick={() => setActive(i)}
-            className={`relative aspect-video rounded-lg overflow-hidden bg-black border-2 transition-all ${
-              active === i ? "border-primary shadow-lg scale-[1.02]" : "border-transparent opacity-60 hover:opacity-90"
+            onClick={() => api?.scrollTo(i)}
+            className={`transition-all rounded-full ${
+              current === i
+                ? "w-6 h-2 bg-primary"
+                : "w-2 h-2 bg-text/20 hover:bg-text/40"
             }`}
-          >
-            <video
-              className="w-full h-full object-cover pointer-events-none"
-              playsInline
-              preload="metadata"
-              muted
-              src={`${v.src}#t=2`}
-            />
-            {/* Play overlay */}
-            {active !== i && (
-              <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                <svg className="size-8 text-white drop-shadow" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            )}
-            <span className="absolute bottom-1.5 left-2 text-white text-[0.6rem] font-black uppercase tracking-wider drop-shadow">
-              {v.label}
-            </span>
-          </button>
+            aria-label={v.label}
+          />
         ))}
       </div>
     </div>
