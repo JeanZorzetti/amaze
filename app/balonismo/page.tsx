@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Experiência em Balonismo — Aeromarketing & Eventos com Balões",
   description:
     "Balões de ar quente gigantes para ativações de marca, campanhas de aeromarketing, eventos esportivos e experiências aéreas. Mais de 40 anos de expertise em balonismo em todo o continente americano.",
-  alternates: { canonical: "https://amazeballoons.com/balonismo" },
+  alternates: { canonical: "https://amazeballoons.com.br/balonismo" },
 };
 
 const faqs = [
@@ -100,7 +100,7 @@ export default function BalonismoPage() {
       <BreadcrumbSchema
         items={[
           { name: "Início",     url: "https://amazeballoons.com" },
-          { name: "Balonismo", url: "https://amazeballoons.com/balonismo" },
+          { name: "Balonismo", url: "https://amazeballoons.com.br/balonismo" },
         ]}
       />
       <FAQSchema items={faqs} />

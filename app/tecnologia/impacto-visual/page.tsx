@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Impacto Visual — O Que Captura. O Que Faz Lembrar. | Amaze Balloons",
   description:
     "Poliéster emborrachado 300g/m² com impressão fotográfica UV. Infláveis que dominam o espaço visual de 2m a 15m+. A estética que transforma ambientes em experiências.",
-  alternates: { canonical: "https://amazeballoons.com/tecnologia/impacto-visual" },
+  alternates: { canonical: "https://amazeballoons.com.br/tecnologia/impacto-visual" },
 };
 
 const materialSpecs = [
@@ -91,8 +91,8 @@ export default function ImpactoVisualPage() {
       <BreadcrumbSchema
         items={[
           { name: "Início", url: "https://amazeballoons.com" },
-          { name: "Tecnologia", url: "https://amazeballoons.com/tecnologia" },
-          { name: "Impacto Visual", url: "https://amazeballoons.com/tecnologia/impacto-visual" },
+          { name: "Tecnologia", url: "https://amazeballoons.com.br/tecnologia" },
+          { name: "Impacto Visual", url: "https://amazeballoons.com.br/tecnologia/impacto-visual" },
         ]}
       />
       <Header />

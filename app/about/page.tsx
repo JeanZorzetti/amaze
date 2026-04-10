@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Sobre a Amaze Balloons — 40+ Anos Fabricando Infláveis Personalizados",
   description:
     "Herança familiar. O primeiro fabricante de infláveis personalizados e balões de ar quente do Brasil, atendendo hoje as maiores marcas das Américas. Liderado por Thiago Marques.",
-  alternates: { canonical: "https://amazeballoons.com/about" },
+  alternates: { canonical: "https://amazeballoons.com.br/about" },
 };
 
 const arrowIcon = (
@@ -23,7 +23,7 @@ export default function AboutPage() {
       <BreadcrumbSchema
         items={[
           { name: "Início", url: "https://amazeballoons.com" },
-          { name: "Sobre", url: "https://amazeballoons.com/about" },
+          { name: "Sobre", url: "https://amazeballoons.com.br/about" },
         ]}
       />
       <Header />

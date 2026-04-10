@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Engenharia Aplicada — O Que Sustenta. O Que Não Pode Falhar. | Amaze Balloons",
   description:
     "Motor Sirocco HideVENT 330w 100% embutido, sistema de fluxo contínuo e ancoragem 300 kg/f. A engenharia que garante performance sem falhas em qualquer evento.",
-  alternates: { canonical: "https://amazeballoons.com/tecnologia/engenharia-aplicada" },
+  alternates: { canonical: "https://amazeballoons.com.br/tecnologia/engenharia-aplicada" },
 };
 
 const specs = [
@@ -93,8 +93,8 @@ export default function EngenhariaAplicadaPage() {
       <BreadcrumbSchema
         items={[
           { name: "Início", url: "https://amazeballoons.com" },
-          { name: "Tecnologia", url: "https://amazeballoons.com/tecnologia" },
-          { name: "Engenharia Aplicada", url: "https://amazeballoons.com/tecnologia/engenharia-aplicada" },
+          { name: "Tecnologia", url: "https://amazeballoons.com.br/tecnologia" },
+          { name: "Engenharia Aplicada", url: "https://amazeballoons.com.br/tecnologia/engenharia-aplicada" },
         ]}
       />
       <Header />

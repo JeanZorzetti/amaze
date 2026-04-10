@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Instruções de Uso — Montagem, Manutenção e Armazenamento de Infláveis | Amaze Balloons",
   description:
     "Guia completo de instruções para montagem, operação, manutenção e armazenamento dos infláveis Amaze Balloons. Maximize a vida útil e a performance do seu inflável.",
-  alternates: { canonical: "https://amazeballoons.com/instrucoes" },
+  alternates: { canonical: "https://amazeballoons.com.br/instrucoes" },
 };
 
 const steps = [
@@ -144,7 +144,7 @@ export default function InstrucoesPage() {
       <BreadcrumbSchema
         items={[
           { name: "Início", url: "https://amazeballoons.com" },
-          { name: "Instruções de Uso", url: "https://amazeballoons.com/instrucoes" },
+          { name: "Instruções de Uso", url: "https://amazeballoons.com.br/instrucoes" },
         ]}
       />
       <Header />

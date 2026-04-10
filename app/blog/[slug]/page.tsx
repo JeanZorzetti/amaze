@@ -21,7 +21,7 @@ export async function generateMetadata({
   return {
     title: `${post.title} — Blog Amaze Balloons`,
     description: post.description,
-    alternates: { canonical: `https://amazeballoons.com/blog/${slug}` },
+    alternates: { canonical: `https://amazeballoons.com.br/blog/${slug}` },
     openGraph: {
       title: post.title,
       description: post.description,
@@ -47,14 +47,14 @@ export default async function BlogPostPage({
       <BreadcrumbSchema
         items={[
           { name: "Início", url: "https://amazeballoons.com" },
-          { name: "Blog", url: "https://amazeballoons.com/blog" },
-          { name: post.title, url: `https://amazeballoons.com/blog/${slug}` },
+          { name: "Blog", url: "https://amazeballoons.com.br/blog" },
+          { name: post.title, url: `https://amazeballoons.com.br/blog/${slug}` },
         ]}
       />
       <ArticleSchema
         title={post.title}
         description={post.description}
-        url={`https://amazeballoons.com/blog/${slug}`}
+        url={`https://amazeballoons.com.br/blog/${slug}`}
         datePublished={post.date}
       />
       <Header />

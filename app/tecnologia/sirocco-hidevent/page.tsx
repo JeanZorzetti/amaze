@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Motor Sirocco HideVENT — Tecnologia de Inflagem Exclusiva Amaze",
   description:
     "O motor 100% embutido que elimina mangueiras externas. 330w, inflagem em 2 minutos, à prova d'água. A inovação de inflagem que nenhum concorrente possui.",
-  alternates: { canonical: "https://amazeballoons.com/tecnologia/sirocco-hidevent" },
+  alternates: { canonical: "https://amazeballoons.com.br/tecnologia/sirocco-hidevent" },
 };
 
 const specs = [
@@ -80,8 +80,8 @@ export default function SiroccoHideventPage() {
       <BreadcrumbSchema
         items={[
           { name: "Início", url: "https://amazeballoons.com" },
-          { name: "Tecnologia", url: "https://amazeballoons.com/tecnologia" },
-          { name: "Motor Sirocco HideVENT", url: "https://amazeballoons.com/tecnologia/sirocco-hidevent" },
+          { name: "Tecnologia", url: "https://amazeballoons.com.br/tecnologia" },
+          { name: "Motor Sirocco HideVENT", url: "https://amazeballoons.com.br/tecnologia/sirocco-hidevent" },
         ]}
       />
       <Header />

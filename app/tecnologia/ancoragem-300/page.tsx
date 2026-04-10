@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Ancoragem 300 kg/f — Sistema de Segurança Estrutural Amaze",
   description:
     "Alças com meia argola de 38mm, arame soldado 4mm, 6 camadas de reforço. Carga de ruptura de até 300 kg/f. O sistema de ancoragem que nenhum concorrente documenta.",
-  alternates: { canonical: "https://amazeballoons.com/tecnologia/ancoragem-300" },
+  alternates: { canonical: "https://amazeballoons.com.br/tecnologia/ancoragem-300" },
 };
 
 const components = [
@@ -94,8 +94,8 @@ export default function Ancoragem300Page() {
       <BreadcrumbSchema
         items={[
           { name: "Início", url: "https://amazeballoons.com" },
-          { name: "Tecnologia", url: "https://amazeballoons.com/tecnologia" },
-          { name: "Ancoragem 300 kg/f", url: "https://amazeballoons.com/tecnologia/ancoragem-300" },
+          { name: "Tecnologia", url: "https://amazeballoons.com.br/tecnologia" },
+          { name: "Ancoragem 300 kg/f", url: "https://amazeballoons.com.br/tecnologia/ancoragem-300" },
         ]}
       />
       <Header />

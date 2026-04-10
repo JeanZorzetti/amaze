@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Poliéster Emborrachado 300g/m² — Material Base Amaze Balloons",
   description:
     "Fios de alta tenacidade, camada de borracha anti-torção e impressão fotográfica. O material que garante 3 anos de garantia e vida útil de 5 a 10 anos em uso externo.",
-  alternates: { canonical: "https://amazeballoons.com/tecnologia/poliester-300" },
+  alternates: { canonical: "https://amazeballoons.com.br/tecnologia/poliester-300" },
 };
 
 const layers = [
@@ -104,8 +104,8 @@ export default function Poliester300Page() {
       <BreadcrumbSchema
         items={[
           { name: "Início", url: "https://amazeballoons.com" },
-          { name: "Tecnologia", url: "https://amazeballoons.com/tecnologia" },
-          { name: "Poliéster 300g/m²", url: "https://amazeballoons.com/tecnologia/poliester-300" },
+          { name: "Tecnologia", url: "https://amazeballoons.com.br/tecnologia" },
+          { name: "Poliéster 300g/m²", url: "https://amazeballoons.com.br/tecnologia/poliester-300" },
         ]}
       />
       <Header />

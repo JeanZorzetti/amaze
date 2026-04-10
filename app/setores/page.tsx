@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Setores que Atendemos — Infláveis para Eventos, Feiras, Esportes e Marketing",
   description:
     "Infláveis personalizados para todos os setores: feiras, eventos corporativos, esportes, festas e marketing. Conheça como a Amaze atende cada mercado.",
-  alternates: { canonical: "https://amazeballoons.com/setores" },
+  alternates: { canonical: "https://amazeballoons.com.br/setores" },
 };
 
 const sectors = [
@@ -60,7 +60,7 @@ export default function SetoresPage() {
       <BreadcrumbSchema
         items={[
           { name: "Início", url: "https://amazeballoons.com" },
-          { name: "Setores", url: "https://amazeballoons.com/setores" },
+          { name: "Setores", url: "https://amazeballoons.com.br/setores" },
         ]}
       />
       <Header />

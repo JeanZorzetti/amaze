@@ -28,7 +28,7 @@ const links = {
     { label: "Portfólio",    href: "/portfolio" },
     { label: "Blog",         href: "/blog" },
     { label: "Instruções",   href: "/instrucoes" },
-    { label: "Contato",      href: "/contact" },
+    { label: "Contato",      href: "/contato" },
     { label: "Orçamento",    href: "/orcamento" },
   ],
   Legal: [

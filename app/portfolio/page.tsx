@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Portfólio — Projetos de Infláveis Personalizados e Casos de Sucesso",
   description:
     "Conheça nosso portfólio de projetos de infláveis personalizados: réplicas gigantes de produtos, arcos com marca, mascotes e displays para eventos para as maiores marcas das Américas.",
-  alternates: { canonical: "https://amazeballoons.com/portfolio" },
+  alternates: { canonical: "https://amazeballoons.com.br/portfolio" },
 };
 
 const PROJECTS = [
@@ -83,7 +83,7 @@ export default function PortfolioPage() {
       <BreadcrumbSchema
         items={[
           { name: "Início",    url: "https://amazeballoons.com" },
-          { name: "Portfólio", url: "https://amazeballoons.com/portfolio" },
+          { name: "Portfólio", url: "https://amazeballoons.com.br/portfolio" },
         ]}
       />
       <Header />

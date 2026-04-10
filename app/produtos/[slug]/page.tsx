@@ -497,7 +497,7 @@ export async function generateMetadata({
   return {
     title: product.title,
     description: product.description,
-    alternates: { canonical: `https://amazeballoons.com/produtos/${slug}` },
+    alternates: { canonical: `https://amazeballoons.com.br/produtos/${slug}` },
   };
 }
 
@@ -526,16 +526,16 @@ export default async function ProdutoPage({
       <ProductSchema
         name={product.h1}
         description={product.description}
-        url={`https://amazeballoons.com/produtos/${slug}`}
+        url={`https://amazeballoons.com.br/produtos/${slug}`}
       />
       <FAQSchema items={product.faqs} />
       <BreadcrumbSchema
         items={[
           { name: "Início", url: "https://amazeballoons.com" },
-          { name: "Produtos", url: "https://amazeballoons.com/produtos" },
+          { name: "Produtos", url: "https://amazeballoons.com.br/produtos" },
           {
             name: product.h1,
-            url: `https://amazeballoons.com/produtos/${slug}`,
+            url: `https://amazeballoons.com.br/produtos/${slug}`,
           },
         ]}
       />

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Blog de Marketing com Infláveis — Dicas, Guias e Casos de Sucesso",
   description:
     "Guias especializados sobre infláveis personalizados, aeromarketing, estratégia em feiras e ativações de marca. Saiba como as maiores marcas usam infláveis gigantes para dominar eventos.",
-  alternates: { canonical: "https://amazeballoons.com/blog" },
+  alternates: { canonical: "https://amazeballoons.com.br/blog" },
 };
 
 const sorted = [...posts].sort((a, b) => b.date.localeCompare(a.date));
@@ -32,7 +32,7 @@ export default function BlogPage() {
       <BreadcrumbSchema
         items={[
           { name: "Início", url: "https://amazeballoons.com" },
-          { name: "Blog", url: "https://amazeballoons.com/blog" },
+          { name: "Blog", url: "https://amazeballoons.com.br/blog" },
         ]}
       />
       <Header />

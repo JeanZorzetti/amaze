@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Tecnologia Amaze — Engenharia de Alta Performance em Infláveis",
   description:
     "Conheça a engenharia por trás dos infláveis Amaze: motor Sirocco HideVENT, poliéster 300g/m², ancoragem 300 kg/f e garantia de 3 anos. A tecnologia que nos separa do mercado.",
-  alternates: { canonical: "https://amazeballoons.com/tecnologia" },
+  alternates: { canonical: "https://amazeballoons.com.br/tecnologia" },
 };
 
 const pilares = [
@@ -114,7 +114,7 @@ export default function TecnologiaPage() {
       <BreadcrumbSchema
         items={[
           { name: "Início",     url: "https://amazeballoons.com" },
-          { name: "Tecnologia", url: "https://amazeballoons.com/tecnologia" },
+          { name: "Tecnologia", url: "https://amazeballoons.com.br/tecnologia" },
         ]}
       />
       <Header />

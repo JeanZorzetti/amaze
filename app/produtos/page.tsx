@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Nossos Produtos — Infláveis Personalizados, Gigantes, Arcos e Mascotes",
   description:
     "Linha completa de infláveis Amaze: personalizados, gigantes, arcos & portais, mascotes e totens. Todos fabricados com Poliéster 300g/m² e motor Sirocco HideVENT.",
-  alternates: { canonical: "https://amazeballoons.com/produtos" },
+  alternates: { canonical: "https://amazeballoons.com.br/produtos" },
 };
 
 const products = [
@@ -61,7 +61,7 @@ export default function ProdutosPage() {
       <BreadcrumbSchema
         items={[
           { name: "Início", url: "https://amazeballoons.com" },
-          { name: "Produtos", url: "https://amazeballoons.com/produtos" },
+          { name: "Produtos", url: "https://amazeballoons.com.br/produtos" },
         ]}
       />
       <Header />

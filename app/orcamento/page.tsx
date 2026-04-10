@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Solicitar Orçamento Grátis — Infláveis Personalizados",
   description:
     "Solicite um orçamento gratuito para infláveis personalizados, balões publicitários gigantes, arcos, mascotes e displays. Respondemos em até 24 horas.",
-  alternates: { canonical: "https://amazeballoons.com/orçamento" },
+  alternates: { canonical: "https://amazeballoons.com.br/orçamento" },
 };
 
 export default function QuotePage() {
@@ -17,7 +17,7 @@ export default function QuotePage() {
       <BreadcrumbSchema
         items={[
           { name: "Início",   url: "https://amazeballoons.com" },
-          { name: "Orçamento", url: "https://amazeballoons.com/orçamento" },
+          { name: "Orçamento", url: "https://amazeballoons.com.br/orçamento" },
         ]}
       />
       <Header />

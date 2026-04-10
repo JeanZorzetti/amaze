@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Confiabilidade — O Que Garante Que Tudo Aconteça Sem Risco | Amaze Balloons",
   description:
     "Garantia de 3 anos sem exclusões. Vida útil de 5 a 10 anos. Fluxo contínuo, ancoragem 300 kg/f e montagem em 15 minutos. A confiabilidade que transforma infláveis em CAPEX.",
-  alternates: { canonical: "https://amazeballoons.com/tecnologia/confiabilidade" },
+  alternates: { canonical: "https://amazeballoons.com.br/tecnologia/confiabilidade" },
 };
 
 const warrantySpecs = [
@@ -115,8 +115,8 @@ export default function ConfiabilidadePage() {
       <BreadcrumbSchema
         items={[
           { name: "Início", url: "https://amazeballoons.com" },
-          { name: "Tecnologia", url: "https://amazeballoons.com/tecnologia" },
-          { name: "Confiabilidade", url: "https://amazeballoons.com/tecnologia/confiabilidade" },
+          { name: "Tecnologia", url: "https://amazeballoons.com.br/tecnologia" },
+          { name: "Confiabilidade", url: "https://amazeballoons.com.br/tecnologia/confiabilidade" },
         ]}
       />
       <Header />

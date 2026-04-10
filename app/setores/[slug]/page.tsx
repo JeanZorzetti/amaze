@@ -361,7 +361,7 @@ export async function generateMetadata({
   return {
     title: sector.title,
     description: sector.description,
-    alternates: { canonical: `https://amazeballoons.com/setores/${slug}` },
+    alternates: { canonical: `https://amazeballoons.com.br/setores/${slug}` },
   };
 }
 
@@ -379,8 +379,8 @@ export default async function SetorPage({
       <BreadcrumbSchema
         items={[
           { name: "Início", url: "https://amazeballoons.com" },
-          { name: "Setores", url: "https://amazeballoons.com/setores" },
-          { name: sector.h1, url: `https://amazeballoons.com/setores/${slug}` },
+          { name: "Setores", url: "https://amazeballoons.com.br/setores" },
+          { name: sector.h1, url: `https://amazeballoons.com.br/setores/${slug}` },
         ]}
       />
       <Header />

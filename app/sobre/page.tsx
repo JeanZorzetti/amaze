@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Sobre a Amaze Balloons — 40+ Anos, o Legado do Primeiro Fabricante do Brasil",
   description:
     "Conheça a história da Amaze Balloons: 40+ anos de legado familiar, o primeiro fabricante de balões e infláveis do Brasil, liderado por Thiago Marques. Tecnologia aeronáutica aplicada a infláveis de alta performance.",
-  alternates: { canonical: "https://amazeballoons.com/sobre" },
+  alternates: { canonical: "https://amazeballoons.com.br/sobre" },
 };
 
 export default function SobrePage() {
@@ -17,7 +17,7 @@ export default function SobrePage() {
       <BreadcrumbSchema
         items={[
           { name: "Início", url: "https://amazeballoons.com" },
-          { name: "Sobre", url: "https://amazeballoons.com/sobre" },
+          { name: "Sobre", url: "https://amazeballoons.com.br/sobre" },
         ]}
       />
       <Header />

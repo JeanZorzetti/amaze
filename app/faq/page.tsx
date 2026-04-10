@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "FAQ | Dúvidas Frequentes — Amaze Balloons",
   description:
     "Tudo que você precisa saber sobre infláveis personalizados Amaze Balloons: material, garantia, montagem, motor, impressão UV e muito mais.",
-  alternates: { canonical: "https://amazeballoons.com/faq" },
+  alternates: { canonical: "https://amazeballoons.com.br/faq" },
 };
 
 export default function FAQPage() {
@@ -17,7 +17,7 @@ export default function FAQPage() {
       <BreadcrumbSchema
         items={[
           { name: "Início", url: "https://amazeballoons.com" },
-          { name: "FAQ", url: "https://amazeballoons.com/faq" },
+          { name: "FAQ", url: "https://amazeballoons.com.br/faq" },
         ]}
       />
       <Header />
