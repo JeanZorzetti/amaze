@@ -28,6 +28,7 @@ export default function QuoteForm() {
   const [step, setStep] = useState<Step>(1);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const [form, setForm] = useState({
     product: "",
@@ -49,10 +50,23 @@ export default function QuoteForm() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
-    // TODO: wire to API route /api/orcamento (Resend)
-    await new Promise((r) => setTimeout(r, 1200));
-    setLoading(false);
-    setSubmitted(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/orcamento", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error ?? "Erro ao enviar. Tente novamente.");
+      }
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Erro ao enviar. Tente novamente.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   if (submitted) {
@@ -83,6 +97,15 @@ export default function QuoteForm() {
 
   return (
     <form onSubmit={handleSubmit} className="bg-surface-card rounded-xl border border-border overflow-hidden">
+      {/* Error banner */}
+      {error && (
+        <div className="px-8 py-4 bg-red-50 border-b border-red-200 text-sm text-red-700 font-medium flex items-center gap-2">
+          <svg className="size-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          {error}
+        </div>
+      )}
       {/* Progress */}
       <div className="flex border-b border-border">
         {([1, 2, 3] as Step[]).map((s) => (
