@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
+import Script from "next/script";
 import { OrganizationSchema } from "@/components/SchemaOrg";
 import "./globals.css";
 
@@ -17,11 +18,12 @@ const inter = Inter({
   display: "swap",
 });
 
-const BASE_URL = "https://amazeballoons.com";
+const BASE_URL = "https://amazeballoons.com.br";
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 export const metadata: Metadata = {
   title: {
-    default: "Amaze Balloons - Mais que Infláveis. Presença de Alta Performance.",
+    default: "Amaze Balloons — Mais que Infláveis. Presença de Alta Performance.",
     template: "%s | Amaze Balloons",
   },
   description:
@@ -34,13 +36,16 @@ export const metadata: Metadata = {
     "infláveis promocionais",
     "arcos infláveis personalizados",
     "balão publicitário gigante",
+    "inflável para evento",
+    "inflável para feira",
+    "balonismo publicitário",
   ],
   metadataBase: new URL(BASE_URL),
   alternates: {
     canonical: BASE_URL,
     languages: {
-      "en-US": BASE_URL,
-      "pt-BR": "https://amazeballoons.com.br",
+      "pt-BR": BASE_URL,
+      "en-US": "https://amazeballoons.com",
     },
   },
   openGraph: {
@@ -49,24 +54,24 @@ export const metadata: Metadata = {
     alternateLocale: "en_US",
     url: BASE_URL,
     siteName: "Amaze Balloons",
-    title: "Amaze Balloons - Mais que Infláveis. Presença de Alta Performance.",
+    title: "Amaze Balloons — Mais que Infláveis. Presença de Alta Performance.",
     description:
       "Infláveis personalizados premium e soluções publicitárias gigantes. Mais de 40 anos de experiência atendendo as principais marcas.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: `${BASE_URL}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: "Amaze Balloons – Infláveis Personalizados",
+        alt: "Amaze Balloons – Infláveis Personalizados de Alta Performance",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Amaze Balloons - Mais que Infláveis. Presença de Alta Performance.",
+    title: "Amaze Balloons — Mais que Infláveis. Presença de Alta Performance.",
     description:
       "Infláveis personalizados premium e soluções publicitárias gigantes. Mais de 40 anos de experiência.",
-    images: ["/og-image.jpg"],
+    images: [`${BASE_URL}/og-image.jpg`],
   },
   robots: {
     index: true,
@@ -74,8 +79,7 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
   verification: {
-    // google: "YOUR_GOOGLE_VERIFICATION_CODE",
-    // yandex: "YOUR_YANDEX_CODE",
+    // google: process.env.GOOGLE_SITE_VERIFICATION,
   },
 };
 
@@ -87,7 +91,29 @@ export default function RootLayout({
       <head>
         <OrganizationSchema />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+
+        {/* Google Analytics 4 — só carrega se NEXT_PUBLIC_GA_ID estiver definido */}
+        {GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga4-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_ID}', {
+                  page_path: window.location.pathname,
+                });
+              `}
+            </Script>
+          </>
+        )}
+      </body>
     </html>
   );
 }

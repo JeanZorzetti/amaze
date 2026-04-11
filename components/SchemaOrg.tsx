@@ -1,5 +1,7 @@
 // JSON-LD Schema Markup components for SEO
 
+const BASE_URL = "https://amazeballoons.com.br";
+
 interface OrganizationSchemaProps {
   name?: string;
   url?: string;
@@ -12,11 +14,11 @@ interface OrganizationSchemaProps {
 
 export function OrganizationSchema({
   name = "Amaze Balloons",
-  url = "https://amazeballoons.com",
-  logo = "https://amazeballoons.com/logo.png",
-  description = "Premium custom inflatables and giant advertising balloons. 40+ years of expertise serving top brands across the Americas.",
-  telephone = "+1-800-AMAZE",
-  email = "hello@amazeballoons.com",
+  url = BASE_URL,
+  logo = `${BASE_URL}/logos/2026_AmazeBalloons_B_black.png`,
+  description = "Fabricante de infláveis personalizados, balões publicitários gigantes, arcos, mascotes e displays de alta performance. Mais de 40 anos de experiência atendendo as principais marcas nas Américas.",
+  telephone = "+554892061259",
+  email = "contato@amazeballoons.com.br",
   sameAs = [
     "https://instagram.com/amazeballoons",
     "https://linkedin.com/company/amazeballoons",
@@ -35,15 +37,23 @@ export function OrganizationSchema({
     description,
     telephone,
     email,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Florianópolis",
+      addressRegion: "SC",
+      addressCountry: "BR",
+    },
     sameAs,
-    areaServed: ["US", "CA", "BR", "MX", "AR", "CL", "CO"],
+    areaServed: ["BR", "US", "CA", "MX", "AR", "CL", "CO"],
     knowsAbout: [
-      "Custom Inflatables",
-      "Advertising Inflatables",
-      "Giant Inflatables",
-      "Inflatable Marketing",
-      "Event Marketing",
+      "Infláveis Personalizados",
+      "Infláveis Publicitários",
+      "Infláveis Gigantes",
+      "Balonismo",
+      "Marketing de Eventos",
+      "Aeromarketing",
     ],
+    foundingDate: "1984",
   };
 
   return (
@@ -67,7 +77,7 @@ export function ProductSchema({
   description,
   url,
   image,
-  category = "Custom Inflatables",
+  category = "Infláveis Personalizados",
 }: ProductSchemaProps) {
   const schema = {
     "@context": "https://schema.org",
@@ -84,7 +94,8 @@ export function ProductSchema({
     offers: {
       "@type": "Offer",
       availability: "https://schema.org/InStock",
-      priceCurrency: "USD",
+      priceCurrency: "BRL",
+      url: `${BASE_URL}/orcamento`,
       seller: {
         "@type": "Organization",
         name: "Amaze Balloons",
@@ -169,7 +180,7 @@ export function ArticleSchema({
   image,
   datePublished,
   dateModified,
-  authorName = "Amaze Balloons Team",
+  authorName = "Thiago Marques · Amaze Balloons",
 }: ArticleSchemaProps) {
   const schema = {
     "@context": "https://schema.org",
@@ -180,6 +191,7 @@ export function ArticleSchema({
     image,
     datePublished,
     dateModified: dateModified ?? datePublished,
+    inLanguage: "pt-BR",
     author: {
       "@type": "Person",
       name: authorName,
@@ -189,7 +201,7 @@ export function ArticleSchema({
       name: "Amaze Balloons",
       logo: {
         "@type": "ImageObject",
-        url: "https://amazeballoons.com/logo.png",
+        url: `${BASE_URL}/logos/2026_AmazeBalloons_B_black.png`,
       },
     },
   };

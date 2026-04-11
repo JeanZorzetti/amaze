@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/admin/"],
       },
     ],
-    sitemap: "https://amazeballoons.com/sitemap.xml",
-    host: "https://amazeballoons.com",
+    sitemap: "https://amazeballoons.com.br/sitemap.xml",
+    host: "https://amazeballoons.com.br",
   };
 }
