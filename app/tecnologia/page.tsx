@@ -18,6 +18,7 @@ const pilares = [
     title: "Engenharia Aplicada",
     desc: "Motor, ancoragem e fluxo contínuo — o que sustenta e não pode falhar.",
     labelColor: "text-orange",
+    img: "/images/gallery/SaveClip.App_659586715_17891981046448342_7629493146823458172_n.jpg",
   },
   {
     href: "/tecnologia/impacto-visual",
@@ -25,6 +26,7 @@ const pilares = [
     title: "Impacto Visual Estratégico",
     desc: "Escala, definição e domínio de atenção — o que captura e faz lembrar.",
     labelColor: "text-orange",
+    img: "/images/gallery/SaveClip.App_604055838_17878831959448342_7903443883004681535_n.jpg",
   },
   {
     href: "/tecnologia/confiabilidade",
@@ -32,6 +34,7 @@ const pilares = [
     title: "Confiabilidade Operacional",
     desc: "Garantia de 3 anos, vida útil de 5–10 anos — o que garante sem risco.",
     labelColor: "text-orange",
+    img: "/images/gallery/SaveClip.App_632153979_17885887683448342_7600628157039576746_n.jpg",
   },
 ];
 
@@ -43,6 +46,7 @@ const deepDives = [
     desc: "330w, 100% embutido, à prova d'água. Zero mangueiras externas.",
     labelColor: "text-primary",
     badge: "Exclusivo",
+    img: "/images/gallery/SaveClip.App_598904006_17877354627448342_7377931598932079293_n.jpg",
   },
   {
     href: "/tecnologia/poliester-300",
@@ -51,6 +55,7 @@ const deepDives = [
     desc: "3 camadas, impressão fotográfica UV, tratamento antifungo de série.",
     labelColor: "text-primary",
     badge: null,
+    img: "/images/gallery/SaveClip.App_598989249_17877354600448342_7726145296482408610_n.jpg",
   },
   {
     href: "/tecnologia/ancoragem-300",
@@ -59,6 +64,7 @@ const deepDives = [
     desc: "Argola 38mm aço galvanizado, 6 camadas de reforço, lona KP1000.",
     labelColor: "text-primary",
     badge: null,
+    img: "/images/gallery/SaveClip.App_598834557_17877354591448342_4532624735367015725_n.jpg",
   },
 ];
 
@@ -99,14 +105,6 @@ const compare = [
   { spec: "Especificações técnicas públicas", amaze: true, market: false },
 ];
 
-function ImagePlaceholder({ label: _label }: { label?: string }) {
-  return (
-    <div className="w-full aspect-[4/3] rounded-lg overflow-hidden">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/images/gallery/SaveClip.App_659586715_17891981046448342_7629493146823458172_n.jpg" alt="" className="w-full h-full object-cover" />
-    </div>
-  );
-}
 
 export default function TecnologiaPage() {
   return (
@@ -162,7 +160,10 @@ export default function TecnologiaPage() {
                   href={p.href}
                   className="group flex flex-col rounded-xl overflow-hidden border border-border hover:border-primary/40 hover:shadow-lg transition-all"
                 >
-                  <ImagePlaceholder label={p.title} />
+                  <div className="w-full aspect-[4/3] overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={p.img} alt={p.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  </div>
                   <div className="p-6 flex flex-col flex-1">
                     <span className={`text-[0.6rem] font-black uppercase tracking-widest mb-2 ${p.labelColor}`}>{p.label}</span>
                     <h3
@@ -207,7 +208,10 @@ export default function TecnologiaPage() {
                   className="group flex flex-col rounded-xl overflow-hidden border border-border bg-white hover:border-primary/40 hover:shadow-lg transition-all"
                 >
                   <div className="relative">
-                    <ImagePlaceholder label={d.title} />
+                    <div className="w-full aspect-[4/3] overflow-hidden">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={d.img} alt={d.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    </div>
                     {d.badge && (
                       <span className="absolute top-3 left-3 px-2.5 py-1 bg-orange text-white text-[0.6rem] font-black uppercase tracking-widest rounded-full">
                         {d.badge}

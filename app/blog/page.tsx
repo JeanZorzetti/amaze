@@ -26,6 +26,19 @@ function categoryIcon(cat: string) {
   return "✦";
 }
 
+// Rotação de imagens da galeria por índice — distribui as fotos pelos cards
+const GALLERY_IMAGES = [
+  "/images/gallery/SaveClip.App_659586715_17891981046448342_7629493146823458172_n.jpg",
+  "/images/gallery/SaveClip.App_604055838_17878831959448342_7903443883004681535_n.jpg",
+  "/images/gallery/SaveClip.App_632153979_17885887683448342_7600628157039576746_n.jpg",
+  "/images/gallery/SaveClip.App_598904006_17877354627448342_7377931598932079293_n.jpg",
+  "/images/gallery/SaveClip.App_598989249_17877354600448342_7726145296482408610_n.jpg",
+  "/images/gallery/SaveClip.App_598834557_17877354591448342_4532624735367015725_n.jpg",
+  "/images/gallery/SaveClip.App_589648017_17876804814448342_8600020723861108054_n.jpg",
+  "/images/gallery/SaveClip.App_598409687_17877354618448342_6209046712205705990_n.jpg",
+  "/images/gallery/SaveClip.App_598635946_17877354609448342_3340277087935498923_n.jpg",
+];
+
 export default function BlogPage() {
   return (
     <>
@@ -127,15 +140,22 @@ export default function BlogPage() {
 
             {/* Articles grid — remaining posts */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {rest.map((post) => (
+              {rest.map((post, i) => (
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
                   className="group flex flex-col rounded-xl border border-border overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all"
                 >
-                  {/* Visual placeholder */}
-                  <div className="h-48 bg-gradient-to-br from-primary-container to-secondary-container flex items-center justify-center">
-                    <span className="text-5xl opacity-30">{categoryIcon(post.category)}</span>
+                  {/* Imagem da galeria rotacionada por índice */}
+                  <div className="relative h-48 overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={GALLERY_IMAGES[i % GALLERY_IMAGES.length]}
+                      alt={post.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                    <span className="absolute bottom-3 left-3 text-2xl">{categoryIcon(post.category)}</span>
                   </div>
 
                   <div className="flex flex-col flex-1 p-6">

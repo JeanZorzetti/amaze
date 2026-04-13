@@ -164,10 +164,21 @@ export default function SobrePage() {
             </h2>
 
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              {/* Foto placeholder */}
-              <div className="bg-gradient-to-br from-primary to-purple rounded-xl aspect-square flex flex-col items-center justify-center gap-4">
-                <span className="text-8xl">🧑‍🏭</span>
-                <p className="text-white/60 text-sm font-medium">Thiago Marques — Diretor</p>
+              {/* Foto do fundador */}
+              <div className="relative rounded-xl overflow-hidden aspect-square">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/gallery/SaveClip.App_632153979_17885887683448342_7600628157039576746_n.jpg"
+                  alt="Thiago Marques — Diretor da Amaze Balloons"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute bottom-6 left-6">
+                  <p className="text-white font-black text-lg uppercase" style={{ fontFamily: "var(--font-headline)" }}>
+                    Thiago Marques
+                  </p>
+                  <p className="text-white/70 text-sm">Diretor &amp; Fundador</p>
+                </div>
               </div>
 
               {/* Bio */}

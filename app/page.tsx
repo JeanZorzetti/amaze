@@ -477,15 +477,21 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {[
-                { title: "Réplica Gigante de Produto — Feira NYC", tag: "Feiras", year: "2024", gradient: "from-primary-container via-primary to-secondary-container" },
-                { title: "Arco de Corrida com Marca — Maratona de Miami",     tag: "Esportes",      year: "2024", gradient: "from-secondary via-primary-container to-secondary-container" },
-                { title: "Mascote Personalizado — Festival de Música",   tag: "Eventos",      year: "2023", gradient: "from-primary via-secondary to-primary-container" },
+                { title: "Réplica Gigante de Produto — Feira", tag: "Feiras", year: "2024", img: "/images/gallery/SaveClip.App_598904006_17877354627448342_7377931598932079293_n.jpg" },
+                { title: "Arco de Corrida com Marca — Maratona", tag: "Esportes", year: "2024", img: "/images/gallery/SaveClip.App_598989249_17877354600448342_7726145296482408610_n.jpg" },
+                { title: "Mascote Personalizado — Festival de Música", tag: "Eventos", year: "2023", img: "/images/gallery/SaveClip.App_589648017_17876804814448342_8600020723861108054_n.jpg" },
               ].map((p) => (
                 <Link
                   key={p.title}
                   href="/portfolio"
-                  className={`group relative h-80 rounded-xl overflow-hidden bg-gradient-to-br ${p.gradient} cursor-pointer`}
+                  className="group relative h-80 rounded-xl overflow-hidden cursor-pointer"
                 >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={p.img}
+                    alt={p.title}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
                   <div className="absolute top-4 left-4">
                     <span className="px-3 py-1.5 bg-white/15 backdrop-blur-sm text-white text-[0.65rem] font-black uppercase tracking-widest rounded-full border border-white/20">

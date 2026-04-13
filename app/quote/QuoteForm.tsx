@@ -28,6 +28,7 @@ export default function QuoteForm() {
   const [step, setStep] = useState<Step>(1);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const [form, setForm] = useState({
     product: "",
@@ -49,10 +50,20 @@ export default function QuoteForm() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
-    // TODO: wire to API route /api/orcamento (Resend)
-    await new Promise((r) => setTimeout(r, 1200));
-    setLoading(false);
-    setSubmitted(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/orcamento", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("Erro ao enviar");
+      setSubmitted(true);
+    } catch {
+      setError("Ocorreu um erro ao enviar. Por favor, tente novamente ou entre em contato pelo WhatsApp.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   if (submitted) {
@@ -272,6 +283,10 @@ export default function QuoteForm() {
               <a href="/privacy" className="text-purple hover:underline">Política de Privacidade</a>.
               Nunca compartilharemos suas informações.
             </p>
+
+            {error && (
+              <p className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-4 py-3">{error}</p>
+            )}
 
             <div className="flex gap-3">
               <Button type="button" variant="ghost" onClick={() => setStep(2)}>← Voltar</Button>
