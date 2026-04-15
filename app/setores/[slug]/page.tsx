@@ -18,6 +18,7 @@ type SectorData = {
     solution: string;
     result: string;
     metrics: Array<{ value: string; label: string }>;
+    img?: string;
   } | null;
   products: Array<{ title: string; href: string; desc: string }>;
 };
@@ -74,6 +75,7 @@ const SECTORS_DATA: Record<string, SectorData> = {
         { value: "50%", label: "Aumento na coleta de leads qualificados" },
         { value: "6×6m", label: "Arena personalizada com proteção interna" },
       ],
+      img: "/images/gallery/SaveClip.App_598635946_17877354609448342_3340277087935498923_n.jpg",
     },
     products: [
       {
@@ -145,6 +147,7 @@ const SECTORS_DATA: Record<string, SectorData> = {
         { value: "2 min", label: "Montagem pela equipe da marca" },
         { value: "10×", label: "Aumento de tráfego vs feiras anteriores" },
       ],
+      img: "/images/gallery/SaveClip.App_659586715_17891981046448342_7629493146823458172_n.jpg",
     },
     products: [
       {
@@ -216,6 +219,7 @@ const SECTORS_DATA: Record<string, SectorData> = {
         { value: "2 min", label: "Tempo de instalação no local" },
         { value: "8m", label: "Largura do arco personalizado" },
       ],
+      img: "/images/gallery/SaveClip.App_598904006_17877354627448342_7377931598932079293_n.jpg",
     },
     products: [
       {
@@ -345,6 +349,7 @@ const SECTORS_DATA: Record<string, SectorData> = {
         { value: "50", label: "PDVs simultâneos, 1 fim de semana" },
         { value: "3 dias", label: "Para amortizar o custo do ativo" },
       ],
+      img: "/images/gallery/SaveClip.App_598989249_17877354600448342_7726145296482408610_n.jpg",
     },
     products: [
       {
@@ -498,11 +503,29 @@ export default async function SetorPage({
 
         {/* 4. Case Study (condicional) */}
         {sector.caseStudy && (
-          <section className="bg-on-surface py-24 px-4 lg:px-8">
-            <div className="max-w-7xl mx-auto">
+          <section className="relative py-24 px-4 lg:px-8 overflow-hidden">
+            {/* Imagem de fundo com overlay degradê */}
+            {sector.caseStudy.img && (
+              <>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={sector.caseStudy.img}
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                {/* Degradê: escuro à esquerda/baixo, transparente à direita/cima */}
+                <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/50" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40" />
+              </>
+            )}
+            {/* Fallback sem imagem */}
+            {!sector.caseStudy.img && <div className="absolute inset-0 bg-on-surface" />}
+
+            <div className="relative z-10 max-w-7xl mx-auto">
               <p className="section-label text-orange mb-4">Case de Sucesso</p>
               <h2
-                className="text-3xl lg:text-4xl font-black text-inverse-on-surface mb-12 uppercase"
+                className="text-3xl lg:text-4xl font-black text-white mb-12 uppercase"
                 style={{ fontFamily: "var(--font-headline)" }}
               >
                 {sector.caseStudy.title}
@@ -510,27 +533,27 @@ export default async function SetorPage({
 
               {/* Desafio / Solução / Resultado */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
-                <div className="bg-white/5 border border-white/10 rounded-xl p-8">
+                <div className="bg-white/8 backdrop-blur-sm border border-white/15 rounded-xl p-8">
                   <p className="text-orange text-xs font-black uppercase tracking-widest mb-3">
                     Desafio
                   </p>
-                  <p className="text-inverse-on-surface/80 text-sm leading-relaxed">
+                  <p className="text-white/80 text-sm leading-relaxed">
                     {sector.caseStudy.challenge}
                   </p>
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-xl p-8">
+                <div className="bg-white/8 backdrop-blur-sm border border-white/15 rounded-xl p-8">
                   <p className="text-orange text-xs font-black uppercase tracking-widest mb-3">
                     Solução
                   </p>
-                  <p className="text-inverse-on-surface/80 text-sm leading-relaxed">
+                  <p className="text-white/80 text-sm leading-relaxed">
                     {sector.caseStudy.solution}
                   </p>
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-xl p-8">
+                <div className="bg-white/8 backdrop-blur-sm border border-white/15 rounded-xl p-8">
                   <p className="text-orange text-xs font-black uppercase tracking-widest mb-3">
                     Resultado
                   </p>
-                  <p className="text-inverse-on-surface/80 text-sm leading-relaxed">
+                  <p className="text-white/80 text-sm leading-relaxed">
                     {sector.caseStudy.result}
                   </p>
                 </div>
