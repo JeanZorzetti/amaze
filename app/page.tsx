@@ -59,18 +59,20 @@ export default function Home() {
         </div>
 
         {/* ── 3. VIDEO ── */}
-        <section className="py-20 px-4 lg:px-8 bg-white">
-          <div className="max-w-5xl mx-auto">
-            <p className="section-label text-muted mb-3 text-center">Veja em Ação</p>
+        <section className="bg-on-surface">
+          {/* Header da seção — com padding */}
+          <div className="pt-16 pb-8 px-4 lg:px-8 text-center">
+            <p className="section-label text-orange/70 mb-3">Veja em Ação</p>
             <h2
-              className="font-black text-3xl lg:text-5xl uppercase text-center text-text mb-10 leading-tight"
+              className="font-black text-3xl lg:text-5xl uppercase text-inverse-on-surface leading-tight"
               style={{ fontFamily: "var(--font-headline)" }}
             >
               INFLÁVEIS QUE<br />
-              <span className="text-primary">PARAM O MUNDO</span>
+              <span className="text-orange">PARAM O MUNDO</span>
             </h2>
-            <VideoCarousel />
           </div>
+          {/* Player full-bleed */}
+          <VideoCarousel />
         </section>
 
         {/* ── 4. SECTORS ── */}
