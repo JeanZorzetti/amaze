@@ -142,15 +142,15 @@ export default function Header() {
             onMouseEnter={() => setMegaOpen("tecnologia")}
             onMouseLeave={() => setMegaOpen(null)}
           >
-            <button
+            <Link
+              href="/tecnologia"
               className="flex items-center gap-1 text-on-surface hover:text-primary transition-colors font-label text-sm font-semibold leading-normal"
-              onClick={() => setMegaOpen(megaOpen === "tecnologia" ? null : "tecnologia")}
             >
               Tecnologia
               <svg className={`size-3.5 transition-transform ${megaOpen === "tecnologia" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
-            </button>
+            </Link>
 
             {megaOpen === "tecnologia" && (
               <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-72">
