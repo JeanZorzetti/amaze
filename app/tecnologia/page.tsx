@@ -314,7 +314,7 @@ export default function TecnologiaPage() {
         </section>
 
         {/* ── COMPARATIVO ── */}
-        <section className="py-24 px-4 lg:px-8 bg-surface-container-low">
+        <section className="py-24 px-4 lg:px-8 bg-white">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
               <p className="section-label text-orange mb-3">Transparência Total</p>
@@ -338,7 +338,7 @@ export default function TecnologiaPage() {
               {compare.map((row, i) => (
                 <div
                   key={row.spec}
-                  className={`grid grid-cols-3 text-sm border-t border-border ${i % 2 === 0 ? "bg-white" : "bg-surface-container-low"}`}
+                  className={`grid grid-cols-3 text-sm border-t border-border ${i % 2 === 0 ? "bg-white" : "bg-slate-50"}`}
                 >
                   <div className="col-span-1 px-6 py-4 font-semibold text-text">{row.spec}</div>
                   <div className="p-4 flex items-center justify-center">
