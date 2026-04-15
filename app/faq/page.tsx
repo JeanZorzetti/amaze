@@ -64,7 +64,7 @@ export default function FAQPage() {
         </section>
 
         {/* ── FAQ Accordion + Sidebar ── */}
-        <section className="bg-surface-container-low">
+        <section className="bg-orange-50">
           <FAQContent />
         </section>
 

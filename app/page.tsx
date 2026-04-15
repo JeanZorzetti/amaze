@@ -586,7 +586,7 @@ export default function Home() {
         </section>
 
         {/* ── 9. ESPECIALISTA — Floatie Kings style ── */}
-        <section className="py-24 px-4 lg:px-8 bg-surface-container-low">
+        <section className="py-24 px-4 lg:px-8 bg-orange-50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <p className="section-label text-orange mb-3">Atendimento Especializado</p>

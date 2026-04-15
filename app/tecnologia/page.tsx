@@ -187,7 +187,7 @@ export default function TecnologiaPage() {
         </section>
 
         {/* ── GRID DE TECNOLOGIAS TÉCNICAS — estilo Michelin ── */}
-        <section className="py-20 px-4 lg:px-8 bg-surface-container-low">
+        <section className="py-20 px-4 lg:px-8 bg-orange-50">
           <div className="max-w-7xl mx-auto">
             <div className="mb-12">
               <p className="section-label text-orange mb-3">Especificações Técnicas</p>
@@ -290,7 +290,7 @@ export default function TecnologiaPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {process.map((step) => (
-                <div key={step.num} className="relative bg-surface-container-low rounded-xl p-8 border border-border">
+                <div key={step.num} className="relative p-8">
                   <div
                     className="text-[5rem] font-black leading-none text-primary/5 select-none absolute top-2 right-4"
                     style={{ fontFamily: "var(--font-headline)" }}

@@ -45,7 +45,7 @@ export default function HeroSlider() {
 
   return (
     <section
-      className="relative min-h-screen flex items-end overflow-hidden"
+      className="relative min-h-[80vh] flex items-end overflow-hidden"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
