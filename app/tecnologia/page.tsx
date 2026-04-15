@@ -314,7 +314,7 @@ export default function TecnologiaPage() {
         </section>
 
         {/* ── COMPARATIVO ── */}
-        <section className="py-24 px-4 lg:px-8 bg-white">
+        <section className="py-24 px-4 lg:px-8 bg-orange-50">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
               <p className="section-label text-orange mb-3">Transparência Total</p>
