@@ -585,7 +585,29 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── 9. ESPECIALISTA — Floatie Kings style ── */}
+        {/* ── 9. LOGOS TICKER — marcas atendidas ── */}
+        <div className="bg-white py-10 border-y border-border overflow-hidden">
+          <p className="text-center text-[0.65rem] font-black uppercase tracking-[0.25em] text-muted mb-7">
+            Marcas que confiam na Amaze
+          </p>
+          <div className="ticker-track-slow flex items-center gap-0 whitespace-nowrap w-max">
+            {[
+              "Coca-Cola", "Nike", "Adidas", "Red Bull", "Heineken",
+              "Ambev", "Itaú", "Bradesco", "Magazine Luiza", "Mercado Livre",
+              "Coca-Cola", "Nike", "Adidas", "Red Bull", "Heineken",
+              "Ambev", "Itaú", "Bradesco", "Magazine Luiza", "Mercado Livre",
+            ].map((brand, i) => (
+              <span key={i} className="flex items-center">
+                <span className="px-10 text-sm font-black uppercase tracking-widest text-text/30 hover:text-text/60 transition-colors cursor-default select-none">
+                  {brand}
+                </span>
+                <span className="text-orange/40 text-xs">✦</span>
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* ── 10. ESPECIALISTA — Floatie Kings style ── */}
         <section className="py-24 px-4 lg:px-8 bg-orange-50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
