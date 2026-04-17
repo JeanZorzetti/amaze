@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/SchemaOrg";
 import PortfolioGrid from "@/components/blocks/PortfolioGrid";
+import PortfolioHero from "@/components/blocks/PortfolioHero";
 
 export const metadata: Metadata = {
   title: "Cases — Projetos de Infláveis Personalizados e Casos de Sucesso",
@@ -24,7 +25,7 @@ const GALLERY = [
   "/images/gallery/SaveClip.App_598635946_17877354609448342_3340277087935498923_n.jpg",
 ];
 
-const PROJECTS = [
+export const PROJECTS = [
   {
     title: "Réplica Gigante de Produto — Feira São Paulo",
     client: "Marca de Bebidas Nacional",
@@ -128,49 +129,16 @@ export default function PortfolioPage() {
           { name: "Cases",  url: "https://amazeballoons.com.br/portfolio" },
         ]}
       />
-      <Header />
-      <main className="flex-1 pt-24">
+      {/* Header transparente — flutua sobre o hero */}
+      <Header transparent />
 
-        {/* ── HERO — clean, estilo Marity ── */}
-        <section className="pt-20 pb-10 px-4 lg:px-8 bg-white border-b border-border">
-          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-end justify-between gap-8">
-            <div>
-              <p className="text-[0.65rem] font-black uppercase tracking-[0.25em] text-muted mb-4">
-                Nosso Trabalho
-              </p>
-              <h1
-                className="text-5xl lg:text-7xl font-black leading-[0.95] uppercase text-text"
-                style={{ fontFamily: "var(--font-headline)" }}
-              >
-                500+<br />
-                <span className="text-orange">PROJETOS.</span>
-              </h1>
-            </div>
+      <main className="flex-1">
 
-            <div className="flex flex-col gap-6 lg:text-right lg:max-w-sm">
-              <p className="text-muted text-base leading-relaxed">
-                De gigantes em feiras a arcos em dias de corrida — 40+ anos de engenharia aplicada a infláveis de alta performance para as maiores marcas das Américas.
-              </p>
-              <div className="flex flex-wrap lg:justify-end gap-5">
-                {[
-                  { value: "500+", label: "Projetos" },
-                  { value: "15+",  label: "Países" },
-                  { value: "40+",  label: "Anos" },
-                ].map((s) => (
-                  <div key={s.label} className="flex flex-col">
-                    <span className="text-3xl font-black text-text leading-none" style={{ fontFamily: "var(--font-headline)" }}>
-                      {s.value}
-                    </span>
-                    <span className="text-xs text-muted uppercase tracking-widest mt-0.5">{s.label}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* ── HERO — full-screen carrossel com zoom-in lento ── */}
+        <PortfolioHero images={GALLERY} />
 
-        {/* ── GRID — fundo branco, masonry, estilo Marity ── */}
-        <section className="py-16 px-4 lg:px-8 bg-white">
+        {/* ── GRID — fundo branco, masonry ── */}
+        <section id="projetos" className="py-16 px-4 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <PortfolioGrid projects={PROJECTS} sectors={SECTORS} />
           </div>

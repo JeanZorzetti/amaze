@@ -47,10 +47,22 @@ const tecnologias = [
   },
 ];
 
-export default function Header() {
+interface HeaderProps {
+  transparent?: boolean;
+}
+
+export default function Header({ transparent = false }: HeaderProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [megaOpen, setMegaOpen]     = useState<"products" | "sectors" | "tecnologia" | null>(null);
+  const [scrolled, setScrolled]     = useState(false);
   const headerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (!transparent) return;
+    function onScroll() { setScrolled(window.scrollY > 60); }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [transparent]);
 
   useEffect(() => {
     function onClickOutside(e: MouseEvent) {
@@ -67,7 +79,11 @@ export default function Header() {
     <header ref={headerRef} className="fixed top-0 left-0 right-0 z-50">
 
       {/* ── Announcement Bar ── */}
-      <div className="bg-on-surface text-inverse-on-surface py-2 px-4 text-center hidden sm:block overflow-hidden">
+      <div className={`py-2 px-4 text-center hidden sm:block overflow-hidden transition-colors duration-500 ${
+        transparent && !scrolled
+          ? "bg-black/20 text-white/90"
+          : "bg-on-surface text-inverse-on-surface"
+      }`}>
         <div className="flex items-center justify-center gap-4 text-xs font-semibold whitespace-nowrap">
           <span>✦ 40+ Anos de Experiência</span>
           <span className="text-white/25">|</span>
@@ -82,12 +98,16 @@ export default function Header() {
       </div>
 
       {/* ── Main Nav ── */}
-      <div className="bg-white border-b border-surface-variant/30 relative flex items-center justify-between whitespace-nowrap px-6 py-3.5 lg:px-12">
+      <div className={`relative flex items-center justify-between whitespace-nowrap px-6 py-3.5 lg:px-12 transition-all duration-500 ${
+        transparent && !scrolled
+          ? "bg-transparent"
+          : "bg-white border-b border-surface-variant/30"
+      }`}>
 
         {/* Logo */}
         <Link href="/" className="shrink-0">
           <Image
-            src="/logos/2026_AmazeBalloons_B_black.png"
+            src={transparent && !scrolled ? "/logos/2026_AmazeBalloons_B_white.png" : "/logos/2026_AmazeBalloons_B_black.png"}
             alt="Amaze Balloons"
             width={160}
             height={52}
@@ -106,7 +126,9 @@ export default function Header() {
             onMouseLeave={() => setMegaOpen(null)}
           >
             <button
-              className="flex items-center gap-1 text-on-surface hover:text-primary transition-colors font-label text-sm font-semibold leading-normal"
+              className={`flex items-center gap-1 transition-colors font-label text-sm font-semibold leading-normal ${
+                transparent && !scrolled ? "text-white/90 hover:text-white" : "text-on-surface hover:text-primary"
+              }`}
               onClick={() => setMegaOpen(megaOpen === "sectors" ? null : "sectors")}
             >
               Setores
@@ -144,7 +166,9 @@ export default function Header() {
           >
             <Link
               href="/tecnologia"
-              className="flex items-center gap-1 text-on-surface hover:text-primary transition-colors font-label text-sm font-semibold leading-normal"
+              className={`flex items-center gap-1 transition-colors font-label text-sm font-semibold leading-normal ${
+                transparent && !scrolled ? "text-white/90 hover:text-white" : "text-on-surface hover:text-primary"
+              }`}
             >
               Tecnologia
               <svg className={`size-3.5 transition-transform ${megaOpen === "tecnologia" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -204,7 +228,9 @@ export default function Header() {
             onMouseLeave={() => setMegaOpen(null)}
           >
             <button
-              className="flex items-center gap-1 text-on-surface hover:text-primary transition-colors font-label text-sm font-semibold leading-normal"
+              className={`flex items-center gap-1 transition-colors font-label text-sm font-semibold leading-normal ${
+                transparent && !scrolled ? "text-white/90 hover:text-white" : "text-on-surface hover:text-primary"
+              }`}
               onClick={() => setMegaOpen(megaOpen === "products" ? null : "products")}
             >
               Produtos
@@ -257,7 +283,9 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-on-surface hover:text-primary transition-colors font-label text-sm font-semibold leading-normal"
+              className={`transition-colors font-label text-sm font-semibold leading-normal ${
+                transparent && !scrolled ? "text-white/90 hover:text-white" : "text-on-surface hover:text-primary"
+              }`}
             >
               {item.label}
             </Link>
@@ -276,13 +304,19 @@ export default function Header() {
         <div className="flex items-center gap-3 shrink-0">
 
           {/* Language toggle — PT / EN */}
-          <div className="flex items-center border border-border rounded-lg overflow-hidden text-xs font-black uppercase tracking-widest">
-            <span className="px-3 py-1.5 bg-on-surface text-inverse-on-surface cursor-default select-none">
+          <div className={`flex items-center border rounded-lg overflow-hidden text-xs font-black uppercase tracking-widest ${
+            transparent && !scrolled ? "border-white/30" : "border-border"
+          }`}>
+            <span className={`px-3 py-1.5 cursor-default select-none ${
+              transparent && !scrolled ? "bg-white/20 text-white" : "bg-on-surface text-inverse-on-surface"
+            }`}>
               PT
             </span>
             <Link
               href="/en"
-              className="px-3 py-1.5 text-muted hover:bg-surface-container hover:text-text transition-colors"
+              className={`px-3 py-1.5 transition-colors ${
+                transparent && !scrolled ? "text-white/70 hover:bg-white/10 hover:text-white" : "text-muted hover:bg-surface-container hover:text-text"
+              }`}
             >
               EN
             </Link>
@@ -290,7 +324,7 @@ export default function Header() {
 
           {/* Mobile toggle */}
           <button
-            className="md:hidden text-primary p-1"
+            className={`md:hidden p-1 ${transparent && !scrolled ? "text-white" : "text-primary"}`}
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Alternar menu"
           >
