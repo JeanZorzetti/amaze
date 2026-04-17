@@ -75,7 +75,61 @@ export default function Home() {
           <VideoCarousel />
         </section>
 
-        {/* ── 4. SECTORS ── */}
+        {/* ── 4. SPLIT CTA — 2 universos ── */}
+        <section className="py-16 px-4 lg:px-8 bg-white">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              {
+                title: "INFLÁVEIS CORPORATIVOS",
+                desc: "Feiras, lançamentos, ativações e conferências.",
+                href: "/setores/eventos-corporativos",
+                img: "/images/gallery/SaveClip.App_659586715_17891981046448342_7629493146823458172_n.jpg",
+                cta: "Ver projetos →",
+                ctaStyle: "bg-on-surface text-white",
+              },
+              {
+                title: "EVENTOS & CELEBRAÇÕES",
+                desc: "Festivais, esportes, festas e campanhas de marca.",
+                href: "/setores/festas-celebracoes",
+                img: "/images/gallery/SaveClip.App_598989249_17877354600448342_7726145296482408610_n.jpg",
+                cta: "Ver projetos →",
+                ctaStyle: "bg-orange text-white",
+              },
+            ].map((item) => (
+              <div key={item.title} className="flex flex-col gap-5">
+                <Link href={item.href} className="group block relative rounded-2xl overflow-hidden aspect-[16/10]">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors" />
+                </Link>
+                <div className="flex items-end justify-between gap-4 px-1">
+                  <div>
+                    <h3
+                      className="text-lg font-black uppercase text-text leading-tight"
+                      style={{ fontFamily: "var(--font-headline)" }}
+                    >
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-muted mt-1">{item.desc}</p>
+                  </div>
+                  <Link
+                    href={item.href}
+                    className={`shrink-0 inline-flex items-center h-11 px-6 rounded-full font-black text-xs uppercase tracking-widest transition-opacity hover:opacity-90 ${item.ctaStyle}`}
+                    style={{ fontFamily: "var(--font-headline)" }}
+                  >
+                    {item.cta}
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ── 5. SECTORS ── */}
         <section className="py-24 px-4 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
