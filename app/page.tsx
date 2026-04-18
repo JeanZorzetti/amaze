@@ -214,9 +214,9 @@ export default function Home() {
                   className="text-4xl lg:text-5xl font-black text-inverse-on-surface leading-[1.05] uppercase"
                   style={{ fontFamily: "var(--font-headline)" }}
                 >
-                  A TECNOLOGIA QUE
+                  A Tecnologia que nos
                   <br />
-                  <span className="text-orange">NOS SEPARA</span>
+                  <span className="text-orange">DESTACA</span>
                 </h2>
               </div>
               <p className="text-inverse-on-surface/50 text-sm max-w-xs leading-relaxed">
