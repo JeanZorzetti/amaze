@@ -96,13 +96,17 @@ const process = [
 ];
 
 const compare = [
-  { spec: "Motor embutido (sem mangueiras)", amaze: true,  market: false },
-  { spec: "Poliéster 300g/m²",              amaze: true,  market: false },
-  { spec: "Ancoragem 300 kg/f documentada", amaze: true,  market: false },
-  { spec: "Fluxo contínuo (sem selados)",   amaze: true,  market: false },
-  { spec: "Garantia 3 anos sem exclusões",  amaze: true,  market: false },
-  { spec: "Análise de fluxo pré-costura",   amaze: true,  market: false },
-  { spec: "Especificações técnicas públicas", amaze: true, market: false },
+  { spec: "Motor 100% Embutido",               desc: "Design limpo, sem mangueiras" },
+  { spec: "Poliéster Premium 300g/m²",         desc: "Alta resistência" },
+  { spec: "Ancoragem Documentada",             desc: "Segurança comprovada" },
+  { spec: "Garantia Real de 3 Anos",           desc: "Sem letras miúdas" },
+  { spec: "Travas de Segurança Automáticas",   desc: "Anti-abertura" },
+  { spec: "Velcro de Poliamida/Nylon",         desc: "Padrão industrial" },
+  { spec: "Criação de Layouts via IA no Site", desc: "Uso aberto ao cliente" },
+  { spec: "Desenvolvimento Constante com IA",  desc: "Evolução tecnológica" },
+  { spec: "Atendimento Humanizado + IA",       desc: "O melhor dos dois mundos" },
+  { spec: "Pós-Venda Próximo e Suporte 24h",   desc: "Sempre ao seu lado" },
+  { spec: "Especificações Técnicas Públicas",  desc: "Transparência" },
 ];
 
 
@@ -314,38 +318,55 @@ export default function TecnologiaPage() {
         </section>
 
         {/* ── COMPARATIVO ── */}
-        <section className="py-24 px-4 lg:px-8 bg-orange-50">
+        <section className="py-24 px-4 lg:px-8 bg-on-surface">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12">
+            <div className="text-center mb-10">
               <p className="section-label text-orange mb-3">Transparência Total</p>
               <h2
-                className="text-3xl lg:text-4xl font-black text-text uppercase"
+                className="text-3xl lg:text-4xl font-black text-white uppercase"
                 style={{ fontFamily: "var(--font-headline)" }}
               >
-                AMAZE VS. MERCADO
+                Compare e Decida com Segurança.
               </h2>
-              <p className="text-muted text-sm mt-4">
-                Pedimos que você compare. Nenhum outro fabricante publica estas especificações porque não as possui.
+              <p className="text-white/50 text-sm mt-4 max-w-xl mx-auto">
+                Acreditamos que a transparência é a base de uma parceria de confiança. Por isso, somos o único player do mercado que torna públicas suas especificações de engenharia, permitindo que você avalie o valor real e a segurança do seu investimento.
               </p>
             </div>
 
-            <div className="rounded-md overflow-hidden border border-border">
-              <div className="grid grid-cols-3 bg-on-surface text-inverse-on-surface text-xs font-black uppercase tracking-widest">
-                <div className="col-span-1 px-6 py-4">Especificação</div>
-                <div className="p-4 text-center text-orange">Amaze</div>
-                <div className="p-4 text-center text-inverse-on-surface/40">Mercado</div>
+            <div className="rounded-lg overflow-hidden border border-white/10">
+              {/* Header row */}
+              <div className="grid grid-cols-[1fr_140px_160px] bg-white/5 text-xs font-black uppercase tracking-widest">
+                <div className="px-6 py-4 text-white/40">Diferencial Estratégico</div>
+                <div className="py-4 text-center text-orange">Amaze Balloons</div>
+                <div className="py-4 text-center text-white/40">Mercado Tradicional</div>
               </div>
+              {/* Data rows */}
               {compare.map((row, i) => (
                 <div
                   key={row.spec}
-                  className={`grid grid-cols-3 text-sm border-t border-border ${i % 2 === 0 ? "bg-white" : "bg-slate-50"}`}
+                  className={`grid grid-cols-[1fr_140px_160px] text-sm border-t border-white/8 ${
+                    i % 2 === 0 ? "bg-white/[0.03]" : "bg-transparent"
+                  }`}
                 >
-                  <div className="col-span-1 px-6 py-4 font-semibold text-text">{row.spec}</div>
-                  <div className="p-4 flex items-center justify-center">
-                    <span className="size-6 rounded-full bg-green/15 flex items-center justify-center text-green font-black text-xs">✓</span>
+                  <div className="px-6 py-4">
+                    <span className="font-bold text-white">{row.spec}</span>
+                    {row.desc && (
+                      <span className="text-white/40 font-normal"> ({row.desc})</span>
+                    )}
                   </div>
-                  <div className="p-4 flex items-center justify-center">
-                    <span className="size-6 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 font-black text-xs">✕</span>
+                  <div className="py-4 flex items-center justify-center">
+                    <span className="size-7 rounded-full bg-green/20 flex items-center justify-center">
+                      <svg className="size-4 text-green" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div className="py-4 flex items-center justify-center">
+                    <span className="size-7 rounded-full bg-red-500/20 flex items-center justify-center">
+                      <svg className="size-4 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </span>
                   </div>
                 </div>
               ))}
