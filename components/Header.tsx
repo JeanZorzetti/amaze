@@ -5,14 +5,82 @@ import Link from "next/link";
 import Image from "next/image";
 
 const products = [
-  { label: "Tendas Infláveis",       href: "/produtos/tendas-inflaveis" },
-  { label: "Portais Infláveis",      href: "/produtos/portais-inflaveis" },
-  { label: "Totens Infláveis",       href: "/produtos/totens-inflaveis" },
-  { label: "Túneis Infláveis",       href: "/produtos/tuneis-inflaveis" },
-  { label: "Produtos Gigantes",      href: "/produtos/produtos-gigantes" },
-  { label: "Personagens Infláveis",  href: "/produtos/personagens-inflaveis" },
-  { label: "Colchões 2D",            href: "/produtos/colchoes-2d" },
-  { label: "Roof-Top",               href: "/produtos/roof-top" },
+  {
+    label: "Tendas Infláveis",
+    href: "/produtos/tendas-inflaveis",
+    icon: (
+      <svg className="size-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3L2 10h2v9h7v-5h2v5h7v-9h2L12 3z" />
+      </svg>
+    ),
+  },
+  {
+    label: "Portais Infláveis",
+    href: "/produtos/portais-inflaveis",
+    icon: (
+      <svg className="size-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4 19V8a2 2 0 012-2h12a2 2 0 012 2v11M4 19h16M4 19H2m18 0h2M9 6V4m6 2V4M9 19v-6h6v6" />
+      </svg>
+    ),
+  },
+  {
+    label: "Totens Infláveis",
+    href: "/produtos/totens-inflaveis",
+    icon: (
+      <svg className="size-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 3h6v18H9V3zM9 3a3 3 0 00-3 3v12a3 3 0 003 3m6-18a3 3 0 013 3v12a3 3 0 01-3 3" />
+      </svg>
+    ),
+  },
+  {
+    label: "Túneis Infláveis",
+    href: "/produtos/tuneis-inflaveis",
+    icon: (
+      <svg className="size-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 12C3 7.029 7.029 3 12 3s9 4.029 9 9M3 12h18M3 12v7h18v-7" />
+      </svg>
+    ),
+  },
+  {
+    label: "Produtos Gigantes",
+    href: "/produtos/produtos-gigantes",
+    icon: (
+      <svg className="size-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v3m0 12v3M3 12h3m12 0h3" />
+      </svg>
+    ),
+  },
+  {
+    label: "Personagens Infláveis",
+    href: "/produtos/personagens-inflaveis",
+    icon: (
+      <svg className="size-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8a3 3 0 100-6 3 3 0 000 6zM6.5 21c0-3.038 2.462-5.5 5.5-5.5s5.5 2.462 5.5 5.5" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 13l-2 2m8-2l2 2" />
+      </svg>
+    ),
+  },
+  {
+    label: "Colchões 2D",
+    href: "/produtos/colchoes-2d",
+    icon: (
+      <svg className="size-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+        <rect x="3" y="6" width="18" height="12" rx="1" strokeLinecap="round" strokeLinejoin="round" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 10h18M7 6v12" />
+      </svg>
+    ),
+  },
+  {
+    label: "Roof-Top",
+    href: "/produtos/roof-top",
+    icon: (
+      <svg className="size-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 10.5L12 3l9 7.5V21H3V10.5z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v4m0 0a2 2 0 100 4 2 2 0 000-4z" />
+      </svg>
+    ),
+  },
 ];
 
 const sectors = [
@@ -252,11 +320,8 @@ export default function Header({ transparent = false }: HeaderProps) {
                       onClick={() => setMegaOpen(null)}
                       className="group flex items-center gap-3 px-4 py-2.5 hover:bg-primary/5 transition-colors border-b border-outline-variant/20 last:border-0"
                     >
-                      {/* Image placeholder */}
-                      <div className="size-8 rounded bg-surface-container shrink-0 flex items-center justify-center text-on-surface-variant/30 border border-border">
-                        <svg className="size-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-                        </svg>
+                      <div className="size-8 rounded bg-primary/8 shrink-0 flex items-center justify-center text-primary border border-primary/15 group-hover:bg-primary/15 transition-colors">
+                        {p.icon}
                       </div>
                       <span className="text-sm font-semibold text-on-surface group-hover:text-primary transition-colors">
                         {p.label}
