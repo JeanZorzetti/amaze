@@ -22,6 +22,708 @@ type ProductData = {
 };
 
 const PRODUCTS: Record<string, ProductData> = {
+  "tendas-inflaveis": {
+    title: "Tendas Infláveis — Espaços Cobertos para Eventos e Ativações | Amaze",
+    h1: "TENDAS INFLÁVEIS",
+    description:
+      "Tendas infláveis modulares para eventos, ativações de marca e espaços cobertos temporários. Instalação em minutos, sem ferramentas. De 3m a 20m de vão livre.",
+    heroText:
+      "Um espaço coberto completo que sai de uma bolsa e está pronto em minutos. Tendas infláveis Amaze entregam vão livre de até 20 metros sem colunas internas — criando ambientes imersivos de marca onde quer que o evento aconteça.",
+    icon: "⛺",
+    sizes: ["3×3m", "5×5m", "6×10m", "10×20m", "Sob Medida"],
+    includes: [
+      "Estrutura inflável completa",
+      "Motor Sirocco HideVENT industrial",
+      "Sistema de ancoragem 300 kg/f",
+      "Cobertura lateral opcional",
+      "Bolsas de transporte",
+      "Kit de reparo rápido Amaze",
+    ],
+    material:
+      "Poliéster Emborrachado 300g/m² com tratamento UV de alta tenacidade e revestimento antifungo. Estrutura tubular em fluxo contínuo — pressão constante garantida durante todo o evento. Resistente à chuva e ao vento.",
+    benefits: [
+      {
+        icon: "⚡",
+        title: "Montagem em Minutos",
+        desc: "Uma tenda de 6×10m está de pé e pronta em menos de 15 minutos com 2 pessoas. Sem ferramentas, sem peças soltas, sem estrutura metálica para montar. O motor infla e a tenda se ergue sozinha.",
+      },
+      {
+        icon: "🏛️",
+        title: "Vão Livre Total",
+        desc: "Sem colunas internas. O espaço interior da tenda inflável é 100% aproveitável para exposição, palco, lounge ou ativação. A estrutura é a própria cobertura — não há suportes que interfiram no layout.",
+      },
+      {
+        icon: "🎨",
+        title: "Superfície de Marca Total",
+        desc: "A cobertura e as laterais da tenda são impressas em cobertura total com a identidade da marca. Do chão ao topo, o espaço é 100% personalizado — uma extensão física da identidade visual.",
+      },
+      {
+        icon: "🔄",
+        title: "Portátil e Reutilizável",
+        desc: "Desinfla, dobra e cabe em bolsas de transporte. De um evento para o próximo sem custo adicional de estrutura. Vida útil de 5 a 10 anos com os cuidados adequados.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Ativações de Marca Externas",
+        desc: "Leve o ambiente da marca para qualquer praça, parque ou área de grande circulação. A tenda inflável cria um espaço de experiência fechado e personalizado em qualquer localização — sem obra, sem permissão de construção.",
+      },
+      {
+        title: "Estandes em Feiras e Festivais",
+        desc: "Abandone o estande modular genérico. Uma tenda inflável personalizada se destaca imediatamente no pavilhão ou no festival — criando um ambiente de marca exclusivo que os visitantes entram, vivenciam e compartilham.",
+      },
+      {
+        title: "Hospitality e Camarotes",
+        desc: "Em eventos esportivos, festivais e shows, tendas infláveis criam áreas VIP e hospitality exclusivas com identidade total do patrocinador. Espaço diferenciado, montagem rápida, desmontagem igual.",
+      },
+      {
+        title: "Pop-up Stores e Showrooms",
+        desc: "Uma loja temporária completa que pode ser instalada em qualquer lugar. A tenda inflável com identidade da marca cria o ambiente de varejo sem necessidade de ponto fixo — com toda a experiência de uma loja física.",
+      },
+    ],
+    specs: [
+      { label: "Vão livre máximo", value: "20m (padrão)" },
+      { label: "Motor", value: "Sirocco HideVENT industrial" },
+      { label: "Montagem", value: "10–15 min (2 pessoas)" },
+      { label: "Ancoragem", value: "300 kg/f" },
+      { label: "Garantia", value: "3 anos" },
+      { label: "Vida útil", value: "5–10 anos" },
+    ],
+    faqs: [
+      {
+        question: "As tendas infláveis suportam chuva?",
+        answer:
+          "Sim. O Poliéster 300g/m² com revestimento antifungo e tratamento UV é impermeável. O sistema de fluxo contínuo mantém a pressão estrutural mesmo em condições adversas.",
+      },
+      {
+        question: "É possível usar a tenda em locais sem tomada?",
+        answer:
+          "Sim. O motor Sirocco HideVENT pode ser conectado a um gerador portátil. Oferecemos opções de motor 110v, 220v e bivolt — informe a disponibilidade de energia no local ao solicitar o orçamento.",
+      },
+      {
+        question: "Quais são as dimensões disponíveis?",
+        answer:
+          "Temos modelos de 3×3m até 10×20m como padrão. Para projetos especiais maiores, consulte nossa equipe — cada tenda é fabricada sob medida.",
+      },
+      {
+        question: "Qual é o prazo de produção?",
+        answer:
+          "4 a 7 semanas dependendo do tamanho e da complexidade da impressão. Aprovação em 3D antes da primeira costura.",
+      },
+    ],
+  },
+
+  "portais-inflaveis": {
+    title: "Arcos & Portais Infláveis — Arcos de Corrida e Entradas para Eventos | Amaze",
+    h1: "PORTAIS INFLÁVEIS",
+    description:
+      "Portais e arcos infláveis personalizados para linhas de chegada em corridas, entradas de eventos e ativações de marca. De 3m a 10m de largura. Instalação em 5 minutos.",
+    heroText:
+      "O ponto mais fotografado de qualquer corrida. A entrada que define o ambiente de um evento antes de qualquer palavra. Portais e arcos infláveis são o marco visual que coloca sua marca no centro de cada registro fotográfico.",
+    icon: "🔷",
+    sizes: ["3m", "4m", "5m", "7m", "10m", "Sob Medida"],
+    includes: [
+      "Motor Sirocco HideVENT embutido",
+      "Sacos de ancoragem (conjunto)",
+      "Bolsa de transporte",
+      "Manual de instalação",
+      "Impressão UV em cores completas",
+      "Kit de reparo rápido Amaze",
+    ],
+    material:
+      "Poliéster Emborrachado 300g/m² com impressão UV em cobertura total. Ancoragem com sistema de 300 kg/f. Sistema de fluxo contínuo para operação em condições externas.",
+    benefits: [
+      {
+        icon: "📸",
+        title: "O Ponto de Foto do Evento",
+        desc: "Cada atleta que cruza a linha de chegada é uma foto com o portal da marca ao fundo. Uma maratona de 10.000 participantes gera no mínimo 10.000 impressões orgânicas — antes de considerar espectadores e cobertura de imprensa.",
+      },
+      {
+        icon: "⚡",
+        title: "Instalação em 5 Minutos",
+        desc: "Motor Sirocco HideVENT embutido. Uma pessoa consegue montar e instalar um portal de 7m em 5 a 10 minutos. Sem ferramentas, sem equipe técnica especializada.",
+      },
+      {
+        icon: "🔷",
+        title: "Múltiplos Patrocinadores",
+        desc: "A superfície do portal comporta logotipos de múltiplos patrocinadores em impressão de alta fidelidade. Cada corrida, cada evento — uma vitrine que todos os participantes cruzam.",
+      },
+      {
+        icon: "⚓",
+        title: "Resistência a Vento",
+        desc: "Sistema de ancoragem de 300 kg/f projetado para eventos externos. O sistema de fluxo contínuo Amaze compensa pressões instantaneamente — estrutura sempre estável.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Linhas de Chegada em Corridas",
+        desc: "O portal de chegada é a imagem símbolo de qualquer corrida. Personalizável com identidade do evento, patrocinadores principais e secundários. Disponível de 3m a 10m+.",
+      },
+      {
+        title: "Entradas de Eventos e Feiras",
+        desc: "Um portal inflável de entrada define o território da marca antes de qualquer conversa. Cria demarcação visual do espaço e posiciona a marca como protagonista do ambiente.",
+      },
+      {
+        title: "Palcos e Zonas VIP",
+        desc: "Portais delimitam zonas VIP, backstage e palcos em festivais. Criam a percepção de exclusividade e reforçam a hierarquia visual do evento.",
+      },
+      {
+        title: "Ativações no Varejo",
+        desc: "Portais na entrada de lojas transformam o acesso em uma experiência de marca. Especialmente eficaz em inaugurações, Black Friday e ativações sazonais de alto tráfego.",
+      },
+    ],
+    specs: [
+      { label: "Largura máxima", value: "10m (padrão) / sob medida" },
+      { label: "Motor", value: "Sirocco HideVENT embutido" },
+      { label: "Instalação", value: "5–10 min (1 pessoa)" },
+      { label: "Impressão", value: "UV cobertura total" },
+      { label: "Ancoragem", value: "300 kg/f" },
+      { label: "Garantia", value: "3 anos" },
+    ],
+    faqs: [
+      {
+        question: "Os portais suportam múltiplos logotipos de patrocinadores?",
+        answer:
+          "Sim. A superfície é impressa em cobertura total em alta fidelidade. Trabalhamos com você para posicionar cada logotipo com hierarquia visual adequada.",
+      },
+      {
+        question: "Em quanto tempo um portal pode ser montado?",
+        answer:
+          "A maioria infla e está pronta em 5 a 10 minutos com uma pessoa. O motor Sirocco HideVENT é embutido — sem mangueiras para conectar.",
+      },
+      {
+        question: "Os portais são seguros em condições de vento?",
+        answer:
+          "Sim. O sistema de fluxo contínuo Amaze compensa pressões de vento instantaneamente, e o sistema de ancoragem de 300 kg/f garante estabilidade.",
+      },
+      {
+        question: "Qual é o prazo de produção?",
+        answer: "3 a 5 semanas dependendo do tamanho e complexidade da impressão. Aprovação em 3D antes da primeira costura.",
+      },
+    ],
+  },
+
+  "totens-inflaveis": {
+    title: "Totens Infláveis e Displays Verticais — Visibilidade de Marca | Amaze",
+    h1: "TOTENS INFLÁVEIS",
+    description:
+      "Totens infláveis de 2m a 5m para máxima visibilidade de marca com mínima área de solo. O inflável mais custo-eficiente do mercado.",
+    heroText:
+      "Área mínima no chão. Altura máxima. Os totens infláveis são a forma mais custo-eficiente de criar um ponto de referência vertical com identidade de marca — em feiras, PDVs, eventos e espaço público.",
+    icon: "📐",
+    sizes: ["2m", "3m", "4m", "5m", "Sob Medida"],
+    includes: [
+      "Motor Sirocco HideVENT 220v embutido",
+      "Bolsa de transporte",
+      "Manual de instalação",
+      "Tratamento UV e antifungo",
+      "Kit de reparo rápido Amaze",
+    ],
+    material:
+      "Poliéster Emborrachado 300g/m² com impressão UV em cores completas. Tratamento UV de alta tenacidade e revestimento antifungo de série.",
+    benefits: [
+      {
+        icon: "📐",
+        title: "Footprint Mínimo, Impacto Máximo",
+        desc: "Um totem de 4m ocupa menos de 1m² de área de solo. Em feiras, PDVs e eventos com espaço limitado, o totem entrega o máximo de visibilidade vertical com o mínimo de espaço consumido.",
+      },
+      {
+        icon: "💰",
+        title: "O Inflável Mais Custo-Eficiente",
+        desc: "Totens são os infláveis de menor investimento inicial por metro de altura de visibilidade. São a porta de entrada ideal para marcas que querem começar com infláveis.",
+      },
+      {
+        icon: "🔄",
+        title: "Versátil para Qualquer Espaço",
+        desc: "Do PDV de supermercado à praça pública, da feira corporativa ao evento de rua — totens se adaptam a qualquer contexto. Desinflam em minutos e se guardam em uma bolsa compacta.",
+      },
+      {
+        icon: "🖼️",
+        title: "Impressão Fotorrealística",
+        desc: "Superfície cilíndrica ou quadrada impressa em cobertura total em alta fidelidade. Visível a distância, identificável de longe, fiel à identidade da marca.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Pontos de Venda (PDV)",
+        desc: "No corredor do supermercado, na entrada da loja ou ao lado da gôndola — o totem inflável cria um marco visual que atrai o olhar do consumidor e reforça a associação de produto.",
+      },
+      {
+        title: "Feiras e Exposições",
+        desc: "Em espaços de estande onde metros quadrados são cobrados em ouro, o totem entrega visibilidade vertical máxima com ocupação horizontal mínima. Visível de qualquer ponto do pavilhão.",
+      },
+      {
+        title: "Eventos Externos e Ambientação",
+        desc: "No festival, na calçada ou na praça, totens criam pontos de referência de marca no espaço urbano. Fácil transporte, rápida instalação e impacto visual imediato.",
+      },
+      {
+        title: "Ambientação de Lojas e Showrooms",
+        desc: "Dentro de showrooms e lojas de grandes dimensões, totens infláveis criam hierarquia visual e destacam áreas, produtos ou campanhas sem reforma ou obra.",
+      },
+    ],
+    specs: [
+      { label: "Altura", value: "2m a 5m (padrão)" },
+      { label: "Motor", value: "Sirocco HideVENT 220v" },
+      { label: "Área de solo", value: "< 1m² (modelos compactos)" },
+      { label: "Impressão", value: "UV cobertura total" },
+      { label: "Garantia", value: "3 anos" },
+      { label: "Vida útil", value: "5–10 anos" },
+    ],
+    faqs: [
+      {
+        question: "Qual é o menor tamanho disponível?",
+        answer: "Nossos totens começam em 2 metros de altura. Ideal para ambientes internos de varejo, lojas e stands pequenos.",
+      },
+      {
+        question: "Totens são adequados para uso externo?",
+        answer: "Sim. O Poliéster 300g/m² com tratamento UV e revestimento antifungo garante performance em uso externo prolongado. O motor Sirocco HideVENT é à prova d'água.",
+      },
+      {
+        question: "Qual é a diferença entre totem e colchão 2D?",
+        answer: "Totens são estruturas cilíndricas ou quadradas verticais — ideais para visibilidade de marca de longe. Colchões 2D são planos, reproduzindo logotipos ou personagens — ideais para backdrop e fachada.",
+      },
+      {
+        question: "Quanto tempo os totens duram?",
+        answer: "Com os cuidados adequados, a vida útil típica é de 5 a 10 anos. Garantia de 3 anos de fabricação.",
+      },
+    ],
+  },
+
+  "tuneis-inflaveis": {
+    title: "Túneis Infláveis — Entradas para Vestiários e Palcos Esportivos | Amaze",
+    h1: "TÚNEIS INFLÁVEIS",
+    description:
+      "Túneis infláveis para entrada de atletas, palcos e eventos esportivos. Impressão fotorrealística, instalação em 5 minutos. O elemento visual mais impactante do esporte.",
+    heroText:
+      "O momento em que o atleta emerge do túnel é o instante de maior tensão e expectativa de qualquer evento esportivo. Um túnel inflável personalizado com a identidade da equipe ou patrocinador transforma esse momento em experiência de marca inesquecível — e em conteúdo que viraliza.",
+    icon: "🏟️",
+    sizes: ["3m", "5m", "8m", "10m", "Sob Medida"],
+    includes: [
+      "Motor Sirocco HideVENT embutido",
+      "Sistema de ancoragem lateral",
+      "Bolsas de transporte",
+      "Manual de instalação",
+      "Impressão UV completa interior e exterior",
+      "Kit de reparo rápido Amaze",
+    ],
+    material:
+      "Poliéster Emborrachado 300g/m² com impressão UV em cobertura total — interior e exterior. Estrutura tubular em fluxo contínuo com reforços de costura dupla em áreas de alto tráfego (bordas, base e junções).",
+    benefits: [
+      {
+        icon: "🏟️",
+        title: "Experiência de Entrada Inesquecível",
+        desc: "O túnel transforma a entrada do atleta em ritual. Impressão no interior e exterior — o atleta percorre a identidade da marca enquanto o público assiste à sua chegada. Um momento de marca, não apenas de esporte.",
+      },
+      {
+        icon: "📸",
+        title: "Conteúdo Viral Garantido",
+        desc: "A saída do atleta pelo túnel é um dos frames mais compartilhados em qualquer cobertura esportiva. Transmissões, redes sociais e cobertura de imprensa — o túnel é o cenário de todas.",
+      },
+      {
+        icon: "⚡",
+        title: "Instalação em 5 Minutos",
+        desc: "Motor Sirocco HideVENT embutido. Túneis de até 8m são instalados por 2 pessoas em 5 a 8 minutos, sem ferramentas ou equipe técnica especializada.",
+      },
+      {
+        icon: "🎨",
+        title: "Personalização Total",
+        desc: "Cores, logotipos, personagens e gráficos de equipe ou patrocinador em impressão fotorrealística no interior e exterior. Cada evento, um túnel único.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Entradas de Atletas em Estádios",
+        desc: "Do futebol ao basquete, do vôlei ao e-sports — o túnel inflável cria o ritual de entrada que jogadores e torcida reconhecem como o momento inaugural do espetáculo.",
+      },
+      {
+        title: "Palcos e Eventos de Música",
+        desc: "Artistas emergindo de túneis infláveis personalizados com a identidade do álbum ou da turnê. Um elemento de produção que diferencia o show e gera cobertura espontânea em todas as plataformas.",
+      },
+      {
+        title: "Competições de eSports",
+        desc: "A entrada dos times em competições de eSports é um momento de produção tão importante quanto no esporte tradicional. Túneis infláveis com identidade do time ou do patrocinador elevam o nível da produção do evento.",
+      },
+      {
+        title: "Eventos Corporativos e Convenções",
+        desc: "Palestras e keynotes com entrada pelo túnel personalizado com a identidade da empresa. Um elemento de cenografia que surpreende a audiência antes que o palestrante diga uma palavra.",
+      },
+    ],
+    specs: [
+      { label: "Comprimento", value: "3m a 10m (padrão)" },
+      { label: "Motor", value: "Sirocco HideVENT embutido" },
+      { label: "Impressão", value: "UV interior e exterior" },
+      { label: "Instalação", value: "5–8 min (2 pessoas)" },
+      { label: "Ancoragem", value: "Sistema lateral 300 kg/f" },
+      { label: "Garantia", value: "3 anos" },
+    ],
+    faqs: [
+      {
+        question: "O interior do túnel também pode ser personalizado?",
+        answer: "Sim. A impressão UV cobre tanto o exterior quanto o interior do túnel — o atleta percorre uma experiência visual completa da marca durante toda a passagem.",
+      },
+      {
+        question: "Qual é a altura mínima livre dentro do túnel?",
+        answer: "Nossos modelos padrão têm altura interna de 2m a 2,5m. Para atletas de maior porte ou equipamentos específicos, o túnel pode ser fabricado em dimensões personalizadas.",
+      },
+      {
+        question: "Túneis podem ser instalados em superfícies de quadra esportiva?",
+        answer: "Sim. O sistema de ancoragem lateral usa sacos de areia ou bases de lastro — sem perfuração de superfície. Compatível com quadras de madeira, sintético e concreto.",
+      },
+      {
+        question: "Qual é o prazo de produção?",
+        answer: "3 a 5 semanas dependendo do comprimento e da complexidade dos gráficos. Aprovação em 3D antes da primeira costura.",
+      },
+    ],
+  },
+
+  "produtos-gigantes": {
+    title: "Infláveis Gigantes — Réplicas de Produtos de até 15m | Amaze Balloons",
+    h1: "PRODUTOS GIGANTES",
+    description:
+      "Réplicas de produtos infláveis de 5m a 15m ou mais de altura. Comparáveis a um prédio de 7 andares. O formato de marketing exterior com maior ROI em mídia espontânea.",
+    heroText:
+      "Comparáveis em altura a um prédio de 7 andares, nossos infláveis gigantes são o formato de marketing exterior com maior taxa de captura de atenção e geração de mídia espontânea. Impossível ignorar. Impossível não fotografar.",
+    icon: "🏔️",
+    sizes: ["5m", "7m", "10m", "15m+"],
+    includes: [
+      "Motor Sirocco HideVENT industrial",
+      "Sistema de ancoragem 300 kg/f",
+      "Bolsas de transporte (conjunto)",
+      "Manual de instalação detalhado",
+      "Tratamento UV e antifungo",
+      "Kit de reparo rápido Amaze",
+    ],
+    material:
+      "Poliéster Emborrachado 300g/m² reforçado com técnicas de viés de reforço e 4 camadas de proteção em áreas críticas. Fio de poliamida 40, 6–8 pontos por polegada. Ancoragem de 300 kg/f.",
+    benefits: [
+      {
+        icon: "📸",
+        title: "Geração de Mídia Espontânea",
+        desc: "A escala desencadeia uma resposta que a mídia convencional não consegue replicar: as pessoas param, tiram fotos e compartilham sem que ninguém peça. ROI em mídia espontânea de 5 a 20× o custo de produção.",
+      },
+      {
+        icon: "⚡",
+        title: "Instalação em 2 Minutos",
+        desc: "O motor Sirocco HideVENT industrial infla arenas inteiras em ~2 minutos. A própria equipe da marca instala — sem montadores externos, sem custo adicional de logística.",
+      },
+      {
+        icon: "⚓",
+        title: "Ancoragem 300 kg/f",
+        desc: "Sistema de ancoragem projetado para condições externas reais: alças com argola de 38mm, arame soldado 4mm, 6 camadas de reforço. Suporta rajadas de vento sem instabilidade.",
+      },
+      {
+        icon: "🎯",
+        title: "Impressão Fotorrealística",
+        desc: "O acabamento acetinado do Poliéster 300g/m² permite impressão em resolução fotográfica. O produto gigante é uma extensão fiel da identidade visual da marca.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Lançamentos de Produto",
+        desc: "O momento do lançamento é único. Uma réplica inflável de 10m do produto revela ao público a magnitude da novidade antes de qualquer palavra.",
+      },
+      {
+        title: "Pontos de Venda (PDV)",
+        desc: "35% de aumento de sell-out documentado. A réplica gigante do produto no PDV direciona o olhar do consumidor de longe e impulsiona a decisão de compra.",
+      },
+      {
+        title: "Feiras e Exposições",
+        desc: "Em um pavilhão com centenas de expositores, o inflável gigante é visível de todos os ângulos — o único formato que atrai visitantes antes de chegarem ao seu corredor.",
+      },
+      {
+        title: "Festivais e Eventos Externos",
+        desc: "Posicionado em um festival ou evento ao ar livre, um inflável gigante torna-se o símbolo visual do evento. Cada registro fotográfico é uma impressão de marca espontânea.",
+      },
+    ],
+    specs: [
+      { label: "Altura máxima", value: "15m ou mais" },
+      { label: "Motor", value: "Sirocco HideVENT industrial" },
+      { label: "Inflagem", value: "~2 min" },
+      { label: "Ancoragem", value: "300 kg/f ruptura" },
+      { label: "Garantia", value: "3 anos sem exclusões" },
+      { label: "Vida útil", value: "5–10 anos" },
+    ],
+    faqs: [
+      {
+        question: "Qual é a altura máxima disponível?",
+        answer: "Fabricamos até 15m de altura como padrão. Para projetos especiais acima disso, consulte nossa equipe.",
+      },
+      {
+        question: "Réplicas gigantes são seguras em eventos externos?",
+        answer: "Sim. Todos os infláveis gigantes passam por análise de distribuição de pressão e carga de vento. O sistema de ancoragem suporta 300 kg/f.",
+      },
+      {
+        question: "Quantas pessoas são necessárias para a instalação?",
+        answer: "Com o motor Sirocco HideVENT, 2 pessoas conseguem instalar estruturas de até 10m em 10 a 15 minutos.",
+      },
+      {
+        question: "Como calcular o ROI?",
+        answer: "Marcas que usam réplicas gigantes consistentemente reportam ROI de 5 a 20× o investimento apenas em cobertura orgânica.",
+      },
+    ],
+  },
+
+  "personagens-inflaveis": {
+    title: "Mascotes & Personagens Infláveis — Personagens Gigantes de Marca | Amaze",
+    h1: "PERSONAGENS INFLÁVEIS",
+    description:
+      "Personagens e mascotes infláveis gigantes que dão vida ao mascote da sua marca em escala monumental. De personagens corporativos a sazonais. Impressão fotorrealística.",
+    heroText:
+      "Seu personagem já existe na mente do público. Agora imagine ele com 7 metros de altura, dominando o espaço, parando multidões. Personagens infláveis gigantes criam uma conexão emocional imediata — o mascote que todos querem fotografar.",
+    icon: "🦁",
+    sizes: ["3m", "5m", "7m", "10m", "Sob Medida"],
+    includes: [
+      "Motor Sirocco HideVENT embutido",
+      "Hardware de ancoragem completo",
+      "Bolsa de transporte personalizada",
+      "Manual de instalação",
+      "Tratamento UV e antifungo",
+      "Kit de reparo rápido Amaze",
+    ],
+    material:
+      "Poliéster Emborrachado 300g/m² com impressão por sublimação em cores completas e alta fidelidade de detalhes. Camada de borracha anti-torção preserva a forma do personagem sob qualquer pressão.",
+    benefits: [
+      {
+        icon: "🦁",
+        title: "Fidelidade Total ao Personagem",
+        desc: "Trabalhamos a partir de seus arquivos de arte para criar uma réplica 3D que preserve cada detalhe — proporções, cores Pantone, expressões faciais e elementos específicos.",
+      },
+      {
+        icon: "📸",
+        title: "O Ponto de Foto Natural",
+        desc: "Um personagem gigante é o ponto de interação mais instintivo em qualquer evento. As pessoas se aproximam, tiram foto e marcam — gerando conteúdo orgânico com o personagem da sua marca no centro.",
+      },
+      {
+        icon: "🎭",
+        title: "Qualquer Personagem",
+        desc: "Mascotes corporativos, personagens sazonais, super-heróis, animais, alimentos gigantes — literalmente qualquer personagem pode se tornar um inflável gigante.",
+      },
+      {
+        icon: "⚡",
+        title: "Montagem Rápida",
+        desc: "Motor Sirocco HideVENT garante inflagem em minutos. Personagens de 5m são instalados por uma pessoa em menos de 10 minutos.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Mascotes Corporativos",
+        desc: "O mascote da sua marca em 7 metros de altura no evento de lançamento, na convenção de vendas ou na inauguração da loja.",
+      },
+      {
+        title: "Personagens Sazonais",
+        desc: "Papai Noel de 5m na entrada do shopping. Coelho de Páscoa no ponto de venda. Cada data comemorativa é uma oportunidade de ativação com o personagem temático correspondente.",
+      },
+      {
+        title: "Festivais e Shows",
+        desc: "Em festivais de música, o personagem gigante da marca patrocinadora torna-se parte da experiência visual. Cada foto tirada no festival inclui o personagem — e a marca.",
+      },
+      {
+        title: "Mascotes Esportivos",
+        desc: "O mascote do clube ou da competição em escala imponente no estádio. Engajamento imediato com a torcida e cobertura midiática garantida.",
+      },
+    ],
+    specs: [
+      { label: "Altura máxima", value: "10m (padrão) / sob medida" },
+      { label: "Motor", value: "Sirocco HideVENT embutido" },
+      { label: "Impressão", value: "Sublimação fotorrealística" },
+      { label: "Material", value: "Poliéster 300g/m²" },
+      { label: "Garantia", value: "3 anos" },
+      { label: "Vida útil", value: "5–10 anos" },
+    ],
+    faqs: [
+      {
+        question: "Vocês conseguem replicar o design exato do nosso personagem?",
+        answer: "Sim. Trabalhamos diretamente com seus arquivos de marca para criar uma réplica 3D fiel. Antes de produzir, aprovamos um render 3D colorido com você.",
+      },
+      {
+        question: "Personagens sazonais podem ser adaptados para vários eventos?",
+        answer: "Sim. O personagem pode ter acabamento neutro com espaços para personalização sazonal, ou ser fabricado com design específico para máxima fidelidade visual.",
+      },
+      {
+        question: "Qual é o prazo de produção?",
+        answer: "4 a 6 semanas dependendo da complexidade do personagem. Mascotes com muitos detalhes podem requerer prazo adicional.",
+      },
+      {
+        question: "Quais formatos de arquivo são necessários?",
+        answer: "AI, EPS, PDF e PNG em alta resolução. Se você não tiver o personagem em 3D, nossa equipe de modelagem pode desenvolvê-lo.",
+      },
+    ],
+  },
+
+  "colchoes-2d": {
+    title: "Colchões 2D Infláveis — Logotipos e Personagens em Grande Formato | Amaze",
+    h1: "COLCHÕES 2D",
+    description:
+      "Colchões infláveis 2D que reproduzem logotipos, personagens e gráficos de marca em grande formato com profundidade visual. A fachada móvel da sua marca.",
+    heroText:
+      "A profundidade tridimensional de um inflável com a clareza visual de um gráfico 2D. Colchões infláveis reproduzem logotipos, personagens e gráficos de marca em escala monumental — com nitidez fotográfica e a impactante dimensão que nenhum banner plano consegue replicar.",
+    icon: "🖼️",
+    sizes: ["1×1m", "2×2m", "3×4m", "5×5m", "Sob Medida"],
+    includes: [
+      "Motor Sirocco HideVENT embutido",
+      "Sistema de suspensão e ancoragem",
+      "Bolsa de transporte",
+      "Manual de instalação",
+      "Impressão UV frente e verso",
+      "Kit de reparo rápido Amaze",
+    ],
+    material:
+      "Poliéster Emborrachado 300g/m² com impressão UV em cobertura total frente e verso. Estrutura de câmara simples que mantém a forma do gráfico com precisão dimensional. Acabamento acetinado para máxima fidelidade de impressão.",
+    benefits: [
+      {
+        icon: "🖼️",
+        title: "Fachada Móvel da Marca",
+        desc: "O colchão 2D é o banner que tem volume. A profundidade tridimensional cria uma presença visual que nenhum material plano consegue replicar — mesmo visto de perto, o detalhe e a fidelidade são fotográficos.",
+      },
+      {
+        icon: "🎨",
+        title: "Fidelidade de Impressão Total",
+        desc: "Impressão UV frente e verso em cobertura 100%. Pantone, gradientes, detalhes finos — tudo reproduzido com a fidelidade exigida pelos guias de identidade visual das maiores marcas.",
+      },
+      {
+        icon: "🔄",
+        title: "Portátil e Reutilizável",
+        desc: "Desinfla completamente em um plano, dobra e cabe em uma bolsa. De um evento para o próximo sem perda de qualidade visual. Vida útil de 5 a 10 anos.",
+      },
+      {
+        icon: "📸",
+        title: "Backdrop Fotográfico Perfeito",
+        desc: "Colchões 2D são o backdrop mais fotogênico de qualquer evento. A profundidade cria um enquadramento natural para fotos — e a marca está sempre no centro da composição.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Backdrop de Foto e Red Carpet",
+        desc: "A parede de logos de um red carpet ou evento de premiação. O colchão 2D com o padrão de logotipos da empresa ou patrocinadores cria o backdrop profissional que é o cenário de toda a cobertura fotográfica.",
+      },
+      {
+        title: "Fachadas Temporárias de Loja",
+        desc: "Para obras, reformas ou pop-ups, o colchão 2D substitui a fachada real com a identidade visual da marca — em grande formato, sem instalação permanente e com impacto visual imediato.",
+      },
+      {
+        title: "Identidade de Estande em Feiras",
+        desc: "A parede traseira de um estande em feira, reproduzindo o logotipo ou gráfico da campanha em escala e profundidade que nenhum display têxtil ou lona plana consegue replicar.",
+      },
+      {
+        title: "Cenografia de Eventos",
+        desc: "Personagens, produtos, logotipos e gráficos de campanha em escala. Posicionados estrategicamente no espaço do evento, os colchões 2D criam pontos de marca em todo o ambiente.",
+      },
+    ],
+    specs: [
+      { label: "Espessura", value: "15cm a 30cm (padrão)" },
+      { label: "Dimensões máx.", value: "5×5m (padrão) / sob medida" },
+      { label: "Impressão", value: "UV frente e verso" },
+      { label: "Motor", value: "Sirocco HideVENT embutido" },
+      { label: "Garantia", value: "3 anos" },
+      { label: "Vida útil", value: "5–10 anos" },
+    ],
+    faqs: [
+      {
+        question: "Qual é a diferença entre colchão 2D e totem?",
+        answer: "Colchões 2D são planos — reproduzem gráficos, logotipos e personagens como uma fachada com profundidade. Totens são estruturas cilíndricas ou quadradas verticais, ideais para visibilidade de longe.",
+      },
+      {
+        question: "A impressão é feita frente e verso?",
+        answer: "Sim. Impressão UV em cobertura total em ambas as faces — ideal para posicionamentos em corredores, entradas e espaços onde o público circula por ambos os lados.",
+      },
+      {
+        question: "Colchões 2D podem ser suspensos no teto?",
+        answer: "Sim. Oferecemos sistema de suspensão por cabos para instalação aérea — ideal para espaços de grandes pés-direitos, feiras e eventos em pavilhões.",
+      },
+      {
+        question: "Qual é o prazo de produção?",
+        answer: "2 a 4 semanas dependendo das dimensões e complexidade da impressão. Aprovação de arte antes da produção.",
+      },
+    ],
+  },
+
+  "roof-top": {
+    title: "Roof-Top Infláveis — Publicidade Aérea e Cobertura de Edificações | Amaze",
+    h1: "ROOF-TOP INFLÁVEIS",
+    description:
+      "Infláveis de cobertura para telhados de edificações — o único formato de publicidade exterior que domina o espaço vertical urbano. Visível a quilômetros. Permanente ou temporário.",
+    heroText:
+      "O único lugar onde nenhum outdoor, banner ou tela digital chega: o topo dos edifícios. Infláveis roof-top transformam coberturas de edificações em mídia exterior de alto impacto — visíveis a quilômetros de distância, identificáveis de helicóptero e impossíveis de ignorar.",
+    icon: "🏙️",
+    sizes: ["3m", "5m", "8m", "10m+", "Sob Medida"],
+    includes: [
+      "Motor Sirocco HideVENT industrial",
+      "Sistema de ancoragem estrutural 300 kg/f",
+      "Cabo de segurança anti-queda",
+      "Manual de instalação e segurança",
+      "Tratamento UV de alta tenacidade",
+      "Kit de reparo rápido Amaze",
+    ],
+    material:
+      "Poliéster Emborrachado 300g/m² com tratamento UV máximo de 10 anos de resistência e revestimento antifungo industrial. Ancoragem estrutural certificada de 300 kg/f com cabo de segurança redundante.",
+    benefits: [
+      {
+        icon: "🏙️",
+        title: "Domínio Visual Urbano",
+        desc: "Um inflável roof-top de 8m sobre um edifício de 20 andares é visível em um raio de vários quilômetros. Nenhum outro formato de mídia exterior ocupa o espaço aéreo urbano — é território exclusivo.",
+      },
+      {
+        icon: "🔁",
+        title: "Permanente ou Temporário",
+        desc: "Roof-tops podem ser instalados permanentemente (vida útil 5–10 anos) ou como ativação temporária para campanhas, lançamentos e datas comemorativas. O mesmo ativo serve os dois propósitos.",
+      },
+      {
+        icon: "📸",
+        title: "Cobertura Aérea Espontânea",
+        desc: "Drones, helicópteros de imprensa e transmissões ao vivo de eventos urbanos capturam o inflável roof-top sem que a marca precise pagar por mídia. É a única mídia exterior que aparece em imagens aéreas.",
+      },
+      {
+        icon: "⚡",
+        title: "Motor Industrial Permanente",
+        desc: "O motor Sirocco HideVENT industrial opera em fluxo contínuo 24/7 — compensando variações de pressão atmosférica, temperatura e vento em qualquer altitude. Projetado para operação continuada.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Identificação de Sede Corporativa",
+        desc: "O logo da empresa em 8m sobre a sede — visível para toda a cidade. Uma declaração de presença que nenhum outdoor de rua consegue replicar. O edifício vira o maior ponto de marca da empresa.",
+      },
+      {
+        title: "Campanhas de Lançamento Urbano",
+        desc: "Para lançamentos de produto de alto impacto, um inflável roof-top na região da campanha domina visualmente o bairro. Em mercados altamente competitivos, a altitude é a diferença entre ser visto e ser ignorado.",
+      },
+      {
+        title: "Eventos e Festivais Urbanos",
+        desc: "Patrocinadores de grandes eventos urbanos (viradas, shows, comemorações) posicionam infláveis roof-top nos arredores — criando uma presença de marca que acompanha o público em todo o percurso do evento.",
+      },
+      {
+        title: "Balonismo e Aeromarketing",
+        desc: "Além de edificações, infláveis de grande porte podem ser posicionados em áreas elevadas, praças e espaços abertos para aeromarketing — a mídia que domina o horizonte visual da cidade.",
+      },
+    ],
+    specs: [
+      { label: "Altura", value: "3m a 10m+ (padrão)" },
+      { label: "Motor", value: "Sirocco HideVENT industrial 24/7" },
+      { label: "Ancoragem", value: "Estrutural certificada 300 kg/f" },
+      { label: "Resistência UV", value: "Até 10 anos" },
+      { label: "Garantia", value: "3 anos" },
+      { label: "Operação", value: "Contínua ou intermitente" },
+    ],
+    faqs: [
+      {
+        question: "É necessária aprovação municipal para instalar em telhados?",
+        answer: "Depende da cidade e do uso — temporário (até 30 dias em geral) não exige aprovação na maioria dos municípios. Para instalações permanentes, orientamos sobre a documentação necessária.",
+      },
+      {
+        question: "O motor suporta operação 24/7?",
+        answer: "Sim. O motor Sirocco HideVENT industrial é projetado para operação contínua. Consumo de energia similar a uma lâmpada comum — menos de R$50/mês em operação contínua.",
+      },
+      {
+        question: "E a segurança em caso de ventos fortes?",
+        answer: "O sistema de ancoragem estrutural de 300 kg/f com cabo de segurança redundante suporta condições de vento extremas. Em situações excepcionais, o motor pode ser desligado e o inflável deflado em minutos.",
+      },
+      {
+        question: "Qual é o prazo de produção?",
+        answer: "4 a 6 semanas para roof-tops padrão. Projetos de grande porte ou instalações permanentes podem requerer prazo adicional para projeto de ancoragem específico.",
+      },
+    ],
+  },
+
   "inflaveis-personalizados": {
     title:
       "Infláveis Personalizados — 100% com Marca, Qualquer Formato | Amaze Balloons",
